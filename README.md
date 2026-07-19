@@ -29,8 +29,8 @@
 
 | ファイル | 言語 | 内容 |
 | --- | --- | --- |
-| [frontier-grade-open-weights_JP.md](./docs/jp/frontier-grade-open-weights_jp.md) | 🇯🇵 日本語 | 本文（日本語版） |
-| [frontier-grade-open-weights_EN.md](./docs/en/frontier-grade-open-weights_en.md) | 🇺🇸 English | 本文（英語版） |
+| [frontier-grade-open-weights_JP.md](./docs/jp/frontier-grade-open-weights_JP.md) | 🇯🇵 日本語 | 本文（日本語版） |
+| [frontier-grade-open-weights_EN.md](./docs/en/frontier-grade-open-weights_EN.md) | 🇺🇸 English | 本文（英語版） |
 
 ---
 
