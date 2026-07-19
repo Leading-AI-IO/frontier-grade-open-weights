@@ -55,16 +55,25 @@ This book is part of an interconnected ecosystem of open-source projects.
 
 | Project | Description | Link |
 | --- | --- | --- |
-| **The Edge of Intelligence** | When AI runs on your device. This book shows where that thesis reverses at 2.8 trillion parameters | [GitHub](https://github.com/Leading-AI-IO/edge-ai-intelligence) |
-| **The Silence of Intelligence** | Systematizing Anthropic CEO Dario Amodei's philosophy — Industry Anatomy Series #2 | [GitHub](https://github.com/Leading-AI-IO/the-silence-of-intelligence) |
-| **The Anatomy of Anthropic** | A comprehensive dissection of Anthropic's strategy, products, research, and safety | [GitHub](https://github.com/Leading-AI-IO/the-anatomy-of-anthropic) |
-| **The Growth Engine of Anthropic** | Decoding Anthropic's path to a trillion-dollar valuation | [GitHub](https://github.com/Leading-AI-IO/the-growth-engine-of-anthropic) |
-| **The Palantir Impact** | Dissecting Palantir Foundry's ontology strategy — Industry Anatomy Series #1 | [GitHub](https://github.com/Leading-AI-IO/palantir-ontology-strategy) |
-| **Depth & Velocity** | A new-business development methodology for the generative AI era | [GitHub](https://github.com/Leading-AI-IO/depth-and-velocity) |
-| **The 10:80:10 Principle** | The golden ratio of human-AI co-creation and a thinking OS for the AI era | [GitHub](https://github.com/Leading-AI-IO/the-10-80-10-principle) |
-| **The AI Strategist** | Defining the AI Strategist as a profession | [GitHub](https://github.com/Leading-AI-IO/the-ai-strategist) |
-| **A Trillion Dollars and a Firebomb** | The parallel, accelerating realities of the AI era | [GitHub](https://github.com/Leading-AI-IO/a-trillion-and-a-firebomb) |
-| **The Forward Deployed Shift** | Where value survives when “building” is over—and what the rise of the FDE reveals | [GitHub](https://github.com/Leading-AI-IO/the-forward-deployed-shift) |
+| **The AI Strategist**               | Defining the AI Strategist role with practical frameworks for the BTC intersection                              | [GitHub](https://github.com/Leading-AI-IO/the-ai-strategist)              |
+| **Depth & Velocity**                | A methodology for new business development in the generative AI era                                             | [GitHub](https://github.com/Leading-AI-IO/depth-and-velocity)             |
+| **The Silence of Intelligence**     | Systematizing Anthropic CEO Dario Amodei's philosophy — Industry Anatomy Series #2                              | [GitHub](https://github.com/Leading-AI-IO/the-silence-of-intelligence)    |
+| **The Anatomy of Anthropic**        | A comprehensive dissection of Anthropic's strategy, products, research, and safety                              | [GitHub](https://github.com/Leading-AI-IO/the-anatomy-of-anthropic)       |
+| **The Palantir Impact**             | Dissecting Palantir Foundry's ontology strategy — Industry Anatomy Series #1                                    | [GitHub](https://github.com/Leading-AI-IO/palantir-ontology-strategy)     |
+| **What They Won't Teach You**       | What the AI-advantaged generation won't teach you about AI and the "Thinking OS"                                | [GitHub](https://github.com/Leading-AI-IO/what-they-wont-teach-you)       |
+| **The Edge of Intelligence**        | When AI runs on your device: the end of cloud, the beginning of edge                                            | [GitHub](https://github.com/Leading-AI-IO/edge-ai-intelligence)           |
+| **The Redesign of Design Strategy** | Redefining design strategy, including a structural analysis of IDEO's decline                                   | [GitHub](https://github.com/Leading-AI-IO/design-strategy-in-the-ai-era)  |
+| **The Orchestrator**                | The first-ever definition of the rarest role in the AI era                                                      | [GitHub](https://github.com/Leading-AI-IO/the-orchestrator-in-the-ai-era) |
+| **Advertising, Redesigned**         | An open-source book exploring the future of advertising in the AI era through strategic analysis of 7 companies | [GitHub](https://github.com/Leading-AI-IO/advertising-redesigned)         |
+| **The AI Organization**             | The root cause of AI failure is not technology. Organizational theory for the AI era                            | [GitHub](https://github.com/Leading-AI-IO/the-ai-organization)  |
+| **The Structural Shift from SaaS**  | SaaS Is Dead: The Structural Shift from SaaS to Service-as-a-Software                                           | [GitHub](https://github.com/Leading-AI-IO/saas-is-dead-the-next-ai-business-model)  |
+| **The 10:80:10 Principle**          | The optimal balance for human-AI synergy:「10:80:10」in the AI era.                                             | [GitHub](https://github.com/Leading-AI-IO/the-10-80-10-principle)  |
+| **A Trillion Dollars and a Firebomb** | The Parallel Realities of the AI Era | [GitHub](https://github.com/Leading-AI-IO/a-trillion-and-a-firebomb) |
+| **The End of the Attention Economy** | The End of the Attention Economy. What Should the Next SNS Look Like? | [GitHub](https://github.com/Leading-AI-IO/the-attention-economy-is-over)  |
+| **The Growth Engine of Anthropic** | Decoding the $1T Trajectory | [GitHub](https://github.com/Leading-AI-IO/the-growth-engine-of-anthropic)  |
+| **The Agentic Commerce Economy** | When AI Agents Buy, the Advertising Model Paradigm Shift | [GitHub](https://github.com/Leading-AI-IO/agentic-commerce-economy)  |
+| **Will ai break the planet** | The AI Infrastructure Boom and the Race Against the Climate's Point of No Return | [GitHub](https://github.com/Leading-AI-IO/will-ai-break-the-planet)  |
+| **The-forward-deployed-shift** | The Forward Deployed Shift — Where Value Survives When "Building" Is Over | [GitHub](https://github.com/Leading-AI-IO/the-ai-strategist)  |
 
 ---
 
