@@ -546,6 +546,39 @@ A company promises to release the weights while selling practical access to thei
 DeepSeek sells at $0.04; K3 sells at $0.94.<br/>
 Both call themselves “open weight.” **The same term conceals a 23-fold price difference.**
 
+## Even When the Weights Are Released, They Are Not Immediately Usable
+
+The physical wall does not vanish the moment weights are published.<br/>
+**It persists afterward, in the form of time.**
+
+Until now, Chinese open-weight releases followed a pattern.<br/>
+When the RL run finished, weights appeared within hours—within a week at the latest.<br/>
+And the ecosystem knew immediately how to run them.<br/>
+Patches for inference engines were sometimes prepared days before release.
+
+With Kimi K3, that pattern is unlikely to hold.
+
+On Interconnects, Florian Brand puts it plainly.<br/>
+**Loading the weights alone requires a full node of B300s.**<br/>
+Getting the model into a fine-tunable state will take substantial engineering and time.
+
+Nathan Lambert reframes this as a question of the time gap.<br/>
+Closed labs complete this optimization behind the scenes before announcing a model.<br/>
+In doing so, they **manipulate the very interval that gets observed as a performance gap.**<br/>
+Open-weight advocates have long argued that the gap should be measured only from the moment a closed model becomes available.
+
+Now the same dynamic has appeared on the open side.<br/>
+**Between the release of weights and their becoming usable, an interval on the order of a month can open up.**<br/>
+Kimi's inference API is already overwhelmed—demand has outrun supply, and it is failing.<br/>
+The model has been published, and it is not diffusing.
+
+Here lies the practical consequence of this book's proposition.<br/>
+**The date of publication and the date of arrival are different dates.**<br/>
+And what determines the interval between them is neither license nor politics, but **whether you own the hardware to run it.**
+
+For an organization that can buy 64 accelerators, that interval is short.<br/>
+For one that cannot, it is, in practice, infinite.
+
 ## The Open Door—and Its Weight
 
 On July 27, the weights may be released.<br/>
@@ -568,9 +601,11 @@ even if the door opens, **no one yet knows the conditions under which they are a
    <https://www.kimi.com/blog/kimi-k3>
 2. Artificial Analysis, “gpt-oss-120b – Intelligence, Performance & Price Analysis” (cost per task: Fable 5 $2.75 / GPT-5.6 Sol $1.04 / Kimi K3 $0.94 / GLM-5.2 $0.47 / DeepSeek V4 Pro $0.04 / Llama 4 Maverick $0.03)
    <https://artificialanalysis.ai/models/gpt-oss-120b>
-3. Satoshi Yamauchi, *The Edge of Intelligence — The Age When AI Runs on Your Device* (Leading.AI / CC BY 4.0)
+3. Nathan Lambert & Florian Brand (Interconnects), “Open models recap: more on Kimi K3, Qwen 3.8, Xi’s WAIC speech, distillation, the open-closed gap, and what’s next” (July 22, 2026; loading the weights alone requires a full B300 node; substantial engineering needed to reach a fine-tunable state; Kimi’s API overwhelmed by demand)
+   <https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3>
+4. Satoshi Yamauchi, *The Edge of Intelligence — The Age When AI Runs on Your Device* (Leading.AI / CC BY 4.0)
    <https://github.com/Leading-AI-IO/edge-ai-intelligence>
-4. MarkTechPost, “Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context” (July 16, 2026)
+5. MarkTechPost, “Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context” (July 16, 2026)
    <https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/>
 
 *The weight-size figures—approximately 5.6 TB in BF16, 2.8 TB in INT8, and 1.4 TB in INT4—are arithmetic estimates based on Moonshot’s reported total of 2.8 trillion parameters, not figures officially disclosed by Moonshot.*
@@ -929,6 +964,59 @@ Without it, **the premises of the policy debate over whether open weights should
 The low-cost mythology around the claim that “DeepSeek trained for $5.5 million” has likewise never been independently audited.<br/>
 No primary data objectively proves the cost of training from scratch.
 
+## If the Teacher Is Stronger, Does the Student Get Smarter?
+
+The gap left by unmeasured contribution runs deeper still.
+
+**No one has established why distillation works in the first place.**
+
+On July 22, 2026, Nathan Lambert and Florian Brand took up this question directly on Interconnects.<br/>
+The trigger was Ben Thompson of Stratechery, author of one of the most widely read blogs in tech, who had made a strong claim about distillation.<br/>
+**As reinforcement learning becomes the center of training, he argued, distillation is becoming more impactful, not less.**<br/>
+The Chinese labs, he suggested, are using the strongest models—Fable 5, GPT-5.6—as graders during RL.
+
+Lambert rejects this clearly, on technical and specific grounds.
+
+First, **large RL runs involve millions to tens of millions of rollouts.**<br/>
+Figures published by Thinking Machines put their final RL run in the range of twenty to forty million.<br/>
+Sending that through the Fable 5 or GPT-5.6 API for grading would be prohibitively expensive.<br/>
+Those models are also comparatively slow, making them **a time bottleneck**.<br/>
+And there is no guarantee they would outperform a purpose-built grader of one's own.
+
+Second, distillation does its work in the **SFT (supervised fine-tuning)** stage.<br/>
+Extract reasoning tokens along with tool calls and you have high-quality SFT data.<br/>
+It is also why a model may answer "I am Claude"—personality is formed at this stage.<br/>
+But **the core of capability is built during RL, and that is where the money and compute go.**
+
+Third—and this is decisive:
+
+**The proposition that the strongest model makes the best teacher has not been established in the literature.**
+
+By Lambert's account, researchers have revisited this question many times,<br/>
+and none have found that the top-performing model in a domain is the best teacher for it.<br/>
+The state-of-the-art open SFT dataset is in fact **built on QwQ-32B, an older reasoning model.**<br/>
+Why generating completions from GLM-5.2 and running SFT on them does not simply improve a model, no one can explain.
+
+Lambert's own words go further.<br/>
+Given a magical API that returned reasoning traces from Claude or Gemini on demand,<br/>
+he says he **does not know** whether fine-tuning OLMo on them would make OLMo smarter.<br/>
+He calls this one of the wildest unanswered research questions in the field.
+
+The weight of that admission deserves precision.<br/>
+The speaker is a researcher who specializes in open-model training methods and trains models himself.<br/>
+And he is saying that **not only is distillation's contribution unquantified—whether it works at all cannot be asserted.**
+
+Brand folds the argument into a single refutation.<br/>
+If Chinese performance were explained by distillation alone,<br/>
+**anyone could use the same data to catch up to GLM or Kimi K3.**<br/>
+That is not what has happened.
+
+In the previous section, this book noted that no study decomposes distillation's contribution.<br/>
+This section adds something more serious.<br/>
+**It is not that the contribution has gone unmeasured. There is not yet a theory of what contributes what.**
+
+And on top of that, policy is being built.
+
 ## The Position Reversed Within a Year
 
 Now place Dario Amodei’s statements on a timeline.
@@ -1009,13 +1097,15 @@ The next chapter examines the institution itself.
 3. Dario Amodei, “The Adolescence of Technology” (2026; chip export controls are “a great example … [that] mostly just work”)
    <https://darioamodei.com/essay/the-adolescence-of-technology>
 4. Nathan Lambert, *Interconnects*, “6 Months to Live for Open Models” (July 12, 2026; banning open models harms good-faith actors / distillation controversy as regulatory capture)
-5. Paddo, “Distillation Is Not Scraping: Why the Internet’s Favourite Take Is Wrong” (July 2026)
+5. Nathan Lambert & Florian Brand (Interconnects), “Open models recap: more on Kimi K3, Qwen 3.8, Xi’s WAIC speech, distillation, the open-closed gap, and what’s next” (July 22, 2026; RL-stage distillation is impractical on both cost and latency; that the strongest model is the best teacher is unestablished in the literature; the state-of-the-art open SFT dataset is built on QwQ-32B)
+   <https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3>
+6. Paddo, “Distillation Is Not Scraping: Why the Internet’s Favourite Take Is Wrong” (July 2026)
    <https://paddo.dev/blog/distillation-is-not-scraping/>
-6. OpenAI, “OpenAI’s comment to the NTIA on open model weights” (submitted March 2024)
+7. OpenAI, “OpenAI’s comment to the NTIA on open model weights” (submitted March 2024)
    <https://openai.com/global-affairs/openai-s-comment-to-the-ntia-on-open-model-weights/>
-7. Anthropic, “Final Anthropic Response to Docket Number NTIA-2023-0009” (submitted March 2024)
+8. Anthropic, “Final Anthropic Response to Docket Number NTIA-2023-0009” (submitted March 2024)
    <https://downloads.regulations.gov/NTIA-2023-0009-0233/attachment_1.pdf>
-8. Lawfare, “Responding to AI Distillation Without Panic”
+9. Lawfare, “Responding to AI Distillation Without Panic”
    <https://www.lawfaremedia.org/article/responding-to-ai-distillation-without-panic>
 
 *The research for this book found none of the following: (1) third-party verification of Anthropic’s accusation; (2) an official, technically substantiated rebuttal from Moonshot, DeepSeek, or MiniMax; (3) a quantitative decomposition of distillation’s contribution to performance gains; or (4) an independent audit of the claim that DeepSeek trained for $5.5 million. Because Amodei’s 2023 Senate testimony could not be verified verbatim from a primary source, the book avoids asserting its exact content.*
@@ -1116,6 +1206,31 @@ The three-week disappearance of Fable 5 gave the concept of AI sovereignty its m
 “Can our mission-critical operations be stopped for three weeks by the decision of another country’s government?”<br/>
 At present, only open weights can answer: “No.”
 
+And in July 2026, this structure took on a far more concrete form.
+
+Hugging Face reported the case.<br/>
+They detected an agent attacking their system and tried to analyze its behavior.<br/>
+**They attempted the analysis with GPT and with Claude. Both were blocked by guardrails.**<br/>
+The act of analyzing attack code was itself refused by the safety machinery.
+
+So they used GLM instead—a less capable model, but one without guardrails against this kind of defensive work.
+
+**A U.S. company had to rely on an inferior model to defend itself.**
+
+Lambert offers this as the strongest argument against a ban.<br/>
+Suppose the best Chinese open-weight models were prohibited for use by U.S. companies.<br/>
+The defenders would lose their means of improvement; the attackers, worldwide, would keep improving.<br/>
+**Structurally, one would be choosing a design in which defense does not improve and only offense does.**<br/>
+That, he argues, is when cyber risk would become real.
+
+He also warns about the form the restriction is taking.<br/>
+The threat of legal action without a clear legal pathway—<br/>
+in effect, **a shadow ban**.<br/>
+Because what is prohibited is never defined, companies restrict themselves.
+
+As Chapter 6 showed, distillation's contribution has never been measured, and its mechanism remains unexplained.<br/>
+On that foundation, an undefined prohibition has begun to act on the field.
+
 ## Europe Does Not Open Unconditionally Either
 
 The European Union takes a different approach.
@@ -1169,6 +1284,10 @@ The next chapter looks at what is happening outside that framework.<br/>
    <https://www.ntia.gov/programs-and-initiatives/artificial-intelligence/open-model-weights-report/policy-approaches-recommendations/policy-approaches>
 8. Council on Foreign Relations, “Assessing Trump’s Executive Order on AI Oversight”
    <https://www.cfr.org/articles/assessing-trumps-executive-order-on-ai-oversight>
+9. Nathan Lambert & Florian Brand (Interconnects), “Open models recap: more on Kimi K3, Qwen 3.8, Xi’s WAIC speech, distillation, the open-closed gap, and what’s next” (July 22, 2026; Hugging Face’s attack analysis blocked by GPT and Claude guardrails, forcing use of GLM; a ban degrades only the defensive side; warning on shadow-ban style restriction)
+   <https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3>
+
+*The Hugging Face case is based on a mention within the Interconnects discussion. This book was unable to locate a primary report from Hugging Face itself; the existence and details of the case require further primary confirmation.*
 
 *The cyber-capability and compute thresholds for “covered frontier models,” due around August 1, 2026 under EO 14409, could not be confirmed because the process was classified. The research also found no quantitative study of how effectively export controls can contain the circulation of model-weight files.*
 
