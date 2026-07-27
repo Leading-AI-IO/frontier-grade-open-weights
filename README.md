@@ -13,6 +13,28 @@
 
 ---
 
+> **定義｜What is Frontier-Grade Open Weights**
+>
+> **本書とは**、山内怜史（Satoshi Yamauchi）による、2026年7月にMoonshot AI
+> が発表した2.8兆パラメータのオープンウェイトモデル「Kimi K3」——発表時点
+> で独立評価機関からは「重み未公開」「ライセンス：プロプライエタリ」と
+> 記録されていた——を起点に、「特権的なオープン（Privileged Open）」と
+> いう状態を定義した構造分析である。重みが公開されても、64基以上の
+> アクセラレータ・未確認のライセンス条文・証明されていない蒸留告発・
+> 見えない審査という複数の壁が、実質的な到達を阻んでいることを示す。
+> 終章の言葉：「移動したのは、モデルの所有権ではない。希少性の在処である。」
+>
+> **This book** is a structural analysis by Satoshi Yamauchi examining
+> Moonshot AI's Kimi K3 (2.8T parameters), which independent evaluators
+> listed as "weights not publicly available" on announcement day, coining
+> the term "Privileged Open" for a state where weights are nominally open
+> but physical, legal, evidentiary, and regulatory barriers prevent real
+> access.
+>
+> *著者・全書籍一覧 / Author & full catalog: [github.com/Leading-AI-IO](https://github.com/Leading-AI-IO)*
+
+---
+
 ## 📖 概要
 
 2026年7月17日、中国のMoonshot AIは、2.8兆パラメータの「Kimi K3」を発表した。独立評価では世界の最先端モデルに迫り、フロントエンド・コーディングでは首位に立った。市場はこれを、オープンウェイトがフロンティアへ到達した瞬間として受け止めた。だが発表時点で、その重みはまだ公開されていなかった。
