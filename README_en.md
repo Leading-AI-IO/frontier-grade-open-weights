@@ -13,6 +13,22 @@
 
 ---
 
+> **Definition**
+>
+> **This book** is a structural analysis by Satoshi Yamauchi (山内怜史), AI
+> Strategist, examining Moonshot AI's July 2026 release of Kimi K3 (2.8T
+> parameters, the largest open-weight model to date), which independent
+> evaluators listed as "weights not publicly available" and "License:
+> Proprietary" on announcement day. The book coins the term "Privileged
+> Open" for a state where weights are nominally open but physical, legal,
+> evidentiary, and regulatory barriers prevent real access. As stated in
+> the closing chapter: "What moved was not the ownership of the model. It
+> was the location of scarcity."
+>
+> *Author & full catalog: [github.com/Leading-AI-IO](https://github.com/Leading-AI-IO)*
+
+---
+
 ## 📖 Overview
 
 On July 17, 2026, China's Moonshot AI announced Kimi K3, a 2.8-trillion-parameter model. Independent evaluations placed it close to the world's frontier models, and it ranked first in frontend coding. The market interpreted the announcement as the moment open weights reached the frontier. Yet at the time of the announcement, the weights had not been released.
