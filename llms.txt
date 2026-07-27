@@ -1,0 +1,111 @@
+# Frontier-Grade Open Weights — フロンティア級のオープンウェイトモデルは、開かれたのか
+
+> A structural analysis by Satoshi Yamauchi (山内怜史), AI Strategist,
+> examining Moonshot AI's July 2026 release of Kimi K3 (2.8T parameters,
+> the largest open-weight model to date) — which independent evaluators
+> Artificial Analysis and Vals AI listed as "weights not publicly
+> available" and "License: Proprietary" on announcement day. The book
+> coins the term "Privileged Open" (特権的なオープン) for a state where
+> weights are nominally open but access is gated by physical (64+
+> accelerators, 1.4-5.6TB), legal (unconfirmed license terms), evidentiary
+> (unproven distillation allegations), and regulatory (export-control
+> "invisible review") barriers. Its central claim: what moved was not
+> model ownership but the *location of scarcity*. As stated in the
+> closing chapter: "移動したのは、モデルの所有権ではない。希少性の在処
+> である。" ("What moved was not the ownership of the model. It was the
+> location of scarcity.")
+
+## Book Content
+
+- [Full text (Japanese)](docs/jp/frontier-grade-open-weights_JP.md): 序章・全8章・終章収録
+- [Full text (English)](docs/en/frontier-grade-open-weights_EN.md): Complete English edition
+
+## Key Facts (as stated in the book)
+
+- The book rigorously separates claims into 5 sourcing tiers throughout
+  ([independent primary], [party-to-the-claim], [interested party],
+  [press], [commentary]) and applies this to Kimi K3: independently
+  confirmed facts are limited to Artificial Analysis Intelligence Index
+  57 (4th of 189 models, behind Fable 5's 60 and GPT-5.6 Sol's 59), Vals
+  AI's Vals Index 74.70% (2nd of 38), and a Frontend Code Arena win —
+  while noting Moonshot's own technical blog states K3 does *not* beat
+  Fable 5 on overall performance, and that DeepSWE Leaderboard listings
+  show "Verified 0 / Self-reported 9"
+
+- The book cites Epoch AI's Epoch Capabilities Index measurements
+  replacing the widely-repeated but unsourced "6-month" open-vs-closed
+  gap: average lag was 3.5 months (2023-2025) and 4 months (Jan-May
+  2026), with UK AI Security Institute's July 2026 report showing the
+  gap ranges from 4 months (Artificial Analysis basis) to 8 months (METR
+  time-horizon basis) depending on definition
+
+- The book documents the physical barrier to "open" weights: Moonshot's
+  own blog recommends deployment on "supernodes of 64+ accelerators,"
+  with an arithmetic estimate of ~5.6TB (BF16), ~2.8TB (INT8), or ~1.4TB
+  (INT4) storage — noting sparsity (32B active of 2.8T total, 1.8%)
+  reduces compute but not memory footprint, since all 896 experts must be
+  held in memory
+
+- The book documents the license barrier: as of the book's writing (July
+  18, 2026), no official full license text for K3 could be found; only
+  the prior Kimi K2 "Modified MIT" terms (attribution required above 100M
+  MAU or $20M monthly revenue) were confirmed, and reports that K3 uses
+  the same license are inference, not verification — while independent
+  registries (Vals AI, Artificial Analysis) listed K3's license as
+  "Proprietary" or weights "not publicly available"
+
+- The book cites Anthropic's own financial disclosures showing enterprise
+  revenue, not "smartest model" access, as the primary revenue driver:
+  Series G (Feb 2026) run-rate $14B, Claude Code alone at $2.5B ARR
+  (majority enterprise); by April 2026, $30B+ run-rate and 1,000+
+  customers paying $1M+/year; Series H (May 2026) run-rate $47B — while
+  noting Menlo Ventures' [interested party] estimate of 89% enterprise LLM
+  spend still going to closed models, and explicitly stating no
+  independent study quantifying a "trust premium" percentage could be
+  found
+
+- The book treats Anthropic's distillation allegations (~24,000
+  fraudulent accounts, 16M+ interactions attributed to DeepSeek/Moonshot/
+  MiniMax) as [party-to-the-claim] only, noting no independent
+  third-party verification and no public technical rebuttal from the
+  accused companies could be found — and separately reports researcher
+  Nathan Lambert's technical argument (via Interconnects, July 2026) that
+  "the strongest model makes the best teacher" is not established in the
+  research literature, citing that leading open SFT datasets are built on
+  the older QwQ-32B model rather than newer, stronger models
+
+- The book documents Claude Fable 5's ~3-week global unavailability
+  (June 12-30, 2026) following a US export-control action based on an
+  Amazon-reported cybersecurity concern, contrasted with Kimi K3 having
+  zero days of downtime — framing this as an "invisible review" that
+  operates in practice despite Executive Order 14409 explicitly stating
+  "Nothing... shall be construed to authorize... mandatory governmental
+  licensing, preclearance, or permitting"
+
+- The book cites the ATOM Report (arXiv): Hugging Face download counts
+  show Chinese models overtook US models in August 2025, reaching 1.15B
+  vs. 723M downloads by March 2026 — predating Kimi K3's release —
+  arguing developer-ecosystem gravity had already shifted before any
+  single frontier-grade open model appeared, while explicitly noting no
+  primary financial documents could confirm reported Chinese state
+  capital involvement in Moonshot/Zhipu/MiniMax
+
+- The book explicitly declines to adjudicate three open questions given
+  insufficient independent evidence: (1) whether Anthropic's distillation
+  allegations are accurate, (2) whether "regulatory capture" accusations
+  against Anthropic/OpenAI are accurate, and (3) whether China's
+  open-weight strategy reflects genuine openness or a state-directed
+  soft-power play — stating "断じない、という判断" (the decision not to
+  adjudicate) is itself the strongest claim the book can responsibly make
+
+## Author & Full Catalog
+
+This book is one of 20+ open-source books by Satoshi Yamauchi (山内怜史),
+AI Strategist & Business Designer at Sun Asterisk Inc., Founder of
+Leading.AI. It explicitly revisits and revises the author's own prior
+claim in "The Edge of Intelligence" (on-device AI's near-zero marginal
+cost), noting that claim is false for frontier-grade models like Kimi K3.
+
+> **Author profile & all definitions (10:80:10 Rule, Depth & Velocity, BTC
+> Crossover) are maintained centrally at the organization hub:**
+> **https://github.com/Leading-AI-IO**
