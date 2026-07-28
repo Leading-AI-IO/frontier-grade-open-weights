@@ -126,6 +126,8 @@ The entire argument of this book is contained in that one question.
 | License | Equivalent to open source | K3’s formal license text remains unconfirmed |
 | Outcome | Democratization of intelligence | Reconcentration of intelligence |
 
+*This table reflects observations as of July 18, 2026. The weights were released on July 27, and the license text (Kimi K3 License) was disclosed at the same time. The execution requirements have not changed. See the addenda to Chapters 3 and 4.*
+
 ## Who This Book Is For—and Its Map
 
 This book is written for three groups.
@@ -254,7 +256,7 @@ In the first half of 2026, open-weight models claiming frontier-class performanc
 
 Then Kimi K3 moved to the front of the line with 2.8 trillion parameters.<br/>
 Its architecture is Stable LatentMoE—an extremely sparse design in which only 16 of 896 experts are active.<br/>
-Out of 2.8 trillion total parameters, only 32B are active: just 1.8%.<br/>
+Out of 2.8 trillion total parameters, only 104B are active: roughly 3.7%.<br/>
 The design uses sparsity to combine vast knowledge capacity with efficient inference.
 
 What about open weights from the United States?<br/>
@@ -292,7 +294,7 @@ The next chapter asks that question.
    <https://www.aisi.gov.uk/frontier-ai-trends-report>
 4. Stanford HAI, “Technical Performance | The 2025 AI Index Report” (Chatbot Arena gap: 8.04% in January 2024 → 1.70% in February 2025)
    <https://hai.stanford.edu/ai-index/2025-ai-index-report/technical-performance>
-5. Moonshot AI, “Kimi K3 Tech Blog” (2.8T total parameters / 32B active / Stable LatentMoE with 16 of 896 experts active / Kimi Delta Attention / one-million-token context)
+5. Moonshot AI, “Kimi K3 Tech Blog” (2.8T total parameters / 104B active / Stable LatentMoE with 16 of 896 experts active / Kimi Delta Attention / one-million-token context)
    <https://www.kimi.com/blog/kimi-k3>
 6. DeepSeek, “DeepSeek-V4-Pro” (1.6T / 49B active / one-million-token context)
    <https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro>
@@ -341,7 +343,7 @@ Only four points can be confirmed through **[Independent Primary]** sources:
 
 Nearly everything else remains **[Interested Party]** reporting:
 
-* 2.8 trillion parameters, 32B active, 16 of 896 experts active, Kimi Delta Attention
+* 2.8 trillion parameters, 104B active, 16 of 896 experts active, Kimi Delta Attention
 * The claim that K3 outperformed Opus 4.8 and GPT-5.6 Sol on GPU-kernel optimization benchmarks
 * The deployment recommendation of at least 64 accelerators
 * The scheduled release of all weights on July 27
@@ -470,11 +472,20 @@ the required configuration varies depending on how all MoE experts are stored an
 But one fact does not change.<br/>
 **This is not the kind of model that runs on a single consumer GPU.**
 
+Then, on July 27, 2026, the weights were in fact released.<br/>
+The distribution format was MXFP4—the very quantization Moonshot had baked in from the training stage.<br/>
+The reported file size was **1.56 TB**.
+
+MXFP4 costs roughly 4.25 bits per parameter once block scales are included,<br/>
+which puts 2.8 trillion parameters at about 1.49 TB. Allowing for embeddings and the vision encoder<br/>
+retained at higher precision, the measured 1.56 TB is arithmetically consistent.<br/>
+**It landed just above the ~1.4 TB this chapter had estimated for INT4.**
+
 ## Sparsity Does Not Reduce the Storage Requirement
 
 One misconception must be resolved here.<br/>
 K3 activates only 16 of its 896 experts.<br/>
-Its active parameter count is 32B—just 1.8% of the total.<br/>
+Its active parameter count is 104B—roughly 3.7% of the total.<br/>
 It is natural to think: “Doesn’t that make it lightweight?”
 
 But sparsity reduces **computation**, not the **memory footprint**.<br/>
@@ -537,6 +548,8 @@ Artificial Analysis’s cost-per-task comparison for July 2026 was as follows.
 | DeepSeek V4 Pro | **$0.04** | Open weight |
 | Llama 4 Maverick | **$0.03** | Open family |
 
+*The classification "open weights (planned)" reflects the state as of July 18, 2026. K3's weights were released on July 27.*
+
 K3 costs roughly one-third as much as Fable 5, but **23 times** as much as DeepSeek V4 Pro.<br/>
 “Open weight” does not mean “cheap.”<br/>
 **A frontier-class premium has emerged within open weights themselves.**
@@ -595,6 +608,46 @@ This is the first face of Privileged Open.
 The next chapter examines the second:<br/>
 even if the door opens, **no one yet knows the conditions under which they are allowed to enter**.
 
+## Addendum (July 28, 2026): The Door Opened
+
+This chapter was written on July 18, 2026.<br/>
+On July 27, Moonshot released the weights as promised.<br/>
+What follows records which of this chapter's predictions held, and which did not.
+
+### What held, 1: The size
+
+The distribution format was MXFP4. The reported file size was **1.56 TB**.<br/>
+Of the three arithmetic estimates this chapter offered—approximately 5.6 TB in BF16, 2.8 TB in INT8, and 1.4 TB in INT4—<br/>
+**the measured value landed just above the INT4 figure.**<br/>
+The fact that quantization had been built in from the training stage shows up directly in the distribution size.
+
+### What held, 2: The number 64
+
+Moonshot's recommended configuration did not change after the weights were released.<br/>
+A supernode of 64 or more high-bandwidth interconnected accelerators.<br/>
+**The weights were distributed, and the requirement to run them did not fall by a single bit.**
+
+### What held, 3: Release date and arrival date are different dates
+
+The download count displayed on the official Hugging Face model page is **2,850**.<br/>
+That is the figure for the largest open-weight model in the world, immediately after release.<br/>
+**The door opened. Fewer than three thousand passes have been recorded.**
+
+### What was not predicted
+
+After the release, discrepancies appeared across the reporting.<br/>
+One technical outlet reported the download size as "approximately 594 GB" and the minimum configuration as "8× H100 80GB."<br/>
+But 594 GB corresponds to roughly 1.7 bits per parameter, which is impossible under MXFP4.<br/>
+And eight H100s total 640 GB of memory—**1.56 TB of weights will not fit at all.**
+
+This is not anyone's negligence.<br/>
+**Those who lack the hardware to run a model also lack the means to judge whether it runs.**<br/>
+This chapter argued that release date and arrival date are different dates.<br/>
+What the release revealed was a fact one step earlier than that.<br/>
+**Those who cannot arrive misreport the very possibility of arrival.**
+
+*The download count is the value displayed on the official Hugging Face page (Downloads last month), retrieved the day after the weights were released. The aggregation window should be interpreted with care.*
+
 ### References
 
 1. Moonshot AI, “Kimi K3 Tech Blog: Open Frontier Intelligence” (supernode with 64+ accelerators recommended / MXFP4 weights and MXFP8 activations / Stable LatentMoE with 16 of 896 experts active / API prices of $3 and $15, cached input $0.30)
@@ -607,8 +660,12 @@ even if the door opens, **no one yet knows the conditions under which they are a
    <https://github.com/Leading-AI-IO/edge-ai-intelligence>
 5. MarkTechPost, “Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context” (July 16, 2026)
    <https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/>
+6. Moonshot AI, “moonshotai/Kimi-K3,” official Hugging Face model card (2.8T total parameters / 104B activated / 16 of 896 experts / 1,048,576-token context / MXFP4 weights and MXFP8 activations / recommended engines vLLM, SGLang, TokenSpeed / 2,850 downloads)
+   <https://huggingface.co/moonshotai/Kimi-K3>
+7. Katsumi Takemoto, “Kimi K3 open-weight release rivals Fable 5: 1.56 TB in MXFP4 format,” PC Watch (July 28, 2026; MXFP4 at 1.56 TB / supernode of 64+ accelerators recommended / Kimi K3 License)
+   <https://pc.watch.impress.co.jp/docs/news/2128308.html>
 
-*The weight-size figures—approximately 5.6 TB in BF16, 2.8 TB in INT8, and 1.4 TB in INT4—are arithmetic estimates based on Moonshot’s reported total of 2.8 trillion parameters, not figures officially disclosed by Moonshot.*
+*The weight-size figures—approximately 5.6 TB in BF16, 2.8 TB in INT8, and 1.4 TB in INT4—are arithmetic estimates based on Moonshot’s reported total of 2.8 trillion parameters, not figures officially disclosed by Moonshot. The actual distribution format on July 27, 2026 was MXFP4, with a reported file size of 1.56 TB (PC Watch, July 28, 2026).*
 
 <br/>
 
@@ -700,6 +757,8 @@ graph LR
     style G fill:#8FB8CC,stroke:#BFD9E6,color:#0A0D10
 ```
 
+*In the diagram above, "release planned (7/27)" and "license text unverified" reflect the state as of July 18, 2026. Both were resolved on July 27. See the addendum at the end of this chapter.*
+
 ## Within Six Days, the Factual Foundation Will Be Rewritten
 
 From July 18, 2026—the date this book was written—three events were scheduled within a span of only six days.
@@ -732,6 +791,49 @@ The next chapter changes perspective.<br/>
 Suppose everything is provided: the weights are distributed, the conditions are clear, and someone can run the model.<br/>
 Then **what do AI labs sell in order to survive?**
 
+## Addendum (July 28, 2026): The Text Existed
+
+This chapter is titled "Release Without a License."<br/>
+As of July 18, 2026, K3's formal license text could not be found.<br/>
+On July 27, the text was published. **The title of this chapter no longer holds.**
+
+### What held, 1: The threshold clauses were there
+
+This chapter predicted that "if the license contains threshold clauses, the larger the commercial use, the more conditions attach."<br/>
+The published text contains two thresholds.
+
+* For businesses offering the model as **Model as a Service**, where total revenue including affiliates exceeds **$20 million** over twelve consecutive months, a separate agreement with Moonshot AI is required before commercial use
+* For commercial products or services exceeding **100 million** monthly active users, or **$20 million** in monthly revenue, the UI must display "Kimi K3" prominently
+
+**These are the same levels as the K2 family (100M MAU / $20M monthly revenue).**<br/>
+The text was new; the thresholds did not move.
+
+### What held, 2: It was not Modified MIT
+
+This chapter wrote: "Some specialist outlets report that K3 carries the same Modified MIT license. But that is an inference from precedent, not a verification of the text."
+
+The name of the published license is **Kimi K3 License**.<br/>
+The official Hugging Face model card states that both the code repository and the model weights are released under it.<br/>
+**It is not Modified MIT.**<br/>
+The construction resembles MIT, but the name and the conditions are different.
+
+The inference from precedent did not hold.<br/>
+**This chapter's decision to write "the precedent exists, but the text does not" and refuse the inference proved correct.**
+
+### What remained
+
+This chapter argued that openness is not a declaration or an intention but a state,<br/>
+and that openness as a state requires four things: distributed weights, the resources to execute them,<br/>
+the conditions under which they may be used, and the materials required to reproduce them.
+
+On July 27, **two** of the four arrived.<br/>
+The weights were distributed. The conditions were stated.<br/>
+But **the resources required remain 64 accelerators**,<br/>
+and **the training data and training code are still not public.**
+
+No one has locked the door. The conditions are posted on it.<br/>
+Even so, those who can enter remain few.
+
 ### References
 
 1. Vals AI, “Kimi K3” (**License type: Proprietary — contact us to get access**)
@@ -748,6 +850,10 @@ Then **what do AI labs sell in order to survive?**
    <https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/>
 7. European Commission, “Guidelines for providers of general-purpose AI models” (GPAI obligations applied from August 2, 2025; **enforcement authority takes effect August 2, 2026**)
    <https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers>
+8. Moonshot AI, “moonshotai/Kimi-K3,” official Hugging Face model card (**Both the code repository and the model weights are released under the Kimi K3 License**)
+   <https://huggingface.co/moonshotai/Kimi-K3>
+9. Katsumi Takemoto, “Kimi K3 open-weight release rivals Fable 5: 1.56 TB in MXFP4 format,” PC Watch (July 28, 2026; Kimi K3 License rather than Modified MIT / separate agreement required for Model as a Service businesses exceeding $20M over twelve consecutive months / UI attribution required above 100M MAU or $20M monthly revenue)
+   <https://pc.watch.impress.co.jp/docs/news/2128308.html>
 
 *As of the research cutoff for this book (July 18, 2026), K3’s formal license text, redistribution conditions, military-use restrictions, and disclosure obligations for modified versions could not be confirmed. Reports describing the license as Modified MIT existed, but the only text verified was that of the K2 family.*
 
@@ -1547,6 +1653,12 @@ Six days later, three events were scheduled.
 * **August 2**: Enforcement authority for the EU AI Act’s GPAI obligations takes effect
 
 **Within those six days, half of this book’s factual foundation will be updated.**
+
+> **Addendum (July 28, 2026)**<br/>
+> On July 27, the weights were released as promised. The license was disclosed at the same time, under the name "Kimi K3 License."<br/>
+> The distribution format was MXFP4, with a reported file size of 1.56 TB. The recommendation of 64 accelerators has not changed.<br/>
+> Details are recorded in the addenda to Chapters 3 and 4.<br/>
+> August 1 (EO 14409) and August 2 (EU AI Act) had not yet arrived at the time of this addendum.
 
 But one thing will not change:<br/>
 **the discipline of continuing to ask, “Who measured it?”**
