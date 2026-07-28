@@ -33,6 +33,8 @@
 
 On July 17, 2026, China's Moonshot AI announced Kimi K3, a 2.8-trillion-parameter model. Independent evaluations placed it close to the world's frontier models, and it ranked first in frontend coding. The market interpreted the announcement as the moment open weights reached the frontier. Yet at the time of the announcement, the weights had not been released.
 
+**This book was written during those ten days before release.** The weights were published as promised on July 27, 2026, in MXFP4 format (1.56 TB), and the license (Kimi K3 License) was disclosed at the same time. All three of the book's predictions held: the weight size, the persistence of the 64-accelerator requirement, and the presence of threshold clauses. The retrospective verification is recorded in the addenda to Chapters 3 and 4.
+
 This book is not about a simple contest between open and closed models. Even when the weights are published, only a limited set of actors can store 2.8 trillion parameters, run them across 64 or more accelerators, independently evaluate the model, and deploy it commercially. **It is published, yet inaccessible.** This book names that condition **“Privileged Open.”**
 
 Drawing on primary sources and independent data, the book examines the capability gap between open-weight and closed models; the boundary between self-reported benchmarks and independent measurement; the physical, institutional, evidentiary, and regulatory barriers surrounding frontier-scale models; the revenue structure of AI labs; the unverified allegations surrounding distillation; AI policy in the United States, China, and Europe; and the developer ecosystem shifting toward Chinese open models.
