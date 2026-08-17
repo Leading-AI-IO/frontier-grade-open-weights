@@ -648,6 +648,54 @@ What the release revealed was a fact one step earlier than that.<br/>
 
 *The download count is the value displayed on the official Hugging Face page (Downloads last month), retrieved the day after the weights were released. The aggregation window should be interpreted with care.*
 
+
+## Addendum 2 (August 17, 2026): The Height of the Wall Is Not Proportional to Scale
+
+This chapter argued the physical barrier on the premise of a single figure: 2.8 trillion parameters.<br/>
+On August 14, 2026, data emerged that counts against that premise.
+
+### Equivalent Performance at One-Quarter the Scale
+
+Z.ai announced GLM-5.3.<br/>
+Its official developer documentation positions the model this way:<br/>
+**its programming and agent capabilities are on par with Claude Fable 5.**
+
+The base model is identical to GLM-5.2. Z.ai states explicitly that every improvement comes from post-training.<br/>
+GLM-5.2 is roughly 744B—**about one-quarter of Kimi K3's 2.8 trillion parameters.**
+
+This chapter described the number 64 as close to a minimum requirement.<br/>
+That judgment stands. Moonshot's recommended configuration has not moved since the weights were published.<br/>
+But the premise this chapter left implicit—**that frontier-grade performance requires frontier-grade mass**—<br/>
+now requires a qualification.
+
+### Where Did the Physical Barrier Go?
+
+That said, GLM-5.3's runtime requirements cannot currently be verified.<br/>
+**The weights have not been published.**
+
+As of August 17, 2026, Z.ai's official developer documentation lists the API as "coming soon,"<br/>
+and the path to Hugging Face still reads "Coming Soon."<br/>
+Neither checkpoint sizes by quantization format nor a minimum GPU configuration exists officially.
+
+What can be said about GLM-5.3 today is therefore limited to two things:<br/>
+**the scale is smaller, and the performance is self-reported as high.**<br/>
+Whether the physical barrier has come down, **no one can yet measure.**
+
+This chapter carries forward a discipline from Chapter 2.<br/>
+A self-reported benchmark is not an independent measurement.<br/>
+Every GLM-5.3 score was produced on Z.ai's own harness.
+
+### Modality: The Variable That Went Unnoticed
+
+The official documentation records GLM-5.3's input and output modalities as **Text / Text**.<br/>
+Kimi K3, by contrast, is listed on its official model card as **Text, Image**—natively multimodal.
+
+Under the same phrase "frontier-grade," the kinds of information the models can handle differ.<br/>
+A comparison of scale does not capture that difference.<br/>
+**What drew level at one-quarter the size did so along a single axis: text.**
+
+*Z.ai has not published a parameter count specific to GLM-5.3. The only official statement is that it uses the same base model as GLM-5.2. Figures such as 743B, 744B, roughly 750B, and 753B are in circulation, but each derives from a different source within the GLM-5 family. The figure of roughly 744B used in this addendum is the published value for GLM-5.2.*
+
 ### References
 
 1. Moonshot AI, “Kimi K3 Tech Blog: Open Frontier Intelligence” (supernode with 64+ accelerators recommended / MXFP4 weights and MXFP8 activations / Stable LatentMoE with 16 of 896 experts active / API prices of $3 and $15, cached input $0.30)
@@ -664,6 +712,12 @@ What the release revealed was a fact one step earlier than that.<br/>
    <https://huggingface.co/moonshotai/Kimi-K3>
 7. Katsumi Takemoto, “Kimi K3 open-weight release rivals Fable 5: 1.56 TB in MXFP4 format,” PC Watch (July 28, 2026; MXFP4 at 1.56 TB / supernode of 64+ accelerators recommended / Kimi K3 License)
    <https://pc.watch.impress.co.jp/docs/news/2128308.html>
+8. Z.AI DEVELOPER DOCUMENT, "GLM-5.3 - Overview" (same base model as GLM-5.2 / 1M context length / 128K maximum output tokens / Text and Text input-output modalities / API "coming soon" / CyberGym 84.5% / ExploitBench 24.4% to 54.4%)
+   <https://docs.z.ai/guides/llm/glm-5.3>
+9. Moonshot AI, "MoonshotAI/Kimi-K3," official GitHub repository (2.8T total parameters / 104B activated / 16 of 896 experts / 93 layers / Text, Image modality / MXFP4 weights and MXFP8 activations)
+   <https://github.com/MoonshotAI/Kimi-K3>
+10. Nathan Lambert (Interconnects), "GLM-5.3: How Chinese labs keep stride with the frontier" (August 14, 2026; at roughly 750B it sits at the frontier of agentic coding benchmarks / RL environments cannot simply be distilled)
+   <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
 
 *The weight-size figures—approximately 5.6 TB in BF16, 2.8 TB in INT8, and 1.4 TB in INT4—are arithmetic estimates based on Moonshot’s reported total of 2.8 trillion parameters, not figures officially disclosed by Moonshot. The actual distribution format on July 27, 2026 was MXFP4, with a reported file size of 1.56 TB (PC Watch, July 28, 2026).*
 
@@ -834,6 +888,68 @@ and **the training data and training code are still not public.**
 No one has locked the door. The conditions are posted on it.<br/>
 Even so, those who can enter remain few.
 
+
+## Addendum 2 (August 17, 2026): Binding by Time, Without Issuing a Text
+
+This chapter was titled "Release Without a License."<br/>
+On July 27, Kimi K3's license text was published, and the title no longer held.<br/>
+Three weeks later, **a case emerged in which the title holds again—in a different sense.**
+
+### What Was Released Was Not a Model but a Schedule
+
+On August 14, 2026, Z.ai announced GLM-5.3.<br/>
+From that day it was available to every GLM Coding Plan user.<br/>
+But **the weights have not been published, and no license text exists.**
+
+What Z.ai names as the condition for release is neither a text nor a date.<br/>
+It is **the completion of safety evaluation and hardening.**
+
+The previous generation, GLM-5.2, was published under the MIT License, with no threshold clauses.<br/>
+But **Z.ai has never stated that GLM-5.3 will carry the same license.**<br/>
+A sentence this chapter wrote in July applies again, unchanged:<br/>
+**there is precedent, but there is no text.**
+
+### The Reason Changed
+
+Kimi K3's period of non-release lasted ten days. No reason was given.<br/>
+GLM-5.3 is different. Z.ai has stated its reason explicitly.
+
+The official documentation records that GLM-5.3 scores 84.5% on CyberGym<br/>
+and that its ExploitBench score more than doubled, from 24.4% to 54.4%.<br/>
+The company has stated that it chose a staged release because of **dual-use risk**.<br/>
+Selected security partners evaluate the model first in controlled settings;<br/>
+broader API access and the weights follow.
+
+**This is a different form from the textual restriction this chapter examined.**<br/>
+Kimi K3 published first, then bound users through its license text.<br/>
+GLM-5.3 partitions the release itself by time, before any text is issued.
+
+A threshold clause binds only large commercial users.<br/>
+Staging the release date **makes every user wait equally.**
+
+### The Second Form of Privileged Open
+
+This chapter wrote that openness is neither a declaration nor an intention, but a state.<br/>
+Four things are required for openness as a state: distributed weights, the resources to run them,<br/>
+the conditions under which they may be used, and the materials to reproduce them.
+
+For GLM-5.3, as of August 17, 2026, the number of these that are in place is **zero.**<br/>
+The weights are unpublished. The runtime requirements are unknown. The conditions are undisclosed.<br/>
+Neither training data nor training code is public.<br/>
+What is available is access through a paid plan.
+
+Kimi K3 was in a state of "published, yet unreachable."<br/>
+GLM-5.3 is in a state of "announced as forthcoming, but not yet published."<br/>
+**The same word denotes two different states.**
+
+And Z.ai's stated reason connects to the argument of Chapter 7.<br/>
+Withholding a release on grounds of safety is a form of review.<br/>
+What differs is that the party conducting it is not a regulator but **the entity that built the model.**
+
+*As of August 17, 2026, neither a license name nor license text has been published for GLM-5.3. Z.ai's official developer documentation contains no statement regarding the license. Some third-party sites present descriptions that presuppose an MIT License, but each is an inference from precedent within the GLM-5 family rather than a verification of GLM-5.3's text.*
+
+*Regarding the timing of the weight release, descriptions stating "approximately two weeks after launch" circulate across multiple outlets and are attributed to the text of Z.ai's official blog post. At the time of writing this addendum, the official blog text could not be retrieved directly, and this point is therefore treated as reported information.*
+
 ### References
 
 1. Vals AI, “Kimi K3” (**License type: Proprietary — contact us to get access**)
@@ -854,6 +970,12 @@ Even so, those who can enter remain few.
    <https://huggingface.co/moonshotai/Kimi-K3>
 9. Katsumi Takemoto, “Kimi K3 open-weight release rivals Fable 5: 1.56 TB in MXFP4 format,” PC Watch (July 28, 2026; Kimi K3 License rather than Modified MIT / separate agreement required for Model as a Service businesses exceeding $20M over twelve consecutive months / UI attribution required above 100M MAU or $20M monthly revenue)
    <https://pc.watch.impress.co.jp/docs/news/2128308.html>
+10. Z.AI DEVELOPER DOCUMENT, "GLM-5.3 - Overview" (API "coming soon" / CyberGym 84.5% / ExploitBench 24.4% to 54.4% / no statement regarding license)
+   <https://docs.z.ai/guides/llm/glm-5.3>
+11. Z.ai, "GLM-5.2," official Hugging Face model card (MIT License / no threshold clauses)
+   <https://huggingface.co/zai-org/GLM-5.2>
+12. Nathan Lambert (Interconnects), "GLM-5.3: How Chinese labs keep stride with the frontier" (August 14, 2026; quotes Z.ai's statement on the staged release)
+   <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
 
 *As of the research cutoff for this book (July 18, 2026), K3’s formal license text, redistribution conditions, military-use restrictions, and disclosure obligations for modified versions could not be confirmed. Reports describing the license as Modified MIT existed, but the only text verified was that of the K2 family.*
 
