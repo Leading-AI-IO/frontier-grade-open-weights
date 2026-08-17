@@ -655,24 +655,6 @@ Hugging Faceの公式モデルページが表示しているダウンロード�
 
 ※ダウンロード数はHugging Face公式ページの表示値（Downloads last month）であり、重み公開の翌日に取得したものである。集計期間の解釈には注意を要する。
 
-### 参考文献
-
-1. Moonshot AI「Kimi K3 Tech Blog: Open Frontier Intelligence」（64アクセラレータ以上のスーパーノード推奨／MXFP4ウェイト・MXFP8アクティベーション／Stable LatentMoE 896エキスパート中16アクティブ／API $3・$15、キャッシュヒット時入力$0.30）
-   <https://www.kimi.com/blog/kimi-k3>
-2. Artificial Analysis「gpt-oss-120b – Intelligence, Performance & Price Analysis」（cost-per-task比較：Fable 5 $2.75／GPT-5.6 Sol $1.04／Kimi K3 $0.94／GLM-5.2 $0.47／DeepSeek V4 Pro $0.04／Llama 4 Maverick $0.03）
-   <https://artificialanalysis.ai/models/gpt-oss-120b>
-3. Nathan Lambert & Florian Brand（Interconnects）「Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC speech, distillation, the open-closed gap, and what's next」（2026年7月22日・重みのロードだけでB300ノード1台／ファインチューニング可能化に相当な工数／Kimi APIは需要過多で機能不全）
-   <https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3>
-4. Satoshi Yamauchi「The Edge of Intelligence — AIがあなたのデバイスで動く時代」（Leading.AI・CC BY 4.0）
-   <https://github.com/Leading-AI-IO/edge-ai-intelligence>
-5. MarkTechPost「Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context」（2026年7月16日）
-   <https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/>
-6. Moonshot AI「moonshotai/Kimi-K3」Hugging Face 公式モデルカード（総パラメータ2.8T／アクティブ104B／896エキスパート中16／コンテキスト1,048,576トークン／MXFP4ウェイト・MXFP8アクティベーション／推奨エンジン vLLM・SGLang・TokenSpeed／ダウンロード数2,850）
-   <https://huggingface.co/moonshotai/Kimi-K3>
-7. 竹元かつみ「Fable 5に迫る『Kimi K3』オープンウェイト版が公開。MXFP4形式で1.56TB」PC Watch（2026年7月28日・MXFP4形式1.56TB／64基以上のアクセラレータによるスーパーノード推奨／Kimi K3 License）
-   <https://pc.watch.impress.co.jp/docs/news/2128308.html>
-
-※重みサイズ（BF16 約5.6TB／INT8 約2.8TB／INT4 約1.4TB）は、Moonshotが公表した総パラメータ数2.8兆からの算術推計であり、公式が開示した数値ではない。2026年7月27日の実配布形式はMXFP4で、報じられたファイルサイズは1.56TBである（PC Watch、2026年7月28日）。
 
 ## 追記2（2026年8月17日）: 壁の高さは、規模に比例しない
 
@@ -718,16 +700,32 @@ GLM-5.3のスコアは、すべてZ.ai自身のハーネスで測られたもの
 規模の比較は、この差を含まない。<br/>
 **4分の1で並んだのは、テキストという一つの軸の上でのことである。**
 
+※GLM-5.3のパラメータ数について、Z.ai公式はGLM-5.3固有の数値を公表していない。公式が述べているのは「GLM-5.2と同一のベースモデル」であることのみである。「743B」「744B」「約750B」「753B」という数字が流通しているが、いずれもGLM-5系列の別ソースに由来する。本追記が用いた「約744B」はGLM-5.2の公表値である。
+
 ### 参考文献
 
-1. Z.AI DEVELOPER DOCUMENT「GLM-5.3 - Overview」（同一ベースモデル／コンテキスト長1M／最大出力128K／入出力モダリティText・Text／API "coming soon"／CyberGym 84.5%／ExploitBench 24.4%→54.4%）
+1. Moonshot AI「Kimi K3 Tech Blog: Open Frontier Intelligence」（64アクセラレータ以上のスーパーノード推奨／MXFP4ウェイト・MXFP8アクティベーション／Stable LatentMoE 896エキスパート中16アクティブ／API $3・$15、キャッシュヒット時入力$0.30）
+   <https://www.kimi.com/blog/kimi-k3>
+2. Artificial Analysis「gpt-oss-120b – Intelligence, Performance & Price Analysis」（cost-per-task比較：Fable 5 $2.75／GPT-5.6 Sol $1.04／Kimi K3 $0.94／GLM-5.2 $0.47／DeepSeek V4 Pro $0.04／Llama 4 Maverick $0.03）
+   <https://artificialanalysis.ai/models/gpt-oss-120b>
+3. Nathan Lambert & Florian Brand（Interconnects）「Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC speech, distillation, the open-closed gap, and what's next」（2026年7月22日・重みのロードだけでB300ノード1台／ファインチューニング可能化に相当な工数／Kimi APIは需要過多で機能不全）
+   <https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3>
+4. Satoshi Yamauchi「The Edge of Intelligence — AIがあなたのデバイスで動く時代」（Leading.AI・CC BY 4.0）
+   <https://github.com/Leading-AI-IO/edge-ai-intelligence>
+5. MarkTechPost「Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context」（2026年7月16日）
+   <https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/>
+6. Moonshot AI「moonshotai/Kimi-K3」Hugging Face 公式モデルカード（総パラメータ2.8T／アクティブ104B／896エキスパート中16／コンテキスト1,048,576トークン／MXFP4ウェイト・MXFP8アクティベーション／推奨エンジン vLLM・SGLang・TokenSpeed／ダウンロード数2,850）
+   <https://huggingface.co/moonshotai/Kimi-K3>
+7. 竹元かつみ「Fable 5に迫る『Kimi K3』オープンウェイト版が公開。MXFP4形式で1.56TB」PC Watch（2026年7月28日・MXFP4形式1.56TB／64基以上のアクセラレータによるスーパーノード推奨／Kimi K3 License）
+   <https://pc.watch.impress.co.jp/docs/news/2128308.html>
+8. Z.AI DEVELOPER DOCUMENT「GLM-5.3 - Overview」（GLM-5.2と同一ベースモデル／コンテキスト長1M／最大出力128K／入出力モダリティText・Text／API "coming soon"／CyberGym 84.5%／ExploitBench 24.4%→54.4%）
    <https://docs.z.ai/guides/llm/glm-5.3>
-2. Moonshot AI「MoonshotAI/Kimi-K3」GitHub 公式リポジトリ（総パラメータ2.8T／アクティブ104B／896エキスパート中16／レイヤー93／モダリティ Text, Image／MXFP4ウェイト・MXFP8アクティベーション）
+9. Moonshot AI「MoonshotAI/Kimi-K3」GitHub 公式リポジトリ（総パラメータ2.8T／アクティブ104B／896エキスパート中16／レイヤー93／モダリティ Text, Image／MXFP4ウェイト・MXFP8アクティベーション）
    <https://github.com/MoonshotAI/Kimi-K3>
-3. Nathan Lambert（Interconnects）「GLM-5.3: How Chinese labs keep stride with the frontier」（2026年8月14日・約750Bでエージェンティック・コーディングのフロンティアに位置／RL環境は蒸留できないという指摘）
+10. Nathan Lambert（Interconnects）「GLM-5.3: How Chinese labs keep stride with the frontier」（2026年8月14日・約750Bでエージェンティック・コーディングのフロンティアに位置／RL環境は蒸留できないという指摘）
    <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
 
-※GLM-5.3のパラメータ数について、Z.ai公式はGLM-5.3固有の数値を公表していない。公式が述べているのは「GLM-5.2と同一のベースモデル」であることのみである。「743B」「744B」「約750B」「753B」という数字が流通しているが、いずれもGLM-5系列の別ソースに由来する。本追記が用いた「約744B」はGLM-5.2の公表値である。
+※重みサイズ（BF16 約5.6TB／INT8 約2.8TB／INT4 約1.4TB）は、Moonshotが公表した総パラメータ数2.8兆からの算術推計であり、公式が開示した数値ではない。2026年7月27日の実配布形式はMXFP4で、報じられたファイルサイズは1.56TBである（PC Watch、2026年7月28日）。
 
 <br/>
 
@@ -895,28 +893,6 @@ Hugging Faceの公式モデルカードは、コードリポジトリと重み�
 誰も鍵をかけていない。条件も貼り出された。<br/>
 それでも、入れる者は限られている。
 
-### 参考文献
-
-1. Vals AI「Kimi K3」（**License type: Proprietary — contact us to get access**）
-   <https://www.vals.ai/models/kimi_kimi-k3>
-2. Artificial Analysis「Kimi K3」（**weights not publicly available**）
-   <https://artificialanalysis.ai/models/kimi-k3>
-3. Moonshot AI「Kimi-K2 LICENSE」（Modified MIT／MAU 1億人超または月商2,000万ドル超で帰属表示義務）
-   <https://github.com/moonshotai/Kimi-K2/blob/main/LICENSE>
-4. OpenAI「Introducing gpt-oss」（Apache 2.0）
-   <https://openai.com/index/introducing-gpt-oss/>
-5. Artificial Analysis「Llama 4 Maverick」（Llama 4 Community License／Index 14）
-   <https://artificialanalysis.ai/models/llama-4-maverick>
-6. The White House「Promoting Advanced Artificial Intelligence Innovation and Security」（2026年6月2日・発効後60日＝2026年8月1日前後に基準策定）
-   <https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/>
-7. European Commission「Guidelines for providers of general-purpose AI models」（GPAI義務は2025年8月2日適用開始／**2026年8月2日から執行権限が発効**）
-   <https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers>
-8. Moonshot AI「moonshotai/Kimi-K3」Hugging Face 公式モデルカード（**Both the code repository and the model weights are released under the Kimi K3 License**）
-   <https://huggingface.co/moonshotai/Kimi-K3>
-9. 竹元かつみ「Fable 5に迫る『Kimi K3』オープンウェイト版が公開。MXFP4形式で1.56TB」PC Watch（2026年7月28日・Modified MITではなくKimi K3 License／Model as a Service事業で連続12ヶ月総収入2,000万ドル超は個別契約／MAU1億超または月商2,000万ドル超はUI表示義務）
-   <https://pc.watch.impress.co.jp/docs/news/2128308.html>
-
-※K3の正式ライセンス全文・再配布条件・軍事利用制限・修正版公開義務は、本書の調査時点（2026年7月18日）では確認できなかった。「Modified MIT」とする報道は存在するが、確認できたのはK2系の条文のみである。
 
 ## 追記2（2026年8月17日）: 条文を出さずに、時間で縛る
 
@@ -949,7 +925,7 @@ ExploitBenchのスコアが24.4%から54.4%へ倍増したと記載する。<br/
 選定されたセキュリティパートナーが管理された環境で先行評価し、<br/>
 その後にAPIとウェイトが続く、という順序である。
 
-**これは第4章が扱った「条文による制限」とは、別の形態である。**<br/>
+**これは本章が扱った「条文による制限」とは、別の形態である。**<br/>
 Kimi K3は、公開したうえで条文で縛った。<br/>
 GLM-5.3は、条文を出す前に、公開そのものを時間で区切っている。
 
@@ -973,18 +949,38 @@ GLM-5.3は「公開されると告げられているが、まだ公開されて�
 安全性を理由に公開を遅らせる判断は、審査の一形態である。<br/>
 違うのは、それを行っているのが規制当局ではなく、**モデルを作った当事者自身**だという点だ。
 
-### 参考文献
-
-1. Z.AI DEVELOPER DOCUMENT「GLM-5.3 - Overview」（API "coming soon"／CyberGym 84.5%／ExploitBench 24.4%→54.4%／ライセンスに関する記述なし）
-   <https://docs.z.ai/guides/llm/glm-5.3>
-2. Z.ai「GLM-5.2」Hugging Face 公式モデルカード（MIT License／閾値条項なし）
-   <https://huggingface.co/zai-org/GLM-5.2>
-3. Nathan Lambert（Interconnects）「GLM-5.3: How Chinese labs keep stride with the frontier」（2026年8月14日・段階的リリースに関するZ.ai声明の引用）
-   <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
-
 ※GLM-5.3のライセンス名・条文は、2026年8月17日時点で公表されていない。Z.ai公式の開発者ドキュメントにもライセンスに関する記述は存在しない。一部の第三者サイトがMITライセンスを前提とした記述を掲載しているが、いずれもGLM-5系列の前例からの推定であり、GLM-5.3の条文確認ではない。
 
 ※ウェイト公開時期について「ローンチから約2週間後」とする記述が複数の媒体で流通しており、Z.ai公式ブログ本文に該当文言があるとされる。本追記の執筆時点で公式ブログ本文の直接取得はできておらず、この一点は報道ベースの情報として扱う。
+
+### 参考文献
+
+1. Vals AI「Kimi K3」（**License type: Proprietary — contact us to get access**）
+   <https://www.vals.ai/models/kimi_kimi-k3>
+2. Artificial Analysis「Kimi K3」（**weights not publicly available**）
+   <https://artificialanalysis.ai/models/kimi-k3>
+3. Moonshot AI「Kimi-K2 LICENSE」（Modified MIT／MAU 1億人超または月商2,000万ドル超で帰属表示義務）
+   <https://github.com/moonshotai/Kimi-K2/blob/main/LICENSE>
+4. OpenAI「Introducing gpt-oss」（Apache 2.0）
+   <https://openai.com/index/introducing-gpt-oss/>
+5. Artificial Analysis「Llama 4 Maverick」（Llama 4 Community License／Index 14）
+   <https://artificialanalysis.ai/models/llama-4-maverick>
+6. The White House「Promoting Advanced Artificial Intelligence Innovation and Security」（2026年6月2日・発効後60日＝2026年8月1日前後に基準策定）
+   <https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/>
+7. European Commission「Guidelines for providers of general-purpose AI models」（GPAI義務は2025年8月2日適用開始／**2026年8月2日から執行権限が発効**）
+   <https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers>
+8. Moonshot AI「moonshotai/Kimi-K3」Hugging Face 公式モデルカード（**Both the code repository and the model weights are released under the Kimi K3 License**）
+   <https://huggingface.co/moonshotai/Kimi-K3>
+9. 竹元かつみ「Fable 5に迫る『Kimi K3』オープンウェイト版が公開。MXFP4形式で1.56TB」PC Watch（2026年7月28日・Modified MITではなくKimi K3 License／Model as a Service事業で連続12ヶ月総収入2,000万ドル超は個別契約／MAU1億超または月商2,000万ドル超はUI表示義務）
+   <https://pc.watch.impress.co.jp/docs/news/2128308.html>
+10. Z.AI DEVELOPER DOCUMENT「GLM-5.3 - Overview」（API "coming soon"／CyberGym 84.5%／ExploitBench 24.4%→54.4%／ライセンスに関する記述なし）
+   <https://docs.z.ai/guides/llm/glm-5.3>
+11. Z.ai「GLM-5.2」Hugging Face 公式モデルカード（MIT License／閾値条項なし）
+   <https://huggingface.co/zai-org/GLM-5.2>
+12. Nathan Lambert（Interconnects）「GLM-5.3: How Chinese labs keep stride with the frontier」（2026年8月14日・段階的リリースに関するZ.ai声明の引用）
+   <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
+
+※K3の正式ライセンス全文・再配布条件・軍事利用制限・修正版公開義務は、本書の調査時点（2026年7月18日）では確認できなかった。「Modified MIT」とする報道は存在するが、確認できたのはK2系の条文のみである。
 
 <br/>
 
