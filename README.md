@@ -4,6 +4,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Language](https://img.shields.io/badge/Language-Japanese%20%7C%20English-blue)](docs/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--08--20-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
 
 <p align="left">
   <img src="./assets/ogp_design.png" width="80%">
@@ -46,6 +47,9 @@
 
 中心命題は一つである。**移動したのは、モデルの所有権ではない。希少性の在処である。** 賢さがコモディティ化するほど、企業固有の業務文脈、一次情報、運用能力、検証する判断力が希少になる。本書は、フロンティアが開かれながら、なお「オープン」にはなっていない世界で、何が価値を持ち、誰が勝つのかを問うOSS書籍である。
 
+> **追記（2026年8月17日）｜規模という前提に、留保がついた。**
+> 2026年8月14日、Z.aiがGLM-5.3を発表した。公式の開発者ドキュメントは、このモデルのプログラミングとエージェント能力を「Claude Fable 5と同等である」と位置づけている。ベースモデルはGLM-5.2と同一で、約744B——**Kimi K3の2.8兆パラメータの、およそ4分の1である。** 本書が暗黙に置いていた前提「フロンティア級の性能には、フロンティア級の質量が要る」は、ここで一度、留保が必要になった。ただし重みは公開されておらず、ライセンス条文も存在しない。物理の壁が下がったのかどうかは、まだ誰も測れない。さらにKimi K3が「公開したうえで条文で縛った」のに対し、GLM-5.3は「条文を出す前に、公開そのものを時間で区切っている」——**特権的なオープンの、第二形態**である。検証は第3章・第4章の追記2に記録している。
+
 ---
 
 ## 📄 ドキュメント
@@ -54,6 +58,21 @@
 | --- | --- | --- |
 | [frontier-grade-open-weights_JP.md](./docs/jp/frontier-grade-open-weights_JP.md) | 🇯🇵 日本語 | 本文（日本語版） |
 | [frontier-grade-open-weights_EN.md](./docs/en/frontier-grade-open-weights_EN.md) | 🇺🇸 English | 本文（英語版） |
+
+---
+
+## 🔄 更新履歴
+
+本書は**定点観測型**のOSS書籍である。対象が現在進行で動いているため、事実が動くたびに追記し、**以前の記述が当たったか外れたかを版として記録する。**
+
+| 版 | 日付 | 内容 |
+| --- | --- | --- |
+| [**v1.3**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.3) | 2026-08-20 | 依頼導線を削除 |
+| [**v1.2**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.2) | 2026-08-17 | GLM-5.3を追記（第3章・第4章） |
+| [**v1.1**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.1) | 2026-07-28 | 重み公開とライセンス条文の確定を追記（第3章・第4章） |
+| [**v1.0**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.0) | 2026-07-23 | 初版公開 |
+
+各版の詳細は [Releases](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases) を参照。
 
 ---
 
