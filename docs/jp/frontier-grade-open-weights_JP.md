@@ -1805,21 +1805,6 @@ GEOツールも、コンサルティング契約も、この結論には紐づ�
 そして、その二つが同時に真である世界で、希少なのは重みではない。<br/>
 **重みが持っていない、あなたの文脈である。**
 
-<br/>
-
----
-
-## 📩 お仕事のご依頼
-
-新規事業伴走 / AI戦略策定 / 講演・ワークショップ をお受けしています。<br/>
-30分の無料初回MTGからスタートできます。
-
-**山内怜史（Satoshi Yamauchi）**<br/>
-Business Designer & AI Strategist at Sun Asterisk / Founder & CEO at Leading.AI
-
-* [📒 note](https://note.com/satoshi_yamauchi)
-* [🌐 Leading.AI](https://www.leading-ai.io/)
-
 ---
 
 ## Related Projects
