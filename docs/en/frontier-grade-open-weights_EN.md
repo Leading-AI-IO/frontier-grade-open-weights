@@ -1801,19 +1801,6 @@ And in a world where both are true at once, the scarce resource is not the weigh
 
 ---
 
-## 📩 Work With Me
-
-I provide new-business development support, AI strategy consulting, and lectures and workshops.<br/>
-Engagements can begin with a free 30-minute introductory meeting.
-
-**Satoshi Yamauchi**<br/>
-Business Designer & AI Strategist at Sun Asterisk / Founder & CEO at Leading.AI
-
-* [📒 note](https://note.com/satoshi_yamauchi)
-* [🌐 Leading.AI](https://www.leading-ai.io/)
-
----
-
 ## Related Projects
 
 This book is part of the author’s open-source knowledge-repository ecosystem.
