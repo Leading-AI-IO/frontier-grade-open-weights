@@ -4,6 +4,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Language](https://img.shields.io/badge/Language-Japanese%20%7C%20English-blue)](docs/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--08--20-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
 
 <p align="left">
   <img src="./assets/ogp_design.png" width="80%">
@@ -41,6 +42,9 @@ Drawing on primary sources and independent data, the book examines the capabilit
 
 Its central thesis is simple: **what moved was not model ownership, but the location of scarcity.** As intelligence becomes commoditized, proprietary business context, first-hand information, operational capability, and the judgment required to verify claims become more valuable. This open-source book asks what remains scarce—and who wins—in a world where the frontier has opened without becoming truly “open.”
 
+**Addendum (August 17, 2026): The premise of scale now requires qualification.** 
+On August 14, 2026, Z.ai announced GLM-5.3. Official developer documentation positions the model's programming and agentic capabilities as "on par with Claude Fable 5." Its base model is identical to GLM-5.2, at roughly 744B parameters — **about one quarter of Kimi K3's 2.8 trillion.** The book's implicit premise, that frontier-grade performance requires frontier-grade mass, now requires qualification. Yet the weights remain unreleased and no license text exists, so whether the physical wall has lowered is something no one can yet measure. And where Kimi K3 released first and bound afterward by license text, GLM-5.3 partitions the release itself by time, before issuing any text — **the second form of Privileged Open.** The verification is recorded in Addendum 2 to Chapters 3 and 4.
+
 ---
 
 ## 📄 Document
@@ -49,6 +53,21 @@ Its central thesis is simple: **what moved was not model ownership, but the loca
 | --- | --- | --- |
 | [frontier-grade-open-weights_JP.md](./docs/jp/frontier-grade-open-weights_JP.md) | 🇯🇵 Japanese | Full text (Japanese edition) |
 | [frontier-grade-open-weights_EN.md](./docs/en/frontier-grade-open-weights_EN.md) | 🇺🇸 English | Full text (English edition) |
+
+---
+
+## 🔄 Update History
+
+This is a **continuously observed** open-source book. Because its subject is still in motion, each new fact is added as an addendum, and **each version records whether the earlier text held or failed.**
+
+| Version | Date | Contents |
+| --- | --- | --- |
+| [**v1.3**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.3) | 2026-08-20 | Removed solicitation section |
+| [**v1.2**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.2) | 2026-08-17 | Added GLM-5.3 (Chapters 3 and 4) |
+| [**v1.1**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.1) | 2026-07-28 | Added the weight release and license confirmation (Chapters 3 and 4) |
+| [**v1.0**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.0) | 2026-07-23 | Initial release |
+
+See [Releases](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases) for details on each version.
 
 ---
 
