@@ -7,7 +7,7 @@
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--08--20-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
 
 <p align="left">
-  <img src="./assets/ogp_design.png" width="80%">
+  <img src="./assets/ogp_design.png" width="90%">
 </p>
 
 *Read this in other languages: [English](README_en.md)*
@@ -117,6 +117,8 @@
 | **Will ai break the planet** | 数十兆円のインフラ投資と、地球温暖化の「不可逆ライン」。 | [GitHub](https://github.com/Leading-AI-IO/will-ai-break-the-planet)  |
 | **The-forward-deployed-shift** | 成果実装 ── FDEが示す、AIで「作る」が終わった世界の価値のありか。 | [GitHub](https://github.com/Leading-AI-IO/the-forward-deployed-shift)  |
 | **Earned-ai-model-optionality** | AIモデルは選べる。選べるのは、選べるようにした企業だけだ。 | [GitHub](https://github.com/Leading-AI-IO/earned-ai-model-optionality)  |
+| **Us-china-ai-competition** | 米中AI競争の多層構造 ── 決めているのは、強さではなく条件である。 | [GitHub](https://github.com/Leading-AI-IO/us-china-ai-competition)  |
+| **The China AI Registry** | あなたが名前を言える5つの中国AIモデルは、中国が数えているものの1%に満たない。 | [GitHub](https://github.com/Leading-AI-IO/the-china-ai-registry)  |
 
 ---
 
