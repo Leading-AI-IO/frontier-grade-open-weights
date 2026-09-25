@@ -42,6 +42,11 @@ K3はGPT-5.5・Claude Opus 4.8と**同等の水準**に着地した。<br/>
 別の独立機関Vals AIのVals Indexでは**74.70%（±0.96）**で、38モデル中**2位**。<br/>
 さらにArena.aiのFrontend Code Arena——人間がブラインドで優劣を選ぶ評価——では、**K3がClaude Fable 5を上回り首位**を取った。
 
+（2026年9月25日追記）<br/>
+上記の「57」「第4位」は、2026年7月18日時点でArtificial Analysisのモデルページに表示されていた値である。<br/>
+同社はその後Intelligence Indexを改定し、過去の公表値も新しい版で計算し直して表示するため、同じページは現在、Kimi K3（max）を**44**と表示している（詳細は第2章の追記に記した）。<br/>
+また、同社が7月17日に公開した記事は、Kimi K3の順位を「第3位」と表記している。本書が参照したページ表示の「第4位」との差は、当時の表示を確認できないため、解消できていない。
+
 ここで一点、正確を期す。<br/>
 「フェイブル5に迫る」「Opus 4.8とGPT-5.6 Solを大幅に上回る」という言葉のうち、<br/>
 **独立機関が測ったのは総合指数とアリーナ順位だけ**である。<br/>
@@ -176,6 +181,10 @@ Moonshotは公式ブログに、こう書いている。<br/>
 7. Epoch AI「Open models lag state-of-the-art closed models by 4 months」（2026年5月29日）
    <https://epoch.ai/data-insights/open-closed-eci-gap>
 
+（2026年9月25日追記）<br/>
+8. Artificial Analysis「Kimi K3 achieves #3 in the Artificial Analysis Intelligence Index, comparable to Opus 4.8 and GPT-5.5」（2026年7月17日・Intelligence Index 57／順位は「#3」と表記）
+   <https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5>
+
 <br/>
 
 ---
@@ -288,6 +297,18 @@ Epoch AIもAISIもスタンフォードHAIも、独立して測った機関で�
 
 次章では、その問いを立てる。
 
+## 追記（2026年9月25日）: 議会で語られた距離
+
+（2026年9月25日追記）<br/>
+2026年9月、Interconnectsの Nathan Lambert は、米議会の議員とスタッフに向けてオープンモデルの現状を説明し、その準備原稿を公開した。<br/>
+Lambertの推計では、中国のオープンウェイトモデルは米国のクローズドなフロンティアから**約2〜5ヶ月**遅れ、米国のオープンウェイトモデルは**約6〜9ヶ月**遅れている。<br/>
+差が最も小さいのはエージェント型のコーディングのように需要が明確な領域であり、物理学や生物学のような開かれた科学的課題では差が大きい、とも述べている。
+
+これは本章の命題——**距離は、数ヶ月という水準で安定した**——と整合する。<br/>
+ただし、これは研究者による推計であり、Epoch AIのような継続測定ではない。<br/>
+そしてこの推計は、もう一つの事実を浮かび上がらせる。<br/>
+**フロンティアに近いオープンウェイトは中国製であり、米国製のオープンウェイトは、そこからさらに数ヶ月遠い。**
+
 ### 参考文献
 
 1. Epoch AI「Open-weight models lag state-of-the-art by around 3 months on average」（2025年10月30日・2023年1月–2025年10月の平均3.5ヶ月／ECI差7ポイント）
@@ -312,6 +333,10 @@ Epoch AIもAISIもスタンフォードHAIも、独立して測った機関で�
     <https://openai.com/index/introducing-gpt-oss/>
 11. Artificial Analysis「Llama 4 Maverick」（402B・17Bアクティブ／Index 14）
     <https://artificialanalysis.ai/models/llama-4-maverick>
+
+（2026年9月25日追記）<br/>
+12. Nathan Lambert（Interconnects）「The current balance of power in open models」（2026年9月21日・米議会向け説明の準備原稿／中国製オープンウェイトとクローズドのフロンティアの差は約2〜5ヶ月、米国製オープンウェイトは約6〜9ヶ月）
+    <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
 
 <br/>
 
@@ -436,12 +461,45 @@ graph TD
 次章では、その誠実さを最も過酷な事実に向ける。<br/>
 仮に7月27日に重みが公開されたとして、あなたはそれを動かせるのか、という問いだ。
 
+## 追記（2026年9月25日）: 物差しが、書き換わった
+
+（2026年9月25日追記）<br/>
+本章で「Kimi K3のIntelligence Indexは57」と書いた。<br/>
+2026年9月現在、Artificial Analysisの同じページは、Kimi K3（max）を**44**と表示している。<br/>
+Kimi K3が弱くなったのではない。**物差しが書き換わった。**
+
+Artificial Analysisは、7月から9月にかけてIntelligence Indexを4回改定した。<br/>
+8月6日のv4.1.1で採点モデルを入れ替え、Kimi K3の値は57から60になった。<br/>
+9月4日のv4.2で実務型の評価（AA-Briefcase、GDP.pdf）を加え、飽和したGPQA Diamondを外した。<br/>
+9月7日のv4.3で、Terminal-Benchを2.1から4.0へ、τ³-BankingをAutomationBench-AAへ置き換えた。<br/>
+9月19日のv4.3.2を経た現在の表示が、44である。<br/>
+非公開の問題セットが指標に占める比重は、v4.1の20%から、v4.3では45%に上がった。
+
+改定で、上位のスコアもそろって下がった。<br/>
+v4.1で60だったFable 5はv4.3で50に、59だったGPT-5.6 Solは47になった。<br/>
+**57と44は、比較できない。比較できるのは、同じ版の中での差である。**<br/>
+v4.1では、Kimi K3とFable 5の差は3ポイントだった。v4.3系では6ポイントである。<br/>
+非公開の実務型タスクの比重が増えたとき、差は広がった。
+
+しかもArtificial Analysisは、改定のたびに過去の公表値も新しい版で計算し直して表示する。<br/>
+本書が7月に参照したページは、いま同じURLで44を示している。<br/>
+**表示されている数字は、測った日の数字ではなく、いまの物差しで測り直した数字である。**<br/>
+本書が引いたArtificial Analysisの値——Kimi K3の57、gpt-oss-120bの24、Llama 4 Maverickの14、cost-per-taskの比較——は、すべて2026年7月時点・v4.1の値である。AISIがこの指標を基準に算出したラグ（4ヶ月）も、その時点の版に基づく。
+
+本章の命題は、ここでも成り立つ。<br/>
+**同じ機関の同じ名前の指標でも、版が変われば別の数字になる。**<br/>
+数字を引くときは、誰が測ったかに加えて、いつ、どの版で測ったかを併記しなければならない。
+
 ### 参考文献
 
 1. Artificial Analysis「Kimi K3 – Intelligence, Performance & Price Analysis」（Intelligence Index 57／weights not publicly available）
    <https://artificialanalysis.ai/models/kimi-k3>
+   （2026年9月25日追記）<br/>
+   2026年7月18日時点・v4.1の値。同URLは2026年9月現在、v4.3.2で計算し直した値を表示している。
 2. Artificial Analysis「AI Model & API Providers Analysis」（Fable 5 = 60／GPT-5.6 Sol = 59／Kimi K3 = 57）
    <https://artificialanalysis.ai/>
+   （2026年9月25日追記）<br/>
+   2026年7月18日時点・v4.1の値。同URLは2026年9月現在、v4.3.2で計算し直した値を表示している。
 3. Vals AI「Kimi K3」（Vals Index 74.70% ±0.96／38モデル中2位／License type: Proprietary）
    <https://www.vals.ai/models/kimi_kimi-k3>
 4. LLM Stats「DeepSWE Leaderboard」（K3 67.5%・3位／**Verified 0 / Self-reported 9**）
@@ -450,6 +508,18 @@ graph TD
    <https://www.kimi.com/blog/kimi-k3>
 6. Tom's Hardware「China's 2.8-trillion-parameter Kimi K3 beats Claude Fable 5 in Frontend Code Arena benchmark」（2026年7月）
    <https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-releases-2-8-trillion-parameter-kimi-k3>
+
+（2026年9月25日追記）<br/>
+7. Artificial Analysis「Kimi K3 achieves #3 in the Artificial Analysis Intelligence Index, comparable to Opus 4.8 and GPT-5.5」（2026年7月17日・Intelligence Index 57／v4.1）
+   <https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5>
+8. Artificial Analysis「Launching v4.1.1 of the Artificial Analysis Intelligence Index」（2026年8月6日・採点モデルとτ³-Bankingの更新／首位Opus 5は63）
+   <https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-1-1>
+9. Artificial Analysis公式X（2026年8月18日・GLM-5.3が60で、Kimi K3（60）と同点）
+   <https://x.com/ArtificialAnlys/status/2089830890709135426>
+10. Artificial Analysis「Announcing Artificial Analysis Intelligence Index v4.2」（2026年9月4日・AA-BriefcaseとGDP.pdfを追加／GPQA Diamondを除外／非公開テストの比重40%＝v4.1の2倍）
+    <https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2>
+11. Artificial Analysis「Announcing the Artificial Analysis Intelligence Index v4.3」（2026年9月7日・Terminal-Bench 4.0／AutomationBench-AA／非公開テストの比重45%／Fable 5 = 50・GPT-5.6 Sol = 47）
+    <https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-3>
 
 <br/>
 
@@ -1321,6 +1391,21 @@ graph TD
 
 次章では、その制度そのものを見る。
 
+## 追記（2026年9月25日）: 推計は出た。測定はまだない
+
+（2026年9月25日追記）<br/>
+本章で、Lambertは蒸留の効果を定量できないどころか、効くかどうかすら断定できないと言っている、と書いた。<br/>
+そのLambertが2026年9月、米議会向けの説明で、蒸留の寄与を推計値で示した。<br/>
+AnthropicやOpenAIが本人確認（KYC）の仕組みなどで蒸留を完全に防いだとしても、米国の最強モデルと中国のオープンウェイトモデルの差は**1〜2ヶ月しか広がらない**、という推計である。<br/>
+彼はあわせて、蒸留は新しい領域で最も効果を持つが、万能に強い最終モデルを容易に作れるものではない、とも述べている。
+
+これは本章の結論を覆すものではない。<br/>
+示されたのは研究者の**推計**であり、寄与度を分解した独立の**測定**ではないからだ。<br/>
+ただ、論争の構図は変わった。<br/>
+告発する側は、蒸留が中国勢の性能を支えていると主張している。<br/>
+蒸留を最も深く論じてきた研究者は、その寄与を**1〜2ヶ月**と見積もった。<br/>
+**証拠の壁は、まだ立っている。だが、その高さを見積もる数字が、議会の場に出された。**
+
 ### 参考文献
 
 1. Anthropic「Detecting and preventing distillation attacks」（DeepSeek・Moonshot・MiniMaxによる約24,000の不正アカウント／1,600万回超のやり取り）※[当事者]
@@ -1340,6 +1425,10 @@ graph TD
    <https://downloads.regulations.gov/NTIA-2023-0009-0233/attachment_1.pdf>
 9. Lawfare「Responding to AI Distillation Without Panic」
    <https://www.lawfaremedia.org/article/responding-to-ai-distillation-without-panic>
+
+（2026年9月25日追記）<br/>
+10. Nathan Lambert（Interconnects）「The current balance of power in open models」（2026年9月21日・米議会向け説明の準備原稿／蒸留を完全に防いでも、差の拡大は1〜2ヶ月との推計）
+    <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
 
 ※本書の調査では、①Anthropicの告発を第三者が検証した記録、②Moonshot・DeepSeek・MiniMaxによる技術的データに基づく公式反証、③蒸留が性能向上に占める寄与度の定量分解、④「DeepSeekは550万ドルで学習した」という主張の独立監査——のいずれも発見できなかった。Amodeiの2023年上院証言については、一次資料での逐語確認ができていないため、内容の断定を避けた。また、Ben Thompsonの主張とLambertの反論は、いずれも公開された言説であり、どちらの立場も実験的に検証されたものではない。本書は、両者の対立そのものが「メカニズムが未解明である」ことの証拠だと位置づけている。
 
@@ -1444,7 +1533,9 @@ Fable 5の3週間は、AI主権という概念に、これ以上ない説得力�
 
 Hugging Faceが報告した事例である。<br/>
 自社のシステムに対する攻撃エージェントを検知し、その挙動を解析しようとした。<br/>
-**GPTとClaudeで解析を試みたが、いずれもガードレールに阻まれ、実行できなかった。**<br/>
+（2026年9月25日訂正）<br/>
+**商用APIで提供されるフロンティアモデル——Hugging Faceの技術報告によればClaude OpusとFable——で解析を試みたが、ガードレールに阻まれ、作業の大部分を実行できなかった。**<br/>
+（初版では「GPTとClaude」と記載した。Hugging Face自身の報告が名指ししているのはAnthropicのClaude OpusとFableであり、GPTの名は挙がっていない）<br/>
 攻撃コードの解析という行為そのものが、安全機構によって拒否されたのである。
 
 結果、彼らはGLMを使った。<br/>
@@ -1501,6 +1592,26 @@ EO 14409の60日期限は、2026年8月1日前後に到来する。<br/>
 次章では、その外側で何が起きているかを見る。<br/>
 **Kimi K3が発表されたのと同じ日に、開放が国家の言葉になった。**
 
+## 追記（2026年9月25日）: 一次文書は、存在した
+
+（2026年9月25日追記）<br/>
+本章の参考文献の注記で、Hugging Face自身による一次的な報告文書を特定できていない、と書いた。<br/>
+その文書は存在した。Hugging Faceは2026年7月16日に事案の開示を、7月27日に技術的な経緯の報告を公開している。
+
+開示文書は、こう書いている。<br/>
+攻撃ログの解析に、まず商用APIで提供されるフロンティアモデルを使ったが、提供元の安全ガードレールに阻まれた。<br/>
+そのガードレールは、インシデント対応者と攻撃者を区別できなかった。<br/>
+そこで彼らは、オープンウェイトの**GLM-5.2**を自社のインフラで動かし、解析を行った。<br/>
+**攻撃者のデータも、そこに含まれる認証情報も、自社の環境の外に出さずに済んだ**ことを、彼らは第二の利点として挙げている。
+
+7月27日の技術報告は、さらに二つの事実を明らかにした。<br/>
+第一に、最初に使ったモデルは**Claude OpusとFable**であり、解析作業の大部分が拒否された。<br/>
+第二に、攻撃を行ったのは、OpenAIの内部評価で動いていた**OpenAIのモデル群によるエージェント**であり、その評価では、素の能力を測るために本番の安全分類器が意図的に無効化されていた。
+
+構図は、Lambertの命題よりもさらに鋭い。<br/>
+**安全機構を外したクローズドモデルが攻撃し、安全機構を持つクローズドモデルは防御を拒み、オープンウェイトが防御を担った。**<br/>
+Lambertは2026年9月の米議会向けの説明で、この事例を、中国製の強力なオープンウェイトへのアクセスを制限すれば後退するのは米国企業である、という主張の根拠として挙げている。
+
 ### 参考文献
 
 1. The White House「Promoting Advanced Artificial Intelligence Innovation and Security」（2026年6月2日・EO 14409・60日以内の機密ベンチマーク／最大30日前の政府アクセス／任意枠組み／**"Nothing … shall be construed to authorize … mandatory governmental licensing, preclearance, or permitting"**）
@@ -1522,7 +1633,17 @@ EO 14409の60日期限は、2026年8月1日前後に到来する。<br/>
 9. Nathan Lambert & Florian Brand（Interconnects）「Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC speech, distillation, the open-closed gap, and what's next」（2026年7月22日・Hugging Faceの攻撃解析がGPT/Claudeのガードレールに阻まれGLMを使用／禁止は防御側のみを劣化させる／「シャドウバン」型規制への警告）
    <https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3>
 
-※Hugging Faceの事例は、Interconnects対談内での言及に基づく。本書の調査では、Hugging Face自身による一次的な報告文書を特定できていない。事例の存在と詳細については、追加の一次確認が必要である。
+（2026年9月25日追記）<br/>
+10. Hugging Face「Security incident disclosure — July 2026」（2026年7月16日・商用APIのフロンティアモデルは安全ガードレールに阻まれ、GLM-5.2を自社インフラで動かして解析）
+    <https://huggingface.co/blog/security-incident-july-2026>
+11. Hugging Face「Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident」（2026年7月27日・最初に使ったClaude OpusとFableが解析作業の大部分を拒否／攻撃はOpenAIの内部評価中のエージェントで、本番の安全分類器を無効化した評価だった）
+    <https://huggingface.co/blog/agent-intrusion-technical-timeline>
+12. Nathan Lambert（Interconnects）「The current balance of power in open models」（2026年9月21日・米議会向け説明の準備原稿／Hugging Faceの事例を、中国製オープンウェイトの制限が米国企業を後退させる例として提示）
+    <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
+
+※Hugging Faceの事例は、Interconnects対談内での言及に基づく。本書の調査では、Hugging Face自身による一次的な報告文書を特定できていない。事例の存在と詳細については、追加の一次確認が必要である。<br/>
+（2026年9月25日追記）<br/>
+その後、Hugging Face自身による一次文書（参考文献10・11）を確認した。事例の存在は一次資料で確認され、詳細は本章の追記に記した。
 ※EO 14409に基づき2026年8月1日を期限として策定中の「対象フロンティアモデル」のサイバー能力閾値・計算量基準は、プロセスが機密とされているため、本書の調査では確認できなかった。また、重みファイルの流通を輸出管理でどこまで実効的に封じ込められるかを数量化した研究も発見できなかった。
 
 <br/>
@@ -1554,7 +1675,9 @@ arXivで公開された**ATOMレポート**（The ATOM Report: Measuring the Ope
 Hugging Faceにおけるモデルのダウンロード数を追跡している。
 
 その結論はこうだ。<br/>
-**2025年8月、中国製モデルのダウンロード数が米国製を逆転した。**<br/>
+（2026年9月25日訂正）<br/>
+**2025年7月下旬、中国製モデルのダウンロード数が米国製を逆転した。**<br/>
+（初版では「2025年8月」と記載した。ATOMレポートの図表で「Aug 25」と表記される月は、7月31日までの累計を示す）<br/>
 そして2026年3月時点で、**中国 11.5億回に対し、米国 7.23億回。**
 
 これは、Kimi K3以前の話である。<br/>
@@ -1599,11 +1722,14 @@ Zhipu AIは香港上場済み（時価総額約75億ドル）、MiniMaxも香港
 「国家戦略としてのオープンウェイト」という物語は魅力的だが、<br/>
 **その物語を財務レベルで裏づける一次データは、いま存在しない。**
 
+（2026年9月25日訂正）<br/>
+下図のATOMレポートの逆転時期を、「2025年8月」から「2025年7月下旬」に訂正した。
+
 ```mermaid
 graph TD
     A["2026/7/17<br/>同じ一日"] --> B["Kimi K3 発表<br/>──────<br/>2.8兆パラメータ<br/>オープンウェイト世界最大"]
     A --> C["習近平 WAIC演説<br/>──────<br/>『open source, openness,<br/>collaboration and sharing』<br/>途上国へ5年で5,000研修枠"]
-    D["ATOMレポート<br/>──────<br/>2025年8月: 中国製DLが米国製を逆転<br/>2026年3月: 中国11.5億 vs 米国7.23億"] --> E{"重心は、すでに移っていた<br/>──────<br/>フロンティア到達より前に<br/>エコシステムが移動していた"}
+    D["ATOMレポート<br/>──────<br/>2025年7月下旬: 中国製DLが米国製を逆転<br/>2026年3月: 中国11.5億 vs 米国7.23億"] --> E{"重心は、すでに移っていた<br/>──────<br/>フロンティア到達より前に<br/>エコシステムが移動していた"}
     B --> E
     C --> E
     E --> F["確認できないこと<br/>──────<br/>企業の資本構造の一次文書<br/>国家の関与を示す財務証拠<br/>グローバルサウスの実配備データ"]
@@ -1653,11 +1779,30 @@ ATOMレポートが測ったのはダウンロード数であり、本番環境�
 
 **熱狂も、恐怖も、いまは実証を追い越している。**
 
+## 追記（2026年9月25日）: 採用の指標は、出始めた
+
+（2026年9月25日追記）<br/>
+本章は、ATOMレポートが測ったのはダウンロード数であり、本番環境での採用ではない、と書いた。<br/>
+2026年9月、Nathan Lambertは米議会向けの説明で、ダウンロード数とは別の、利用側の指標を示した。
+
+複数のモデルを切り替えて使える推論プラットフォームOpenRouterでは、オープンモデルの処理量が、2025年9月の週約1兆トークンから、週約80兆トークンに増えた。<br/>
+その間に、中国製モデルの利用比率は約70%から80%超に上がった。<br/>
+オープンソースのコーディングエージェントOpenCodeでは、推論量の約95%以上が中国製モデルである。<br/>
+論文にも同じ傾向が出ている。主要な機械学習分野のarXiv論文でAlibabaのQwenに言及する割合は約30%に達し、MetaのLlama（約21%）を上回った。
+
+ただし、Lambert自身がこれらを利用実態の**近似**と位置づけている。<br/>
+Together AIやFireworks AIのように、モデル別の内訳を開示しない推論基盤や、企業内の非公開環境での利用は、この数字に含まれない。<br/>
+そして彼は、**米国と中国以外の国でオープンモデルがどう使われているかについては、良いデータがない**と明言している。
+
+本章が明記した空白——グローバルサウスにおける実配備データ——は、この領域を最もよく測っている研究者自身によって、空白のまま確認された。<br/>
+**採用の指標は、米中の内側では出始めた。その外側は、まだ誰にも見えていない。**
+
 ### 参考文献
 
 1. CGTN「Full text: Xi's keynote speech at the 2026 WAIC opening ceremony」（2026年7月17日・**"encourage open source, openness, collaboration and sharing"**／今後5年で発展途上国へ**5,000のAI研修・セミナー機会**）
    <https://news.cgtn.com/news/2026-07-17/Full-text-Xi-s-keynote-speech-at-the-2026-WAIC-opening-ceremony-1OQSfeoRvUs/p.html>
-2. arXiv「The ATOM Report: Measuring the Open Language Model Ecosystem」（Hugging Faceダウンロード数：**2025年8月に中国製が米国製を逆転**／2026年3月時点で中国11.5億回 vs 米国7.23億回）
+（2026年9月25日訂正）<br/>
+2. arXiv「The ATOM Report: Measuring the Open Language Model Ecosystem」（Hugging Faceダウンロード数：**2025年7月下旬に中国製が米国製を逆転**／2026年3月時点で中国11.5億回 vs 米国7.23億回）
    <https://arxiv.org/html/2604.07190v2>
 3. RAND / CSET「Open Models, Soft Power, and the Spectrum of U.S.-China Artificial Intelligence Competition」
    <https://cset.georgetown.edu/wp-content/uploads/RAND_PEA4686-1.pdf>
@@ -1669,6 +1814,10 @@ ATOMレポートが測ったのはダウンロード数であり、本番環境�
    <https://cyber.fsi.stanford.edu/publication/taking-stock-deepseek-shock>
 7. Red Hat「Why agentic AI needs an open inference stack」（推論コスト低下とエージェント需要の拡大）
    <https://www.redhat.com/en/blog/why-agentic-ai-needs-open-inference-stack>
+
+（2026年9月25日追記）<br/>
+8. Nathan Lambert（Interconnects）「The current balance of power in open models」（2026年9月21日・米議会向け説明の準備原稿／OpenRouterで中国製の利用比率は約70%→80%超／OpenCodeで約95%以上／arXiv論文でQwen約30%・Llama約21%／米中以外の国の利用データはない）
+   <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
 
 ※Moonshot・Zhipu・MiniMaxの資本構造（Alibaba/Tencent出資・評価額300億ドル・香港上場観測）は[報道]レベルの言及にとどまり、会社自身の一次文書での確証は本調査では得られなかった。中国政府の戦略ファンドの流入・意思決定への影響を示す財務証拠、およびオープンウェイトのグローバルサウスにおける実配備データ（国別利用比率・ソブリンAI採用件数）も発見できなかった。
 
