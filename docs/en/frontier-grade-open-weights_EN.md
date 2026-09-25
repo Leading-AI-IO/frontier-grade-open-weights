@@ -41,6 +41,11 @@ K3 landed at **roughly the same level** as GPT-5.5 and Claude Opus 4.8.<br/>
 On the Vals Index, produced by another independent evaluator, it scored **74.70% (±0.96)**, ranking **2nd out of 38 models**.<br/>
 And in Arena.ai’s Frontend Code Arena—a human blind-preference evaluation—**K3 surpassed Claude Fable 5 and took first place**.
 
+(Added on September 25, 2026)<br/>
+The figures “57” and “4th” above are the values shown on Artificial Analysis’s model page as of July 18, 2026.<br/>
+Artificial Analysis has since revised its Intelligence Index and recalculates previously published values under each new version, so the same page now shows Kimi K3 (max) at **44** (details in the addendum to Chapter 2).<br/>
+In addition, the article Artificial Analysis published on July 17 describes Kimi K3’s rank as “#3.” The discrepancy with the “4th” shown on the page this book consulted cannot be resolved, because the page as displayed at that time can no longer be checked.
+
 One point requires precision.<br/>
 Of the claims that K3 was “approaching Fable 5” or “substantially outperforming Opus 4.8 and GPT-5.6 Sol,”<br/>
 **independent organizations measured only the aggregate indices and arena rankings**.<br/>
@@ -172,6 +177,10 @@ We will answer, step by step, from primary data and structure.
 7. Epoch AI, “Open models lag state-of-the-art closed models by 4 months” (May 29, 2026)
    <https://epoch.ai/data-insights/open-closed-eci-gap>
 
+(Added on September 25, 2026)<br/>
+8. Artificial Analysis, “Kimi K3 achieves #3 in the Artificial Analysis Intelligence Index, comparable to Opus 4.8 and GPT-5.5” (July 17, 2026; Intelligence Index 57 / rank stated as “#3”)
+   <https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5>
+
 <br/>
 
 ---
@@ -284,6 +293,18 @@ So who measured the numbers circulating about Kimi K3 itself?
 
 The next chapter asks that question.
 
+## Addendum (September 25, 2026): The Gap as Described Before Congress
+
+(Added on September 25, 2026)<br/>
+In September 2026, Nathan Lambert of Interconnects briefed members and staff of the U.S. Congress on the state of open models and published his prepared remarks.<br/>
+By Lambert’s estimate, Chinese open-weight models are **about 2–5 months** behind the closed U.S. frontier, while U.S. open-weight models are **about 6–9 months** behind.<br/>
+He also notes that the gap is smallest in tasks with clear user demand, such as agentic coding, and larger in open-ended scientific tasks such as physics or biology.
+
+This is consistent with this chapter’s proposition: **the gap stabilized at a level of a few months.**<br/>
+It is, however, a researcher’s estimate, not continuous measurement of the kind Epoch AI performs.<br/>
+And the estimate brings another fact into view.<br/>
+**The open-weight models closest to the frontier are Chinese; U.S. open-weight models sit several months further away.**
+
 ### References
 
 1. Epoch AI, “Open-weight models lag state-of-the-art by around 3 months on average” (October 30, 2025; average 3.5-month lag / 7-point ECI gap from January 2023 to October 2025)
@@ -308,6 +329,10 @@ The next chapter asks that question.
     <https://openai.com/index/introducing-gpt-oss/>
 11. Artificial Analysis, “Llama 4 Maverick” (402B / 17B active / Index 14)
     <https://artificialanalysis.ai/models/llama-4-maverick>
+
+(Added on September 25, 2026)<br/>
+12. Nathan Lambert (Interconnects), “The current balance of power in open models” (September 21, 2026; prepared remarks for a Congressional briefing / Chinese open-weight models about 2–5 months behind the closed frontier, U.S. open-weight models about 6–9 months)
+    <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
 
 <br/>
 
@@ -430,12 +455,45 @@ Who measured it? Does that person benefit if the number is large?<br/>
 The next chapter directs that honesty toward the harshest fact of all:<br/>
 even if the weights are released on July 27, can you run them?
 
+## Addendum (September 25, 2026): The Ruler Was Rewritten
+
+(Added on September 25, 2026)<br/>
+This chapter stated that Kimi K3’s Intelligence Index score was 57.<br/>
+As of September 2026, the same Artificial Analysis page shows Kimi K3 (max) at **44**.<br/>
+Kimi K3 did not get weaker. **The ruler was rewritten.**
+
+Between July and September, Artificial Analysis revised its Intelligence Index four times.<br/>
+On August 6, v4.1.1 replaced the grader models, and Kimi K3’s score moved from 57 to 60.<br/>
+On September 4, v4.2 added work-like evaluations (AA-Briefcase, GDP.pdf) and removed the saturated GPQA Diamond.<br/>
+On September 7, v4.3 upgraded Terminal-Bench from 2.1 to 4.0 and replaced τ³-Banking with AutomationBench-AA.<br/>
+After v4.3.2 on September 19, the score currently displayed is 44.<br/>
+The share of the index weighted on private question sets rose from 20% in v4.1 to 45% in v4.3.
+
+The revisions lowered the top scores as well.<br/>
+Fable 5, at 60 in v4.1, stood at 50 in v4.3; GPT-5.6 Sol went from 59 to 47.<br/>
+**57 and 44 cannot be compared. What can be compared is the gap within the same version.**<br/>
+In v4.1, Kimi K3 trailed Fable 5 by 3 points; in the v4.3 series, by 6.<br/>
+As the weight on private, work-like tasks increased, the gap widened.
+
+Moreover, each time it revises the index, Artificial Analysis recalculates previously published values under the new version.<br/>
+The page this book consulted in July now shows 44 at the same URL.<br/>
+**The number displayed is not the number measured on that day; it is the number re-measured with today’s ruler.**<br/>
+All Artificial Analysis values cited in this book—Kimi K3’s 57, gpt-oss-120b’s 24, Llama 4 Maverick’s 14, and the cost-per-task comparison—are v4.1 values as of July 2026. The four-month lag that AISI calculated on this index is likewise based on the version in use at that time.
+
+This chapter’s proposition holds here as well.<br/>
+**Even an index with the same name from the same organization becomes a different number when its version changes.**<br/>
+When citing a number, one must state not only who measured it, but also when, and under which version.
+
 ### References
 
 1. Artificial Analysis, “Kimi K3 – Intelligence, Performance & Price Analysis” (Intelligence Index 57 / weights not publicly available)
    <https://artificialanalysis.ai/models/kimi-k3>
+   (Added on September 25, 2026)<br/>
+   Value as of July 18, 2026 (v4.1). As of September 2026, the same URL displays values recalculated under v4.3.2.
 2. Artificial Analysis, “AI Model & API Providers Analysis” (Fable 5 = 60 / GPT-5.6 Sol = 59 / Kimi K3 = 57)
    <https://artificialanalysis.ai/>
+   (Added on September 25, 2026)<br/>
+   Value as of July 18, 2026 (v4.1). As of September 2026, the same URL displays values recalculated under v4.3.2.
 3. Vals AI, “Kimi K3” (Vals Index 74.70% ±0.96 / 2nd of 38 / License type: Proprietary)
    <https://www.vals.ai/models/kimi_kimi-k3>
 4. LLM Stats, “DeepSWE Leaderboard” (K3 67.5%, 3rd / **Verified 0 / Self-reported 9**)
@@ -444,6 +502,18 @@ even if the weights are released on July 27, can you run them?
    <https://www.kimi.com/blog/kimi-k3>
 6. Tom’s Hardware, “China’s 2.8-trillion-parameter Kimi K3 beats Claude Fable 5 in Frontend Code Arena benchmark” (July 2026)
    <https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-releases-2-8-trillion-parameter-kimi-k3>
+
+(Added on September 25, 2026)<br/>
+7. Artificial Analysis, “Kimi K3 achieves #3 in the Artificial Analysis Intelligence Index, comparable to Opus 4.8 and GPT-5.5” (July 17, 2026; Intelligence Index 57 / v4.1)
+   <https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5>
+8. Artificial Analysis, “Launching v4.1.1 of the Artificial Analysis Intelligence Index” (August 6, 2026; grader-model and τ³-Banking updates / Opus 5 leads at 63)
+   <https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-1-1>
+9. Artificial Analysis, official X post (August 18, 2026; GLM-5.3 scores 60, tying Kimi K3 at 60)
+   <https://x.com/ArtificialAnlys/status/2089830890709135426>
+10. Artificial Analysis, “Announcing Artificial Analysis Intelligence Index v4.2” (September 4, 2026; adds AA-Briefcase and GDP.pdf / removes GPQA Diamond / 40% private-test weighting, double v4.1)
+    <https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2>
+11. Artificial Analysis, “Announcing the Artificial Analysis Intelligence Index v4.3” (September 7, 2026; Terminal-Bench 4.0 / AutomationBench-AA / 45% private-test weighting / Fable 5 = 50, GPT-5.6 Sol = 47)
+    <https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-3>
 
 <br/>
 
@@ -1316,6 +1386,21 @@ This is the third face of Privileged Open: the **wall of evidence**.
 
 The next chapter examines the institution itself.
 
+## Addendum (September 25, 2026): An Estimate Has Appeared. A Measurement Has Not
+
+(Added on September 25, 2026)<br/>
+This chapter noted that Lambert could not quantify the effect of distillation—could not even say with certainty whether it works.<br/>
+In September 2026, in a briefing prepared for the U.S. Congress, Lambert put an estimated number on its contribution.<br/>
+Even if Anthropic and OpenAI fully prevented distillation, for example with know-your-customer (KYC) tools, the gap between the strongest U.S. models and Chinese open-weight models **would widen by only 1–2 months**.<br/>
+He also noted that distillation is most impactful in new domains and does not make it trivial to create a universally strong final model.
+
+This does not overturn this chapter’s conclusion.<br/>
+What has been offered is a researcher’s **estimate**, not an independent **measurement** that decomposes the contribution.<br/>
+But the shape of the dispute has changed.<br/>
+The accusers claim that distillation underpins Chinese performance.<br/>
+The researcher who has examined distillation most deeply estimates its contribution at **1–2 months**.<br/>
+**The wall of evidence still stands. But a number estimating its height has now been placed before Congress.**
+
 ### References
 
 1. Anthropic, “Detecting and preventing distillation attacks” (approximately 24,000 fraudulent accounts / more than 16 million interactions involving DeepSeek, Moonshot, and MiniMax) *[Interested Party]*
@@ -1335,6 +1420,10 @@ The next chapter examines the institution itself.
    <https://downloads.regulations.gov/NTIA-2023-0009-0233/attachment_1.pdf>
 9. Lawfare, “Responding to AI Distillation Without Panic”
    <https://www.lawfaremedia.org/article/responding-to-ai-distillation-without-panic>
+
+(Added on September 25, 2026)<br/>
+10. Nathan Lambert (Interconnects), “The current balance of power in open models” (September 21, 2026; prepared remarks for a Congressional briefing / estimate that fully preventing distillation would widen the gap by only 1–2 months)
+    <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
 
 *The research for this book found none of the following: (1) third-party verification of Anthropic’s accusation; (2) an official, technically substantiated rebuttal from Moonshot, DeepSeek, or MiniMax; (3) a quantitative decomposition of distillation’s contribution to performance gains; or (4) an independent audit of the claim that DeepSeek trained for $5.5 million. Because Amodei’s 2023 Senate testimony could not be verified verbatim from a primary source, the book avoids asserting its exact content.*
 
@@ -1438,7 +1527,9 @@ And in July 2026, this structure took on a far more concrete form.
 
 Hugging Face reported the case.<br/>
 They detected an agent attacking their system and tried to analyze its behavior.<br/>
-**They attempted the analysis with GPT and with Claude. Both were blocked by guardrails.**<br/>
+(Corrected on September 25, 2026)<br/>
+**They attempted the analysis with frontier models offered through commercial APIs—according to Hugging Face’s technical report, Claude Opus and Fable—but guardrails blocked most of the work.**<br/>
+(The first edition read “GPT and Claude.” Hugging Face’s own reports name Anthropic’s Claude Opus and Fable; GPT is not named.)<br/>
 The act of analyzing attack code was itself refused by the safety machinery.
 
 So they used GLM instead—a less capable model, but one without guardrails against this kind of defensive work.
@@ -1494,6 +1585,26 @@ The current framework is based primarily on voluntary cooperation, and **no lega
 The next chapter looks at what is happening outside that framework.<br/>
 **On the same day Kimi K3 was announced, openness became the language of the state.**
 
+## Addendum (September 25, 2026): The Primary Documents Existed
+
+(Added on September 25, 2026)<br/>
+In the note to this chapter’s references, this book stated that it could not locate a primary report from Hugging Face itself.<br/>
+Such documents exist. Hugging Face published an incident disclosure on July 16, 2026, and a technical timeline on July 27.
+
+The disclosure states the following.<br/>
+For the log analysis, they first used frontier models behind commercial APIs, and the requests were blocked by the providers’ safety guardrails.<br/>
+Those guardrails could not distinguish an incident responder from an attacker.<br/>
+They therefore ran the analysis on the open-weight **GLM-5.2**, on their own infrastructure.<br/>
+They cite a second benefit: **no attacker data, and none of the credentials it referenced, left their environment.**
+
+The July 27 technical report revealed two further facts.<br/>
+First, the models they reached for first were **Claude Opus and Fable**, which refused a large part of the analysis.<br/>
+Second, the attack was carried out by **an agent driven by OpenAI models** during an internal OpenAI evaluation—one in which production safety classifiers had been deliberately disabled to measure raw capability.
+
+The picture is sharper than Lambert’s proposition.<br/>
+**A closed model with its safeguards removed attacked; closed models with safeguards refused to help defend; an open-weight model carried the defense.**<br/>
+In his September 2026 briefing to Congress, Lambert cites this case as evidence that restricting access to strong Chinese open-weight models would set back American businesses.
+
 ### References
 
 1. The White House, “Promoting Advanced Artificial Intelligence Innovation and Security” (June 2, 2026; EO 14409 / classified benchmarks within 60 days / government access up to 30 days before release / voluntary framework / **“Nothing … shall be construed to authorize … mandatory governmental licensing, preclearance, or permitting”**)
@@ -1515,7 +1626,17 @@ The next chapter looks at what is happening outside that framework.<br/>
 9. Nathan Lambert & Florian Brand (Interconnects), “Open models recap: more on Kimi K3, Qwen 3.8, Xi’s WAIC speech, distillation, the open-closed gap, and what’s next” (July 22, 2026; Hugging Face’s attack analysis blocked by GPT and Claude guardrails, forcing use of GLM; a ban degrades only the defensive side; warning on shadow-ban style restriction)
    <https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3>
 
-*The Hugging Face case is based on a mention within the Interconnects discussion. This book was unable to locate a primary report from Hugging Face itself; the existence and details of the case require further primary confirmation.*
+(Added on September 25, 2026)<br/>
+10. Hugging Face, “Security incident disclosure — July 2026” (July 16, 2026; frontier models behind commercial APIs were blocked by safety guardrails; analysis run on GLM-5.2 on Hugging Face’s own infrastructure)
+    <https://huggingface.co/blog/security-incident-july-2026>
+11. Hugging Face, “Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident” (July 27, 2026; Claude Opus and Fable, used first, refused most of the analysis / the attack came from an agent in an internal OpenAI evaluation with production safety classifiers disabled)
+    <https://huggingface.co/blog/agent-intrusion-technical-timeline>
+12. Nathan Lambert (Interconnects), “The current balance of power in open models” (September 21, 2026; prepared remarks for a Congressional briefing / cites the Hugging Face case as an example of how restricting Chinese open weights would set back American businesses)
+    <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
+
+*The Hugging Face case is based on a mention within the Interconnects discussion. This book was unable to locate a primary report from Hugging Face itself; the existence and details of the case require further primary confirmation.*<br/>
+(Added on September 25, 2026)<br/>
+*Primary documents from Hugging Face itself (References 10 and 11) have since been confirmed. The existence of the case is established by primary sources; details are given in this chapter’s addendum.*
 
 *The cyber-capability and compute thresholds for “covered frontier models,” due around August 1, 2026 under EO 14409, could not be confirmed because the process was classified. The research also found no quantitative study of how effectively export controls can contain the circulation of model-weight files.*
 
@@ -1547,7 +1668,9 @@ The **ATOM Report**—*The ATOM Report: Measuring the Open Language Model Ecosys
 tracks model downloads on Hugging Face.
 
 Its conclusion is clear.<br/>
-**In August 2025, downloads of Chinese models surpassed downloads of U.S. models.**<br/>
+(Corrected on September 25, 2026)<br/>
+**In late July 2025, downloads of Chinese models surpassed downloads of U.S. models.**<br/>
+(The first edition read “August 2025.” In the ATOM Report’s charts, the month labeled “Aug 25” denotes cumulative downloads through July 31.)<br/>
 By March 2026, the totals were **1.15 billion for China and 723 million for the United States**.
 
 This happened before Kimi K3.<br/>
@@ -1592,11 +1715,14 @@ This is a major gap in the subject.<br/>
 The story of “open weights as national strategy” is compelling,<br/>
 but **the primary financial data needed to substantiate that story does not currently exist in public**.
 
+(Corrected on September 25, 2026)<br/>
+In the diagram below, the timing of the reversal in the ATOM Report has been corrected from “August 2025” to “late July 2025.”
+
 ```mermaid
 graph TD
     A["2026/7/17<br/>The same day"] --> B["Kimi K3 announced<br/>──────<br/>2.8T parameters<br/>World's largest open-weight model"]
     A --> C["Xi Jinping's WAIC speech<br/>──────<br/>'open source, openness,<br/>collaboration and sharing'<br/>5,000 training opportunities over 5 years"]
-    D["ATOM Report<br/>──────<br/>Aug. 2025: Chinese downloads surpass U.S.<br/>Mar. 2026: China 1.15B vs U.S. 723M"] --> E{"The center had already moved<br/>──────<br/>The ecosystem shifted before<br/>frontier-class capability arrived"}
+    D["ATOM Report<br/>──────<br/>Late Jul. 2025: Chinese downloads surpass U.S.<br/>Mar. 2026: China 1.15B vs U.S. 723M"] --> E{"The center had already moved<br/>──────<br/>The ecosystem shifted before<br/>frontier-class capability arrived"}
     B --> E
     C --> E
     E --> F["What cannot be confirmed<br/>──────<br/>Primary documents on corporate capital structures<br/>Financial evidence of state involvement<br/>Deployment data in the Global South"]
@@ -1646,11 +1772,30 @@ At the same time, the capability curve is extremely steep, and national evaluati
 
 **Both excitement and fear are currently outrunning the evidence.**
 
+## Addendum (September 25, 2026): Adoption Metrics Have Begun to Appear
+
+(Added on September 25, 2026)<br/>
+This chapter stated that the ATOM Report measured downloads, not production adoption.<br/>
+In September 2026, in his briefing to the U.S. Congress, Nathan Lambert presented usage-side indicators distinct from downloads.
+
+On OpenRouter, an inference platform that lets users switch among many models, weekly open-model volume grew from about 1 trillion tokens in a week of September 2025 to about 80 trillion tokens per week.<br/>
+Over the same period, the share of usage going to Chinese models rose from about 70% to over 80%.<br/>
+On OpenCode, an open-source coding agent, about 95% or more of inference volume runs on Chinese models.<br/>
+Research papers show the same trend: among arXiv papers in the major machine-learning categories, the share mentioning Alibaba’s Qwen has reached about 30%, above Meta’s Llama at about 21%.
+
+Lambert himself, however, describes these figures as **approximations** of actual usage.<br/>
+They exclude inference platforms that do not disclose per-model breakdowns, such as Together AI and Fireworks AI, as well as private enterprise deployments.<br/>
+And he states plainly that **there is no good data on how open models are used in countries other than the U.S. and China.**
+
+The gap this chapter identified—deployment data in the Global South—has been confirmed as a gap by the very researcher who measures this field most closely.<br/>
+**Adoption metrics have begun to appear inside the U.S. and China. Outside them, no one can yet see.**
+
 ### References
 
 1. CGTN, “Full text: Xi’s keynote speech at the 2026 WAIC opening ceremony” (July 17, 2026; **“encourage open source, openness, collaboration and sharing”** / **5,000 AI training and seminar opportunities** for developing countries over five years)
    <https://news.cgtn.com/news/2026-07-17/Full-text-Xi-s-keynote-speech-at-the-2026-WAIC-opening-ceremony-1OQSfeoRvUs/p.html>
-2. arXiv, “The ATOM Report: Measuring the Open Language Model Ecosystem” (Hugging Face downloads: **Chinese models surpassed U.S. models in August 2025** / March 2026: China 1.15B vs U.S. 723M)
+(Corrected on September 25, 2026)<br/>
+2. arXiv, “The ATOM Report: Measuring the Open Language Model Ecosystem” (Hugging Face downloads: **Chinese models surpassed U.S. models in late July 2025** / March 2026: China 1.15B vs U.S. 723M)
    <https://arxiv.org/html/2604.07190v2>
 3. RAND / CSET, “Open Models, Soft Power, and the Spectrum of U.S.-China Artificial Intelligence Competition”
    <https://cset.georgetown.edu/wp-content/uploads/RAND_PEA4686-1.pdf>
@@ -1662,6 +1807,10 @@ At the same time, the capability curve is extremely steep, and national evaluati
    <https://cyber.fsi.stanford.edu/publication/taking-stock-deepseek-shock>
 7. Red Hat, “Why agentic AI needs an open inference stack” (falling inference costs and expanding agent demand)
    <https://www.redhat.com/en/blog/why-agentic-ai-needs-open-inference-stack>
+
+(Added on September 25, 2026)<br/>
+8. Nathan Lambert (Interconnects), “The current balance of power in open models” (September 21, 2026; prepared remarks for a Congressional briefing / Chinese share on OpenRouter about 70% → over 80% / about 95% or more on OpenCode / arXiv mentions: Qwen about 30%, Llama about 21% / no data for countries other than the U.S. and China)
+   <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
 
 *Claims concerning the capital structures of Moonshot, Zhipu, and MiniMax—including Alibaba/Tencent investment, a $30-billion valuation, and Hong Kong listing plans—remained at the [Reporting] level and could not be verified through company-issued primary documents. The research also found no financial evidence showing the flow or decision-making influence of Chinese government strategic funds, and no deployment data for open weights in the Global South, such as country-level usage shares or sovereign-AI adoption counts.*
 
