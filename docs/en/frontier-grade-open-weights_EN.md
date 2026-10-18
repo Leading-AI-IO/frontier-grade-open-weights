@@ -133,6 +133,9 @@ The entire argument of this book is contained in that one question.
 
 *This table reflects observations as of July 18, 2026. The weights were released on July 27, and the license text (Kimi K3 License) was disclosed at the same time. The execution requirements have not changed. See the addenda to Chapters 3 and 4.*
 
+(Added on October 18, 2026)<br/>
+The right-hand column of this table is an observation of Kimi K3. Since then, GLM-5.3 (weights released August 27–28, 2026; 753B; GLM-5.3 License) and DeepSeek V4.1 Flash (released September 10, 2026; 552B; MIT License) have published their weights, and the combination of license text and storage size is no longer a single pattern. See Addendum 3 to Chapter 3 and Addendum 3 to Chapter 4.
+
 ## Who This Book Is For—and Its Map
 
 This book is written for three groups.
@@ -766,6 +769,58 @@ A comparison of scale does not capture that difference.<br/>
 
 *Z.ai has not published a parameter count specific to GLM-5.3. The only official statement is that it uses the same base model as GLM-5.2. Figures such as 743B, 744B, roughly 750B, and 753B are in circulation, but each derives from a different source within the GLM-5 family. The figure of roughly 744B used in this addendum is the published value for GLM-5.2.*
 
+## Addendum 3 (October 18, 2026): The Height of the Wall Can Now Be Measured
+
+(Added on October 18, 2026)<br/>
+Addendum 2 wrote that only two things could be said about GLM-5.3: that it is smaller, and that its performance is self-reported as high.<br/>
+Both have since become measurable.
+
+### The Weights Came Out in Two Weeks
+
+On August 27–28, 2026, Z.ai published the GLM-5.3 weights on Hugging Face.<br/>
+The official model card lists a total of **753B** parameters. The figure of roughly 744B used in Addendum 2 was the published value for GLM-5.2; a figure specific to GLM-5.3 was confirmed here for the first time.<br/>
+The distribution consists of 141 safetensors shards, and the repository totals **756 GB**. The tensor types are a mix of BF16, F8_E4M3, and F32.
+
+Kimi K3: 2.8 trillion parameters, 1.56 TB in MXFP4.<br/>
+GLM-5.3: 753B parameters, 756 GB in mixed FP8.<br/>
+**One-quarter the scale, and roughly half the storage.**
+
+The official model card gives no minimum GPU configuration.<br/>
+There is no official recommended configuration for GLM-5.3 equivalent to the "number 64" this chapter discussed.
+
+### On the Same Ruler, One Point Apart
+
+The "self-reported" qualification that Chapter 2 placed is resolved here as well.<br/>
+Artificial Analysis's Intelligence Index (v4.3.2) shows GLM-5.3 (max) at **45** and Kimi K3 (max) at **44**.<br/>
+Under independent measurement, a model one-quarter the size has drawn level with the largest open-weight model, **one point apart.**
+
+The modality gap that Addendum 2 pointed out, however, remains.<br/>
+Artificial Analysis's figure is a text metric, and GLM-5.3's input is still text only.
+
+### A Third Data Point: DeepSeek V4.1 Flash
+
+On September 10, 2026, DeepSeek published "DeepSeek-V4.1-Flash" on Hugging Face.<br/>
+According to the official model card, it is a multimodal Mixture-of-Experts model with a 552B backbone, activating 8B parameters per token during prefill and 16B during decode, with a one-million-token context. The license is MIT.<br/>
+On October 17, its successor, "DeepSeek-V4.1-Flash-1017," was published under the same MIT license.
+
+On the same ruler, V4.1 Flash (max) scores **39**. It does not reach GLM-5.3's 45 or Kimi K3's 44.<br/>
+But placing the three side by side shows one trend.
+
+| | Total parameters | Distribution size | Intelligence Index (v4.3.2) | License |
+|---|---|---|---|---|
+| Kimi K3 | 2.8T | 1.56 TB (MXFP4) | 44 | Kimi K3 License |
+| GLM-5.3 | 753B | 756 GB (mixed FP8) | 45 | GLM-5.3 License |
+| DeepSeek V4.1 Flash | 552B | Unconfirmed | 39 | MIT |
+
+The implicit premise of this chapter—that frontier-grade performance requires frontier-grade mass—was qualified in Addendum 2.<br/>
+In Addendum 3, that qualification is backed by independent measurement.<br/>
+**The physical wall is not proportional to scale. But it has not disappeared.**<br/>
+Neither 753B nor 552B is a number that runs locally.
+
+*Regarding the total parameter count of DeepSeek-V4.1-Flash, the body of the official model card states "552B backbone parameters," while the card's metadata displays "763B params." The body separately lists "Engram conditional memory (196B parameters)." No official explanation of the difference was found. This addendum adopts the 552B figure from the body, which Artificial Analysis also displays. The distribution size is marked "Unconfirmed" in the table because an official total could not be confirmed at the time of writing.*
+
+*Regarding the release date of the GLM-5.3 weights, the Hugging Face commit history shows the initial commit at August 27, 17:16 (display time zone unknown), titled "Initial commit 0828." Reporting (The New Stack, August 28, 2026) gives the release date as August 28. This addendum treats it as August 27–28. The statement attributed to Z.ai that it "conducted two additional weeks of comprehensive safety evaluations" is quoted by that report from an X post by a Z.ai staff member; this book has not directly verified the primary source.*
+
 ### References
 
 1. Moonshot AI, “Kimi K3 Tech Blog: Open Frontier Intelligence” (supernode with 64+ accelerators recommended / MXFP4 weights and MXFP8 activations / Stable LatentMoE with 16 of 896 experts active / API prices of $3 and $15, cached input $0.30)
@@ -788,6 +843,20 @@ A comparison of scale does not capture that difference.<br/>
    <https://github.com/MoonshotAI/Kimi-K3>
 10. Nathan Lambert (Interconnects), "GLM-5.3: How Chinese labs keep stride with the frontier" (August 14, 2026; at roughly 750B it sits at the frontier of agentic coding benchmarks / RL environments cannot simply be distilled)
    <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
+
+(Added on October 18, 2026)<br/>
+11. Z.ai, "zai-org/GLM-5.3," official Hugging Face model card (753B params / 141 safetensors shards, repository total 756 GB / tensor types BF16, F8_E4M3, F32 / License: glm-5.3 / initial commit August 27, 2026, "Initial commit 0828")
+   <https://huggingface.co/zai-org/GLM-5.3>
+12. DeepSeek, "deepseek-ai/DeepSeek-V4.1-Flash," official Hugging Face model card (552B backbone / 8B active in prefill, 16B in decode / Engram conditional memory 196B / 1M context / MIT License / initial commit September 10, 2026)
+   <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash>
+13. DeepSeek, "deepseek-ai/DeepSeek-V4.1-Flash-1017," official Hugging Face model card (MIT License / initial commit October 17, 2026 / benchmarks self-reported)
+   <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017>
+14. Artificial Analysis, "GLM-5.3," "Kimi K3," "DeepSeek V4.1 Flash" (Intelligence Index v4.3.2: GLM-5.3 (max) 45 / Kimi K3 (max) 44 / DeepSeek V4.1 Flash (max) 39; accessed October 18, 2026)
+   <https://artificialanalysis.ai/models/glm-5-3>
+   <https://artificialanalysis.ai/models/kimi-k3>
+   <https://artificialanalysis.ai/models/deepseek-v4-1-flash>
+15. The New Stack, "Z.ai's GLM-5.3 goes open weight, but its new license aims at hyperscalers" (August 28, 2026; quotes a Z.ai staff member's X post on "two additional weeks of comprehensive safety evaluations")
+   <https://thenewstack.io/zai-glm-weights-license/>
 
 *The weight-size figures—approximately 5.6 TB in BF16, 2.8 TB in INT8, and 1.4 TB in INT4—are arithmetic estimates based on Moonshot’s reported total of 2.8 trillion parameters, not figures officially disclosed by Moonshot. The actual distribution format on July 27, 2026 was MXFP4, with a reported file size of 1.56 TB (PC Watch, July 28, 2026).*
 
@@ -1020,6 +1089,67 @@ What differs is that the party conducting it is not a regulator but **the entity
 
 *Regarding the timing of the weight release, descriptions stating "approximately two weeks after launch" circulate across multiple outlets and are attributed to the text of Z.ai's official blog post. At the time of writing this addendum, the official blog text could not be retrieved directly, and this point is therefore treated as reported information.*
 
+## Addendum 3 (October 18, 2026): The Text Came Out. It Was Not MIT
+
+(Added on October 18, 2026)<br/>
+Addendum 2 wrote that "Z.ai has never stated that GLM-5.3 will adopt the same license."<br/>
+On August 27–28, 2026, the text came out together with the weights. Its name is the "GLM-5.3 License." **It is not MIT.**<br/>
+The "approximately two weeks after launch" that Addendum 2 held as reported information also turned out as reported.
+
+### The Threshold Rose 500-Fold
+
+The GLM-5.3 License permits use, copying, modification, distribution, sublicensing, and sale.<br/>
+Exactly one condition is added.<br/>
+Anyone operating a "Model as a Service"—providing third parties with access to inference or fine-tuning that gives them meaningful control over inputs, parameters, or training data—<br/>
+**whose aggregate revenue, together with its affiliates, exceeds US$10 billion in any twelve consecutive months must pass Z.AI's security review before commercial use.**<br/>
+The scope and method of that review are determined by Z.AI.
+
+The Kimi K3 License required an individual agreement at US$20 million in annual revenue from a Model-as-a-Service business.<br/>
+The GLM-5.3 License's threshold is 500 times that.<br/>
+There is no MAU clause, and the attribution obligation is limited to the ordinary copyright notice.
+
+**The text binds a narrower set of parties. But the manner of binding has changed.**<br/>
+What the Kimi K3 text demanded was a contract.<br/>
+What the GLM-5.3 text demands is **a review conducted by the entity that built the model.**
+
+Addendum 2 described the decision to delay release on safety grounds as "review by the party itself."<br/>
+That review remained inside the license text after release.<br/>
+The wall of time dissolved, and the review moved into the text.
+
+### Of the Four, What Is Now in Place
+
+Four things are required for openness as a state: distributed weights, the resources to run them, the conditions under which they may be used, and the materials to reproduce them.<br/>
+What stood at zero on August 17 stands as follows on October 18.
+
+* Distributed weights: **in place** (Hugging Face, 753B, 756 GB)
+* Resources to run them: **now measurable.** No official minimum configuration is given
+* Conditions of use: **in place** (GLM-5.3 License)
+* Materials to reproduce: no release of training data could be confirmed
+
+GLM-5.3 has converged on the same state as Kimi K3: published, with limited reach.<br/>
+The second form returned to the first form in two weeks.
+
+### Release Without Restriction Also Exists
+
+In the same period, DeepSeek published V4.1 Flash (September 10) and V4.1-Flash-1017 (October 17) under the MIT License.<br/>
+No threshold clause. No review clause.<br/>
+The inverse of this chapter's title, "Release Without a License"—**release under a license without restriction**—emerged from the same country within the same two months.
+
+Placing the three side by side:
+
+| | From announcement to confirmed text | Text | Threshold |
+|---|---|---|---|
+| Kimi K3 | 10 days (with the weights, July 27) | Kimi K3 License | MaaS revenue US$20M / 100M MAU |
+| GLM-5.3 | About two weeks (with the weights, August 27–28) | GLM-5.3 License | MaaS aggregate revenue US$10B (security review) |
+| DeepSeek V4.1 Flash | 0 days (with the weights, September 10) | MIT | None |
+
+**"Chinese open weights" cannot be described by a single condition.**<br/>
+Privileged Open is not an attribute of a country; it is an individual state determined by license text and storage size.<br/>
+The sentence this chapter wrote in July holds across all three cases.<br/>
+Openness is neither a declaration nor an intention, but a state.
+
+*The text of the GLM-5.3 License was verified from the LICENSE file (4.26 kB) in the Hugging Face repository. This addendum's summary is limited to the revenue threshold (US$10 billion, twelve consecutive months), the party conducting the security review (Z.AI), and the definition of Model as a Service (which excludes embedded end-user features and simple request relaying). Conditions on redistribution and whether the text must be inherited by derivative models were not examined in this addendum.*
+
 ### References
 
 1. Vals AI, “Kimi K3” (**License type: Proprietary — contact us to get access**)
@@ -1046,6 +1176,16 @@ What differs is that the party conducting it is not a regulator but **the entity
    <https://huggingface.co/zai-org/GLM-5.2>
 12. Nathan Lambert (Interconnects), "GLM-5.3: How Chinese labs keep stride with the frontier" (August 14, 2026; quotes Z.ai's statement on the staged release)
    <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
+
+(Added on October 18, 2026)<br/>
+13. Z.ai, "GLM-5.3 License" (LICENSE file in Hugging Face zai-org/GLM-5.3 / Model-as-a-Service operators whose aggregate revenue with affiliates exceeds US$10 billion in any twelve consecutive months must pass Z.AI's security review before commercial use / scope and method of review determined by Z.AI / no MAU clause)
+   <https://huggingface.co/zai-org/GLM-5.3/blob/main/LICENSE>
+14. DeepSeek, "deepseek-ai/DeepSeek-V4.1-Flash," official Hugging Face model card (**This repository and the model weights are licensed under the MIT License** / initial commit September 10, 2026)
+   <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash>
+15. DeepSeek, "deepseek-ai/DeepSeek-V4.1-Flash-1017," official Hugging Face model card (MIT License / initial commit October 17, 2026)
+   <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017>
+16. Artificial Analysis, "GLM-5.3" (**Open weights model** / License: GLM-5.3 License / 753B total, 40B active; accessed October 18, 2026)
+   <https://artificialanalysis.ai/models/glm-5-3>
 
 *As of the research cutoff for this book (July 18, 2026), K3’s formal license text, redistribution conditions, military-use restrictions, and disclosure obligations for modified versions could not be confirmed. Reports describing the license as Modified MIT existed, but the only text verified was that of the K2 family.*
 
@@ -1790,6 +1930,26 @@ And he states plainly that **there is no good data on how open models are used i
 The gap this chapter identified—deployment data in the Global South—has been confirmed as a gap by the very researcher who measures this field most closely.<br/>
 **Adoption metrics have begun to appear inside the U.S. and China. Outside them, no one can yet see.**
 
+## Addendum 2 (October 18, 2026): The Prospectus Is Still Not Visible
+
+(Added on October 18, 2026)<br/>
+This chapter placed Moonshot's "potential Hong Kong listing" at the [Reporting] level and recorded that no company-issued primary document could be found.<br/>
+On September 3, 2026, Reuters reported that Moonshot had filed **confidentially** for a listing on the Hong Kong Stock Exchange.<br/>
+According to three people with knowledge of the plans, the target raise is about US$3 billion, and the valuation in an ongoing funding round is about US$50 billion.<br/>
+Moonshot had not replied to a request for comment. Chinese outlet LatePost reported the filing first, the same week.
+
+The valuation this chapter recorded as [Reporting] in July was about US$30 billion. The September reporting says US$50 billion.<br/>
+But **this chapter's judgment does not change.**<br/>
+A confidential filing, as the name says, does not publish a prospectus.<br/>
+A company-issued primary document appears only when the filing turns public and the prospectus is posted on the Hong Kong exchange's site.<br/>
+Until then, the valuation, the raise, and the Alibaba and Tencent stakes all remain [Reporting].
+
+This chapter wrote that the primary financial data needed to substantiate the story of "open weights as national strategy" does not currently exist in public.<br/>
+**The place where that primary data will first appear has now been identified: the prospectus.**<br/>
+When it is posted, one of this chapter's gaps will close. This book will add to the record at that point.
+
+*The facts in this addendum are based on reporting by Reuters (September 3, 2026, Hong Kong; Laurie Chen, Kane Wu, and Yantoultra Ngui) and TechNode (same day). No announcement by Moonshot itself could be confirmed; TechNode reports that Moonshot said it had no comment on the market report and had no information to disclose at this time. In this addendum, the filing itself, the target raise, and the valuation are all treated as [Reporting].*
+
 ### References
 
 1. CGTN, “Full text: Xi’s keynote speech at the 2026 WAIC opening ceremony” (July 17, 2026; **“encourage open source, openness, collaboration and sharing”** / **5,000 AI training and seminar opportunities** for developing countries over five years)
@@ -1811,6 +1971,12 @@ The gap this chapter identified—deployment data in the Global South—has been
 (Added on September 25, 2026)<br/>
 8. Nathan Lambert (Interconnects), “The current balance of power in open models” (September 21, 2026; prepared remarks for a Congressional briefing / Chinese share on OpenRouter about 70% → over 80% / about 95% or more on OpenCode / arXiv mentions: Qwen about 30%, Llama about 21% / no data for countries other than the U.S. and China)
    <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
+
+(Added on October 18, 2026)<br/>
+9. Reuters, "Chinese AI firm Moonshot files confidentially for Hong Kong IPO, sources say" (September 3, 2026, Hong Kong / three people with knowledge of the plans / target raise about US$3 billion / valuation about US$50 billion in an ongoing round / Moonshot had not replied to a request for comment / first reported by LatePost; URL is a republication by WTVB)
+   <https://wtvbam.com/2026/09/03/chinese-ai-firm-moonshot-files-confidentially-for-hong-kong-ipo-sources-say/>
+10. TechNode, "Moonshot AI reportedly submits confidential Hong Kong IPO filing" (September 3, 2026 / confidential A1 application / reported fundraising at a pre-money valuation of about US$50 billion / Moonshot "had no comment on the market report")
+   <https://technode.com/2026/09/03/moonshot-ai-reportedly-submits-confidential-hong-kong-ipo-filing/>
 
 *Claims concerning the capital structures of Moonshot, Zhipu, and MiniMax—including Alibaba/Tencent investment, a $30-billion valuation, and Hong Kong listing plans—remained at the [Reporting] level and could not be verified through company-issued primary documents. The research also found no financial evidence showing the flow or decision-making influence of Chinese government strategic funds, and no deployment data for open weights in the Global South, such as country-level usage shares or sovereign-AI adoption counts.*
 
