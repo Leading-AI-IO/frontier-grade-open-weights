@@ -137,6 +137,9 @@ Moonshotは公式ブログに、こう書いている。<br/>
 
 ※本表は2026年7月18日時点の観測である。重みは7月27日に公開され、ライセンス条文（Kimi K3 License）も同時に開示された。実行環境の要件は変わっていない。第3章・第4章の追記を参照。
 
+（2026年10月18日追記）<br/>
+本表の右列は、Kimi K3の観測である。その後、GLM-5.3（2026年8月27日〜28日公開・753B・GLM-5.3 License）とDeepSeek V4.1 Flash（2026年9月10日公開・552B・MIT License）が重みを公開し、条文と容量の組み合わせは一つではなくなった。第3章追記3・第4章追記3を参照。
+
 ## 本書の読者と地図
 
 本書は、次の3者のために書かれている。
@@ -772,6 +775,58 @@ GLM-5.3のスコアは、すべてZ.ai自身のハーネスで測られたもの
 
 ※GLM-5.3のパラメータ数について、Z.ai公式はGLM-5.3固有の数値を公表していない。公式が述べているのは「GLM-5.2と同一のベースモデル」であることのみである。「743B」「744B」「約750B」「753B」という数字が流通しているが、いずれもGLM-5系列の別ソースに由来する。本追記が用いた「約744B」はGLM-5.2の公表値である。
 
+## 追記3（2026年10月18日）: 壁の高さは、測れるようになった
+
+（2026年10月18日追記）<br/>
+追記2は、GLM-5.3について現在言えるのは「規模が小さいことと、性能が高いと自己申告されていること」の二点だけだ、と書いた。<br/>
+その後、二点とも測れるようになった。
+
+### 重みは、2週間で出た
+
+2026年8月27日〜28日、Z.aiはGLM-5.3の重みをHugging Faceで公開した。<br/>
+公式モデルカードが示す総パラメータ数は**753B**である。追記2が用いた「約744B」はGLM-5.2の公表値であり、GLM-5.3固有の数値はここで初めて確定した。<br/>
+配布ファイルは141分割のsafetensorsで、リポジトリ全体は**756GB**。テンソル型はBF16・F8_E4M3・F32が混在する。
+
+Kimi K3は、2.8兆パラメータをMXFP4で1.56TB。<br/>
+GLM-5.3は、753BをFP8混在で756GB。<br/>
+**規模は4分の1、保持すべき容量はおよそ半分である。**
+
+公式モデルカードは、最小GPU構成を示していない。<br/>
+本章が論じた「64という数字」に相当する公式の推奨構成は、GLM-5.3には存在しない。
+
+### 同じ物差しで、1点差になった
+
+第2章が留保した「自己申告」も、ここで解ける。<br/>
+Artificial AnalysisのIntelligence Index（v4.3.2）は、GLM-5.3（max）を**45**、Kimi K3（max）を**44**と表示している。<br/>
+独立測定の上で、4分の1の規模が、最大のオープンウェイトと**1点差で並んだ。**
+
+ただし、追記2が指摘したモダリティの差は残っている。<br/>
+Artificial Analysisの数値はテキストの指標であり、GLM-5.3の入力は依然としてテキストのみである。
+
+### 三つ目の点：DeepSeek V4.1 Flash
+
+2026年9月10日、DeepSeekは「DeepSeek-V4.1-Flash」をHugging Faceで公開した。<br/>
+公式モデルカードによれば、バックボーン552Bのマルチモーダル混合専門家モデルで、トークンあたりの活性パラメータはプリフィル時8B・デコード時16B、コンテキストは100万トークン。ライセンスはMITである。<br/>
+10月17日には後継の「DeepSeek-V4.1-Flash-1017」が、同じMITライセンスで公開された。
+
+同じ物差しで、V4.1 Flash（max）は**39**である。GLM-5.3の45、Kimi K3の44には届いていない。<br/>
+だが、三つを並べると、一つの傾向が見える。
+
+| | 総パラメータ | 配布容量 | Intelligence Index（v4.3.2） | ライセンス |
+|---|---|---|---|---|
+| Kimi K3 | 2.8T | 1.56TB（MXFP4） | 44 | Kimi K3 License |
+| GLM-5.3 | 753B | 756GB（FP8混在） | 45 | GLM-5.3 License |
+| DeepSeek V4.1 Flash | 552B | 未確認 | 39 | MIT |
+
+本章が暗黙に置いていた前提——フロンティア級の性能には、フロンティア級の質量が要る——は、追記2で留保がついた。<br/>
+追記3で、その留保は独立測定に裏づけられた。<br/>
+**物理の壁は、規模に比例しない。だが、消えてもいない。**<br/>
+753Bも552Bも、ローカルで動く数字ではない。
+
+※DeepSeek-V4.1-Flashの総パラメータ数について、公式モデルカード本文は「552B backbone parameters」と記し、同カードのメタデータは「763B params」と表示している。本文はさらに「Engram conditional memory（196B parameters）」を別枠で挙げている。両者の差について公式の説明は見つからなかった。本追記は本文の552Bを採用し、Artificial Analysisも552Bを表示している。配布容量は本追記の執筆時点で公式の合計値を確認できなかったため、表では「未確認」とした。
+
+※GLM-5.3の重み公開日について、Hugging Faceのコミット履歴は初回コミットを8月27日17:16（表示タイムゾーン不明）、コミット名を「Initial commit 0828」としている。報道（The New Stack、2026年8月28日）は公開日を8月28日としている。本追記は「8月27日〜28日」として扱う。Z.aiが「追加で2週間の包括的な安全性評価を実施した」と述べたとする記述は、同報道がZ.ai関係者のX投稿を引用したものであり、本書は一次資料を直接確認していない。
+
 ### 参考文献
 
 1. Moonshot AI「Kimi K3 Tech Blog: Open Frontier Intelligence」（64アクセラレータ以上のスーパーノード推奨／MXFP4ウェイト・MXFP8アクティベーション／Stable LatentMoE 896エキスパート中16アクティブ／API $3・$15、キャッシュヒット時入力$0.30）
@@ -794,6 +849,20 @@ GLM-5.3のスコアは、すべてZ.ai自身のハーネスで測られたもの
    <https://github.com/MoonshotAI/Kimi-K3>
 10. Nathan Lambert（Interconnects）「GLM-5.3: How Chinese labs keep stride with the frontier」（2026年8月14日・約750Bでエージェンティック・コーディングのフロンティアに位置／RL環境は蒸留できないという指摘）
    <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
+
+（2026年10月18日追記）<br/>
+11. Z.ai「zai-org/GLM-5.3」Hugging Face 公式モデルカード（753B params／141分割safetensors・リポジトリ合計756GB／テンソル型BF16・F8_E4M3・F32／License: glm-5.3／初回コミット2026年8月27日「Initial commit 0828」）
+   <https://huggingface.co/zai-org/GLM-5.3>
+12. DeepSeek「deepseek-ai/DeepSeek-V4.1-Flash」Hugging Face 公式モデルカード（552B backbone／活性8B（prefill）・16B（decode）／Engram conditional memory 196B／コンテキスト1M／MIT License／初回コミット2026年9月10日）
+   <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash>
+13. DeepSeek「deepseek-ai/DeepSeek-V4.1-Flash-1017」Hugging Face 公式モデルカード（MIT License／初回コミット2026年10月17日／ベンチマークは自社測定）
+   <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017>
+14. Artificial Analysis「GLM-5.3」「Kimi K3」「DeepSeek V4.1 Flash」（Intelligence Index v4.3.2：GLM-5.3（max）45／Kimi K3（max）44／DeepSeek V4.1 Flash（max）39、2026年10月18日閲覧）
+   <https://artificialanalysis.ai/models/glm-5-3>
+   <https://artificialanalysis.ai/models/kimi-k3>
+   <https://artificialanalysis.ai/models/deepseek-v4-1-flash>
+15. The New Stack「Z.ai's GLM-5.3 goes open weight, but its new license aims at hyperscalers」（2026年8月28日・Z.ai関係者のX投稿「追加で2週間の包括的な安全性評価」を引用）
+   <https://thenewstack.io/zai-glm-weights-license/>
 
 ※重みサイズ（BF16 約5.6TB／INT8 約2.8TB／INT4 約1.4TB）は、Moonshotが公表した総パラメータ数2.8兆からの算術推計であり、公式が開示した数値ではない。2026年7月27日の実配布形式はMXFP4で、報じられたファイルサイズは1.56TBである（PC Watch、2026年7月28日）。
 
@@ -1023,6 +1092,67 @@ GLM-5.3は「公開されると告げられているが、まだ公開されて�
 
 ※ウェイト公開時期について「ローンチから約2週間後」とする記述が複数の媒体で流通しており、Z.ai公式ブログ本文に該当文言があるとされる。本追記の執筆時点で公式ブログ本文の直接取得はできておらず、この一点は報道ベースの情報として扱う。
 
+## 追記3（2026年10月18日）: 条文は出た。MITではなかった
+
+（2026年10月18日追記）<br/>
+追記2は「GLM-5.3が同じライセンスを採ると、Z.aiは一度も述べていない」と書いた。<br/>
+2026年8月27日〜28日、重みとともに条文が出た。名称は「GLM-5.3 License」。**MITではない。**<br/>
+追記2が報道ベースとして留保した「ローンチから約2週間後」も、そのとおりになった。
+
+### 閾値は、500倍になった
+
+GLM-5.3 Licenseは、使用・複製・改変・配布・再ライセンス・販売を認める。<br/>
+条件は一つだけ加わっている。<br/>
+「Model as a Service」——第三者に推論または微調整へのアクセスを提供し、入力・パラメータ・学習データに対する実質的な制御を与える形態——を運営する者で、<br/>
+**本人と関連会社の合算収入が連続する12ヶ月で100億ドルを超える場合、商用利用の前にZ.AIの安全審査を通過しなければならない。**<br/>
+審査の範囲と方法は、Z.AIが定める。
+
+Kimi K3 Licenseは、Model as a Service事業の年間総収入2,000万ドルで個別契約を求めた。<br/>
+GLM-5.3 Licenseの閾値は、その500倍である。<br/>
+MAU条項はなく、帰属表示の義務も通常の著作権表示にとどまる。
+
+**条文が縛る対象は、狭くなった。だが、縛り方は変わった。**<br/>
+Kimi K3の条文が求めたのは、契約である。<br/>
+GLM-5.3の条文が求めるのは、**モデルを作った当事者による審査**である。
+
+追記2は、安全性を理由に公開を遅らせる判断を「当事者自身による審査」と書いた。<br/>
+その審査は、公開のあとも条文の中に残った。<br/>
+時間の壁は解け、審査は条文へ移った。
+
+### 四つのうち、揃ったもの
+
+状態としての開放に要る四つ——重みの配布・実行できる資源・使ってよい条件・再現できる材料。<br/>
+8月17日時点でゼロだったものが、10月18日時点ではこうなっている。
+
+* 重みの配布：**揃った**（Hugging Face、753B、756GB）
+* 実行できる資源：**測れるようになった**。公式の最小構成は示されていない
+* 使ってよい条件：**揃った**（GLM-5.3 License）
+* 再現できる材料：学習データの公開は確認できなかった
+
+Kimi K3と同じ、「公開されているが、到達は限られる」状態に収束した。<br/>
+第二形態は、2週間で第一形態に戻った。
+
+### 条文のない公開も、ある
+
+同じ期間に、DeepSeekはV4.1 Flash（9月10日）とV4.1-Flash-1017（10月17日）をMITライセンスで公開した。<br/>
+閾値条項はない。審査条項もない。<br/>
+本章の題「ライセンスなき公開」の逆——**制限なきライセンスの公開**——が、同じ中国から、同じ2ヶ月の間に出ている。
+
+三つを並べる。
+
+| | 発表から条文確定まで | 条文 | 閾値 |
+|---|---|---|---|
+| Kimi K3 | 10日（7月27日に重みと同時） | Kimi K3 License | MaaS年商2,000万ドル／MAU1億 |
+| GLM-5.3 | 約2週間（8月27日〜28日に重みと同時） | GLM-5.3 License | MaaS合算収入100億ドル（安全審査） |
+| DeepSeek V4.1 Flash | 0日（9月10日に重みと同時） | MIT | なし |
+
+**「中国製オープンウェイト」は、一つの条件では語れない。**<br/>
+特権的なオープンは、国の属性ではなく、条文と容量が決める個別の状態である。<br/>
+本章が7月に書いた一文は、三つの事例を経ても変わらない。<br/>
+開放は、宣言でも意思でもなく、状態である。
+
+※GLM-5.3 Licenseの条文は、Hugging Faceリポジトリ内のLICENSEファイル（4.26kB）で確認した。本追記の要約は、収入閾値（100億ドル・連続12ヶ月）、安全審査の主体（Z.AI）、Model as a Serviceの定義（埋め込み型のエンドユーザー機能と単純なリクエスト中継は除外）に限る。再配布時の条件、派生モデルへの条文継承の要否は、本追記では検証していない。
+
 ### 参考文献
 
 1. Vals AI「Kimi K3」（**License type: Proprietary — contact us to get access**）
@@ -1049,6 +1179,16 @@ GLM-5.3は「公開されると告げられているが、まだ公開されて�
    <https://huggingface.co/zai-org/GLM-5.2>
 12. Nathan Lambert（Interconnects）「GLM-5.3: How Chinese labs keep stride with the frontier」（2026年8月14日・段階的リリースに関するZ.ai声明の引用）
    <https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>
+
+（2026年10月18日追記）<br/>
+13. Z.ai「GLM-5.3 License」（Hugging Face zai-org/GLM-5.3 内 LICENSE／Model as a Service運営者で本人と関連会社の合算収入が連続12ヶ月で100億ドル超の場合、商用利用前にZ.AIの安全審査／審査の範囲と方法はZ.AIが決定／MAU条項なし）
+   <https://huggingface.co/zai-org/GLM-5.3/blob/main/LICENSE>
+14. DeepSeek「deepseek-ai/DeepSeek-V4.1-Flash」Hugging Face 公式モデルカード（**This repository and the model weights are licensed under the MIT License**／初回コミット2026年9月10日）
+   <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash>
+15. DeepSeek「deepseek-ai/DeepSeek-V4.1-Flash-1017」Hugging Face 公式モデルカード（MIT License／初回コミット2026年10月17日）
+   <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017>
+16. Artificial Analysis「GLM-5.3」（**Open weights model**／License: GLM-5.3 License／753B total・40B active、2026年10月18日閲覧）
+   <https://artificialanalysis.ai/models/glm-5-3>
 
 ※K3の正式ライセンス全文・再配布条件・軍事利用制限・修正版公開義務は、本書の調査時点（2026年7月18日）では確認できなかった。「Modified MIT」とする報道は存在するが、確認できたのはK2系の条文のみである。
 
@@ -1797,6 +1937,26 @@ Together AIやFireworks AIのように、モデル別の内訳を開示しない
 本章が明記した空白——グローバルサウスにおける実配備データ——は、この領域を最もよく測っている研究者自身によって、空白のまま確認された。<br/>
 **採用の指標は、米中の内側では出始めた。その外側は、まだ誰にも見えていない。**
 
+## 追記2（2026年10月18日）: 目論見書は、まだ見えない
+
+（2026年10月18日追記）<br/>
+本章は、Moonshotの「香港上場観測」を[報道]レベルと書き、会社自身の一次文書は発見できなかったと記した。<br/>
+2026年9月3日、Reutersは、Moonshotが香港証券取引所に**非公開で**上場申請を提出したと報じた。<br/>
+計画を知る3人の話として、調達目標は約30億ドル、進行中の資金調達ラウンドでの評価額は約500億ドル。<br/>
+Moonshotはコメント要請に応じていない。中国メディアLatePostが同週に先行して報じている。
+
+本章が7月に[報道]として記した評価額は、約300億ドルだった。9月の報道は、500億ドルである。<br/>
+だが、**本章の判定は変わらない。**<br/>
+非公開申請は、その名のとおり目論見書を公開しない。<br/>
+会社自身の一次文書が出るのは、申請が公開に転じ、目論見書が香港取引所のサイトに掲載されたときである。<br/>
+それまで、評価額も、調達額も、Alibaba・Tencentの持分も、[報道]のままだ。
+
+本章は、「国家戦略としてのオープンウェイト」という物語を財務レベルで裏づける一次データはいま存在しない、と書いた。<br/>
+**その一次データが初めて現れる場所は、特定できた。目論見書である。**<br/>
+掲載された時点で、本章の空白の一つが埋まる。本書はその時点で追記する。
+
+※本追記の事実関係は、Reuters（2026年9月3日・香港発・Laurie Chen、Kane Wu、Yantoultra Ngui）およびTechNode（同日）の報道に基づく。Moonshot自身の発表は確認できておらず、TechNodeはMoonshotが「市場の報道にコメントしない」「現時点で開示する情報はない」と回答したと伝えている。本追記では、上場申請の事実・調達目標・評価額のいずれも[報道]として扱う。
+
 ### 参考文献
 
 1. CGTN「Full text: Xi's keynote speech at the 2026 WAIC opening ceremony」（2026年7月17日・**"encourage open source, openness, collaboration and sharing"**／今後5年で発展途上国へ**5,000のAI研修・セミナー機会**）
@@ -1818,6 +1978,12 @@ Together AIやFireworks AIのように、モデル別の内訳を開示しない
 （2026年9月25日追記）<br/>
 8. Nathan Lambert（Interconnects）「The current balance of power in open models」（2026年9月21日・米議会向け説明の準備原稿／OpenRouterで中国製の利用比率は約70%→80%超／OpenCodeで約95%以上／arXiv論文でQwen約30%・Llama約21%／米中以外の国の利用データはない）
    <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
+
+（2026年10月18日追記）<br/>
+9. Reuters「Chinese AI firm Moonshot files confidentially for Hong Kong IPO, sources say」（2026年9月3日・香港発／計画を知る3人／調達目標約30億ドル／進行中ラウンドの評価額約500億ドル／Moonshotはコメント要請に未回答／LatePostが先行報道。URLはWTVBによる転載）
+   <https://wtvbam.com/2026/09/03/chinese-ai-firm-moonshot-files-confidentially-for-hong-kong-ipo-sources-say/>
+10. TechNode「Moonshot AI reportedly submits confidential Hong Kong IPO filing」（2026年9月3日・非公開のA1申請／プレマネー評価額約500億ドルで調達中との報道／Moonshotは「市場の報道にコメントしない」）
+   <https://technode.com/2026/09/03/moonshot-ai-reportedly-submits-confidential-hong-kong-ipo-filing/>
 
 ※Moonshot・Zhipu・MiniMaxの資本構造（Alibaba/Tencent出資・評価額300億ドル・香港上場観測）は[報道]レベルの言及にとどまり、会社自身の一次文書での確証は本調査では得られなかった。中国政府の戦略ファンドの流入・意思決定への影響を示す財務証拠、およびオープンウェイトのグローバルサウスにおける実配備データ（国別利用比率・ソブリンAI採用件数）も発見できなかった。
 
