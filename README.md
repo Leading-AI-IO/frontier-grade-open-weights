@@ -4,7 +4,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Language](https://img.shields.io/badge/Language-Japanese%20%7C%20English-blue)](docs/)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--08--20-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--10--18-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
 
 <p align="left">
   <img src="./assets/ogp_design.png" width="90%">
@@ -50,6 +50,9 @@
 > **追記（2026年8月17日）｜規模という前提に、留保がついた。**
 > 2026年8月14日、Z.aiがGLM-5.3を発表した。公式の開発者ドキュメントは、このモデルのプログラミングとエージェント能力を「Claude Fable 5と同等である」と位置づけている。ベースモデルはGLM-5.2と同一で、約744B——**Kimi K3の2.8兆パラメータの、およそ4分の1である。** 本書が暗黙に置いていた前提「フロンティア級の性能には、フロンティア級の質量が要る」は、ここで一度、留保が必要になった。ただし重みは公開されておらず、ライセンス条文も存在しない。物理の壁が下がったのかどうかは、まだ誰も測れない。さらにKimi K3が「公開したうえで条文で縛った」のに対し、GLM-5.3は「条文を出す前に、公開そのものを時間で区切っている」——**特権的なオープンの、第二形態**である。検証は第3章・第4章の追記2に記録している。
 
+> **追記（2026年10月18日）｜第二形態は、2週間で第一形態に戻った。**
+> 2026年8月27日〜28日、Z.aiはGLM-5.3の重み（753B・756GB）をHugging Faceで公開し、条文「GLM-5.3 License」を同時に開示した。MITではない。Model as a Service運営者で合算収入が100億ドルを超える場合、商用利用の前にZ.AIの安全審査を要する——**時間の壁は解け、審査は条文へ移った。** 独立測定（Artificial Analysis Intelligence Index v4.3.2）では、GLM-5.3が45、Kimi K3が44。4分の1の規模が、1点差で並んだ。一方、DeepSeekはV4.1 Flash（9月10日・552B）とV4.1-Flash-1017（10月17日）をMITライセンスで公開した。閾値条項はない。**「中国製オープンウェイト」は、一つの条件では語れない。** 検証は第3章・第4章の追記3に記録している。Moonshotの香港上場申請の報道（Reuters・9月3日）は、第8章の追記2に[報道]として記した。
+
 ---
 
 ## 📄 ドキュメント
@@ -67,6 +70,8 @@
 
 | 版 | 日付 | 内容 |
 | --- | --- | --- |
+| [**v1.5**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.5) | 2026-10-18 | GLM-5.3の重み公開と条文、DeepSeek V4.1 Flash、Moonshot上場申請報道を追記（序章・第3章・第4章・第8章） |
+| [**v1.4**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.4) | 2026-09-25 | 議会で語られた距離、評価指標の改定、蒸留の推計、Hugging Face一次文書、採用指標を追記（序章・第1章・第2章・第6章・第7章・第8章）。第8章ATOMレポートの逆転時期を訂正 |
 | [**v1.3**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.3) | 2026-08-20 | 依頼導線を削除 |
 | [**v1.2**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.2) | 2026-08-17 | GLM-5.3を追記（第3章・第4章） |
 | [**v1.1**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.1) | 2026-07-28 | 重み公開とライセンス条文の確定を追記（第3章・第4章） |
