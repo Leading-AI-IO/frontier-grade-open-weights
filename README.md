@@ -4,7 +4,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Language](https://img.shields.io/badge/Language-Japanese%20%7C%20English-blue)](docs/)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--10--18-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--10--19-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
 
 <p align="left">
   <img src="./assets/ogp_design.png" width="90%">
@@ -53,6 +53,9 @@
 > **追記（2026年10月18日）｜第二形態は、2週間で第一形態に戻った。**
 > 2026年8月27日〜28日、Z.aiはGLM-5.3の重み（753B・756GB）をHugging Faceで公開し、条文「GLM-5.3 License」を同時に開示した。MITではない。Model as a Service運営者で合算収入が100億ドルを超える場合、商用利用の前にZ.AIの安全審査を要する——**時間の壁は解け、審査は条文へ移った。** 独立測定（Artificial Analysis Intelligence Index v4.3.2）では、GLM-5.3が45、Kimi K3が44。4分の1の規模が、1点差で並んだ。一方、DeepSeekはV4.1 Flash（9月10日・552B）とV4.1-Flash-1017（10月17日）をMITライセンスで公開した。閾値条項はない。**「中国製オープンウェイト」は、一つの条件では語れない。** 検証は第3章・第4章の追記3に記録している。Moonshotの香港上場申請の報道（Reuters・9月3日）は、第8章の追記2に[報道]として記した。
 
+> **追記（2026年10月19日）｜米国のオープンウェイトが、列に戻ってきた。条文は、Kimi K3と同じ線を引いた。**
+> 2026年10月15日、MetaはMuse Spark Open（816B・アクティブ42B）の重みをHugging Faceで公開した。独立測定（Artificial Analysis Intelligence Index v4.3.2）では39。本書が米国側の根拠にしたgpt-oss-120b（12）とLlama 4 Maverick（9）を大きく上回り、中国製の最高値（GLM-5.3の45）との差は6点になった。条文「Muse Model License」はMAU条項をやめ、Model as a Serviceで本人と関連会社の総収入が連続12ヶ月で2,000万ドルを超える場合に、Metaとの別途の書面契約を求める——**Kimi K3 Licenseと同じ額・同じ期間である。** 配布されたBF16の重みは約1.64TB。Metaは「Mac Studio 2台のデスクトップで動く」と書いたが、2台の統合メモリは合計1TBで、どの精度で載せるのかは書かれていない。**特権的なオープンは、国の属性ではない。** 検証は第1章の追記2、第3章・第4章の追記4に記録している。
+
 ---
 
 ## 📄 ドキュメント
@@ -70,6 +73,7 @@
 
 | 版 | 日付 | 内容 |
 | --- | --- | --- |
+| [**v1.6**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.6) | 2026-10-19 | MetaのMuse Spark Open（重みの公開・独立測定・Muse Model License）を追記（第1章・第3章・第4章） |
 | [**v1.5**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.5) | 2026-10-18 | GLM-5.3の重み公開と条文、DeepSeek V4.1 Flash、Moonshot上場申請報道を追記（序章・第3章・第4章・第8章） |
 | [**v1.4**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.4) | 2026-09-25 | 議会で語られた距離、評価指標の改定、蒸留の推計、Hugging Face一次文書、採用指標を追記（序章・第1章・第2章・第6章・第7章・第8章）。第8章ATOMレポートの逆転時期を訂正 |
 | [**v1.3**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.3) | 2026-08-20 | 依頼導線を削除 |

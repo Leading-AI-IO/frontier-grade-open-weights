@@ -4,7 +4,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Language](https://img.shields.io/badge/Language-Japanese%20%7C%20English-blue)](docs/)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--10--18-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--10--19-brightgreen)](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases)
 
 <p align="left">
   <img src="./assets/ogp_design.png" width="90%">
@@ -48,6 +48,9 @@ On August 14, 2026, Z.ai announced GLM-5.3. Official developer documentation pos
 **Addendum (October 18, 2026): The second form returned to the first form in two weeks.** 
 On August 27–28, 2026, Z.ai published the GLM-5.3 weights (753B, 756 GB) on Hugging Face and disclosed the license text, the "GLM-5.3 License," at the same time. It is not MIT. Model-as-a-Service operators whose aggregate revenue exceeds US$10 billion must pass Z.AI's security review before commercial use — **the wall of time dissolved, and the review moved into the text.** Under independent measurement (Artificial Analysis Intelligence Index v4.3.2), GLM-5.3 scores 45 and Kimi K3 scores 44: a model one-quarter the size drew level, one point apart. Meanwhile, DeepSeek published V4.1 Flash (September 10, 552B) and V4.1-Flash-1017 (October 17) under the MIT License, with no threshold clause. **"Chinese open weights" cannot be described by a single condition.** The verification is recorded in Addendum 3 to Chapters 3 and 4. The reported Hong Kong IPO filing by Moonshot (Reuters, September 3) is recorded as [Reporting] in Addendum 2 to Chapter 8.
 
+**Addendum (October 19, 2026): U.S. open weights have rejoined the line. Their license drew the same line as Kimi K3.** 
+On October 15, 2026, Meta published the weights of Muse Spark Open (816B, 42B active) on Hugging Face. Under independent measurement (Artificial Analysis Intelligence Index v4.3.2), it scores 39—far above gpt-oss-120b (12) and Llama 4 Maverick (9), the two U.S. models this book used as evidence—narrowing the gap to the highest Chinese score (GLM-5.3 at 45) to six points. Its license, the "Muse Model License," drops the MAU clause and instead requires a separate written agreement with Meta for Model-as-a-Service businesses whose aggregate gross revenue, including affiliates, exceeds US$20 million over any consecutive twelve months — **the same amount and the same period as the Kimi K3 License.** The distributed BF16 weights total about 1.64 TB. Meta wrote that the model "runs on your desktop" using two Mac Studios, but the two machines' combined unified memory is one terabyte, and the precision used is not stated. **Privileged Open is not an attribute of a country.** The verification is recorded in Addendum 2 to Chapter 1 and Addendum 4 to Chapters 3 and 4.
+
 ---
 
 ## 📄 Document
@@ -65,6 +68,7 @@ This is a **continuously observed** open-source book. Because its subject is sti
 
 | Version | Date | Contents |
 | --- | --- | --- |
+| [**v1.6**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.6) | 2026-10-19 | Added Meta's Muse Spark Open (weight release, independent measurement, and the Muse Model License) (Chapters 1, 3, and 4) |
 | [**v1.5**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.5) | 2026-10-18 | Added GLM-5.3 weight release and license text, DeepSeek V4.1 Flash, and the reported Moonshot IPO filing (Prologue, Chapters 3, 4, and 8) |
 | [**v1.4**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.4) | 2026-09-25 | Added the gap as described before Congress, the revised evaluation index, the distillation estimate, Hugging Face primary documents, and adoption metrics (Prologue, Chapters 1, 2, 6, 7, and 8). Corrected the ATOM Report reversal date in Chapter 8 |
 | [**v1.3**](https://github.com/Leading-AI-IO/frontier-grade-open-weights/releases/tag/v1.3) | 2026-08-20 | Removed solicitation section |
