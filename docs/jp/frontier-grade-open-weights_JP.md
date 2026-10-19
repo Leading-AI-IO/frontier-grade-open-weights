@@ -312,6 +312,43 @@ Lambertの推計では、中国のオープンウェイトモデルは米国の�
 そしてこの推計は、もう一つの事実を浮かび上がらせる。<br/>
 **フロンティアに近いオープンウェイトは中国製であり、米国製のオープンウェイトは、そこからさらに数ヶ月遠い。**
 
+## 追記2（2026年10月19日）: 米国のオープンウェイトが、列に戻ってきた
+
+（2026年10月19日追記）<br/>
+本章は「米国のオープンウェイトが、フロンティア級オープンウェイトの主役ではなくなった」と書いた。<br/>
+根拠は、gpt-oss-120bのIndex 24と、Llama 4 MaverickのIndex 14だった。いずれも2026年7月時点、v4.1の値である。
+
+2026年10月15日、MetaはMuse Spark Openの重みをHugging Faceで公開した。<br/>
+Metaは公式ブログで、これを「これまでで最も高性能な米国のオープンウェイトモデル（the most capable US open-weight model to date）」と呼んでいる。<br/>
+公式モデルカードによれば、総パラメータ816B、アクティブ42B、コンテキストは100万トークンで、ネイティブのマルチモーダルである。
+
+同じ物差し——Artificial Analysis Intelligence Index v4.3.2——で並べ直す。
+
+| | 開発元 | Intelligence Index（v4.3.2） |
+|---|---|---|
+| GLM-5.3（max） | Z.ai（中国） | 45 |
+| Kimi K3（max） | Moonshot AI（中国） | 44 |
+| **Muse Spark Open（Xhigh）** | **Meta（米国）** | **39** |
+| DeepSeek V4.1 Flash（max） | DeepSeek（中国） | 39 |
+| gpt-oss-120b（High） | OpenAI（米国） | 12 |
+| Llama 4 Maverick | Meta（米国） | 9 |
+
+本章が米国側の根拠にした2モデルは、現行の版で12と9である。<br/>
+Muse Spark Openは39。中国製の最高値（GLM-5.3の45）との差は**6点**になった。<br/>
+同じ版の上で、gpt-oss-120bとGLM-5.3の差は33点である。
+
+Lambertは2026年10月17日、米国製と中国製の最良のオープンウェイトの差は「多くの点で、およそ半分に縮んだ（reduced roughly by half）」と書いた。<br/>
+これは研究者の評価であり、測定ではない。本追記は、上の表の数値だけを事実として扱う。
+
+本章の命題——**距離は、数ヶ月という水準で安定した**——は、この追記で動かない。<br/>
+動いたのは、追記1が浮かび上がらせたもう一つの事実のほうである。<br/>
+**米国のオープンウェイトは、まだ主役ではない。だが、列に戻ってきた。**
+
+性能が並ぶことと、手に渡ることは、別の話だ。<br/>
+Muse Spark Openの実行の要件は第3章の追記4に、使ってよい条件は第4章の追記4に記した。
+
+※Muse Spark Openの39は、Metaの公式モデルカードにも記載がある。本追記は、Artificial Analysisのモデルページの表示（2026年10月19日閲覧）で確認した値を用いた。gpt-oss-120bとLlama 4 Maverickの現行値も、同日に同社のモデルページで確認した。GLM-5.3・Kimi K3・DeepSeek V4.1 Flashの値は、第3章の追記3（2026年10月18日閲覧）による。
+
 ### 参考文献
 
 1. Epoch AI「Open-weight models lag state-of-the-art by around 3 months on average」（2025年10月30日・2023年1月–2025年10月の平均3.5ヶ月／ECI差7ポイント）
@@ -340,6 +377,18 @@ Lambertの推計では、中国のオープンウェイトモデルは米国の�
 （2026年9月25日追記）<br/>
 12. Nathan Lambert（Interconnects）「The current balance of power in open models」（2026年9月21日・米議会向け説明の準備原稿／中国製オープンウェイトとクローズドのフロンティアの差は約2〜5ヶ月、米国製オープンウェイトは約6〜9ヶ月）
     <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
+
+（2026年10月19日追記）<br/>
+13. Meta「Muse Spark Open」（2026年10月15日・"the most capable US open-weight model to date"／816B総パラメータ・42Bアクティブ／100万トークン）
+    <https://research.meta.ai/blog/muse-spark-open>
+14. Meta「meta-models/Muse-Spark-Open-816B-A42B」Hugging Face 公式モデルカード（816B total／42B active／1M tokens／ネイティブマルチモーダル／Artificial Analysis Intelligence Index 39の記載）
+    <https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B>
+15. Artificial Analysis「Muse Spark Open」「gpt-oss-120b」「Llama 4 Maverick」（Intelligence Index v4.3.2：Muse Spark Open（Xhigh）39／gpt-oss-120b（High）12／Llama 4 Maverick 9、2026年10月19日閲覧）
+    <https://artificialanalysis.ai/models/muse-spark-open>
+    <https://artificialanalysis.ai/models/gpt-oss-120b>
+    <https://artificialanalysis.ai/models/llama-4-maverick>
+16. Nathan Lambert（Interconnects）「Meta shakes up the frontiers, open and closed」（2026年10月17日・米国製と中国製の最良のオープンウェイトの差は多くの点でおよそ半分に縮んだという評価）
+    <https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open>
 
 <br/>
 
@@ -827,6 +876,48 @@ Artificial Analysisの数値はテキストの指標であり、GLM-5.3の入力
 
 ※GLM-5.3の重み公開日について、Hugging Faceのコミット履歴は初回コミットを8月27日17:16（表示タイムゾーン不明）、コミット名を「Initial commit 0828」としている。報道（The New Stack、2026年8月28日）は公開日を8月28日としている。本追記は「8月27日〜28日」として扱う。Z.aiが「追加で2週間の包括的な安全性評価を実施した」と述べたとする記述は、同報道がZ.ai関係者のX投稿を引用したものであり、本書は一次資料を直接確認していない。
 
+## 追記4（2026年10月19日）: デスクトップで動く、と当事者が書いた
+
+（2026年10月19日追記）<br/>
+追記3は、GLM-5.3とDeepSeek V4.1 Flashについて「753Bも552Bも、ローカルで動く数字ではない」と書いた。<br/>
+2026年10月15日、Metaは816Bのモデルについて、デスクトップで動くと書いた。
+
+### 四つ目の点：Muse Spark Open
+
+Muse Spark Openの重みは、Hugging Faceで65分割のsafetensorsとして配布されている。<br/>
+テンソル型はBF16とF32で、safetensorsの合計は**約1.64TB**（1,644,333,393,864バイト）である。<br/>
+本章の題「1.7テラバイト」に近い重さの扉が、もう一つ開いた。
+
+総パラメータはKimi K3の約3割である。だが配布容量は、MXFP4で配られたKimi K3の1.56TBを上回る。<br/>
+**規模とファイルの重さは、配布の精度で逆転する。**
+
+| | 総パラメータ | 配布容量 | Intelligence Index（v4.3.2） | ライセンス |
+|---|---|---|---|---|
+| Kimi K3 | 2.8T | 1.56TB（MXFP4） | 44 | Kimi K3 License |
+| GLM-5.3 | 753B | 756GB（FP8混在） | 45 | GLM-5.3 License |
+| DeepSeek V4.1 Flash | 552B | 未確認 | 39 | MIT |
+| **Muse Spark Open** | **816B** | **1.64TB（BF16）** | **39** | **Muse Model License** |
+
+### 当事者が示した、実行の要件
+
+公式モデルカードは、必要なメモリを「NVFP4で700GB以上、BF16で2TB」と示している。<br/>
+本章が論じた「64という数字」に相当する、当事者による実行要件の明示である。
+
+Metaの公式ブログは、さらに踏み込んでいる。<br/>
+Apple M5 UltraのMac Studio 2台とMLXで、**デスクトップで動く**。この級のモデルで初めてだ、という。<br/>
+1台あたり最大512GBの統合メモリを2台でつなぎ、合計1TBとして扱う、と説明している。
+
+ここで一点、計算が合わない。<br/>
+配布されているBF16の重み（約1.64TB）は、2台の合計1TBに収まらない。<br/>
+収まるのは、モデルカードが示すNVFP4の700GB級である。<br/>
+だが、このリポジトリに配布されている重みはBF16とF32だけで、**ブログは、どの精度で2台に載せるのかを書いていない。**
+
+本追記は、デスクトップで動くことを確認していない。当事者の記述として記録する。<br/>
+追記3の「ローカルで動く数字ではない」に対して、当事者が反対の記述を出した。<br/>
+**壁は下がったと書かれた。だが、その壁を越える条件は、まだ書かれていない。**
+
+※Muse Spark Openの総パラメータ数について、公式モデルカード本文とMetaの公式ブログは816Bとし、Hugging Faceのメタデータは822,036,529,664（822B）と表示している（BF16 821,906,490,368・F32 130,039,296）。両者の差について公式の説明は見つからなかった。本追記は本文の816Bを用いた。配布容量は、Hugging FaceのAPIが返す各safetensorsファイルのサイズの合計である（2026年10月19日取得）。
+
 ### 参考文献
 
 1. Moonshot AI「Kimi K3 Tech Blog: Open Frontier Intelligence」（64アクセラレータ以上のスーパーノード推奨／MXFP4ウェイト・MXFP8アクティベーション／Stable LatentMoE 896エキスパート中16アクティブ／API $3・$15、キャッシュヒット時入力$0.30）
@@ -863,6 +954,14 @@ Artificial Analysisの数値はテキストの指標であり、GLM-5.3の入力
    <https://artificialanalysis.ai/models/deepseek-v4-1-flash>
 15. The New Stack「Z.ai's GLM-5.3 goes open weight, but its new license aims at hyperscalers」（2026年8月28日・Z.ai関係者のX投稿「追加で2週間の包括的な安全性評価」を引用）
    <https://thenewstack.io/zai-glm-weights-license/>
+
+（2026年10月19日追記）<br/>
+16. Meta「meta-models/Muse-Spark-Open-816B-A42B」Hugging Face 公式モデルカード（816B total／42B active／必要メモリ NVFP4で700GB以上・BF16で2TB／Hugging Faceメタデータ822B params／65分割safetensors・合計1,644,333,393,864バイト／テンソル型BF16・F32／License: Muse Model License）
+   <https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B>
+17. Meta「Muse Spark Open」（2026年10月15日・Apple M5 Ultra Mac Studio 2台とMLXでデスクトップ実行／1台あたり最大512GB・合計1TBの統合メモリ／精度の記載なし）
+   <https://research.meta.ai/blog/muse-spark-open>
+18. Artificial Analysis「Muse Spark Open」（Intelligence Index v4.3.2：Muse Spark Open（Xhigh）39／816B total・42B active／Open weights、2026年10月19日閲覧）
+   <https://artificialanalysis.ai/models/muse-spark-open>
 
 ※重みサイズ（BF16 約5.6TB／INT8 約2.8TB／INT4 約1.4TB）は、Moonshotが公表した総パラメータ数2.8兆からの算術推計であり、公式が開示した数値ではない。2026年7月27日の実配布形式はMXFP4で、報じられたファイルサイズは1.56TBである（PC Watch、2026年7月28日）。
 
@@ -1153,6 +1252,65 @@ Kimi K3と同じ、「公開されているが、到達は限られる」状態�
 
 ※GLM-5.3 Licenseの条文は、Hugging Faceリポジトリ内のLICENSEファイル（4.26kB）で確認した。本追記の要約は、収入閾値（100億ドル・連続12ヶ月）、安全審査の主体（Z.AI）、Model as a Serviceの定義（埋め込み型のエンドユーザー機能と単純なリクエスト中継は除外）に限る。再配布時の条件、派生モデルへの条文継承の要否は、本追記では検証していない。
 
+## 追記4（2026年10月19日）: 米国の条文が、Kimi K3と同じ線を引いた
+
+（2026年10月19日追記）<br/>
+本章は、Metaの「Llama 4 Community License」にMAU 7億人の上限があることを、閾値つきのオープンの例として挙げた。<br/>
+2026年10月15日、MetaはMuse Spark Openを、新しい条文「Muse Model License」とともに公開した。<br/>
+**MAU条項は、なくなった。代わりに入ったのは、収益の線である。**
+
+### 線は、Kimi K3と同じ位置にある
+
+条文の第3条はこう定める。<br/>
+本人または関連会社が、第三者にAPI等でAIモデルへのアクセスを提供し、その出力を受け取らせる事業——「Model as a Service」——を行い、<br/>
+**本人と関連会社の総収入が、連続する12ヶ月のいずれかで2,000万ドルを超える場合**、Metaに通知し、別途の書面契約を結ばなければ、その事業でMuse Spark Openを提供できない。<br/>
+社内利用、研究、Model as a Serviceでない商用活動、自社製品の機能としての組み込みには、この条は適用されない。
+
+本章の追記1が記録したKimi K3 Licenseは、Model as a Serviceとして提供する事業で、関連会社を含む総収入が連続12ヶ月で2,000万ドルを超える場合に、Moonshot AIとの個別契約を求めた。<br/>
+**額も、期間も、対象の事業形態も同じである。**<br/>
+GLM-5.3 Licenseの閾値（100億ドル）から見れば、その500分の1にあたる。
+
+本章は、閾値条項を中国製オープンウェイトの条文で追ってきた。<br/>
+米国で最も高性能なオープンウェイトの条文は、その中の一つと同じ線を引いた。<br/>
+追記3は「特権的なオープンは、国の属性ではなく、条文と容量が決める個別の状態である」と書いた。<br/>
+**その一文は、米国の条文でも成り立った。**
+
+### 表示と派生物は、より広い
+
+閾値の位置は同じだが、条件の範囲は広い。
+
+* **表示義務**：Muse Spark Openまたはその派生物を使う製品・サービスは、UI・ドキュメント・ウェブサイト・設定画面のいずれかに「Built with Muse Spark Open」を目立つ形で表示しなければならない。規模の閾値はない。Kimi K3 Licenseの表示義務は、MAU1億人超または月間売上2,000万ドル超の製品に限られていた
+* **派生物**：条文は「派生物」を、本ソフトウェア**またはその出力**を使って作成・学習・改変（微調整を含む）・**蒸留**・改良したAIモデルと定義する。Metaは出力の所有権を主張しないが、出力で作ったモデルは派生物として条文の内側に入る
+* **利用規約**：Usage Policy（別紙A）が条文に組み込まれており、その遵守が条件である
+
+第6章が論じた蒸留は、ここでは告発ではなく、条文の定義語として現れている。
+
+### 逆相関は、上端でしか成り立たなくなった
+
+本章の図は「寛容さと能力の逆相関」を示した。図の値は、いずれも2026年7月時点・v4.1の値である。<br/>
+現行の物差し（v4.3.2）で並べ直す。
+
+| | ライセンス | 閾値・条件 | Intelligence Index（v4.3.2） |
+|---|---|---|---|
+| gpt-oss-120b | Apache 2.0 | なし | 12 |
+| DeepSeek V4.1 Flash | MIT | なし | 39 |
+| Muse Spark Open | Muse Model License | MaaS総収入2,000万ドル（12ヶ月）／表示義務／利用規約 | 39 |
+| Kimi K3 | Kimi K3 License | MaaS総収入2,000万ドル（12ヶ月）／MAU1億・月商2,000万ドルで表示 | 44 |
+| GLM-5.3 | GLM-5.3 License | MaaS合算収入100億ドル（安全審査） | 45 |
+
+上端の44と45は、どちらも閾値つきの条文である。<br/>
+だが39の位置では、MITと閾値つきの条文が同点で並んだ。<br/>
+**寛容さと能力の逆相関は、上端でしか成り立たなくなった。**
+
+### 四つのうち、揃ったもの
+
+* 重みの配布：**揃った**（Hugging Face、BF16で約1.64TB）
+* 実行できる資源：**当事者が書いた**（デスクトップ2台。精度は書かれていない。第3章の追記4）
+* 使ってよい条件：**揃った**（Muse Model License）
+* 再現できる材料：本追記では確認していない
+
+※二次的な解説（Interconnects、2026年10月17日）は、この閾値を「事業全体で月2,000万ドル超」と紹介した。条文の文言は「連続する12ヶ月のいずれかで2,000万ドル超」であり、対象はModel as a Serviceの事業に限られる。期間の読み方で12倍の差が出る。本追記は条文の文言を用いた。
+
 ### 参考文献
 
 1. Vals AI「Kimi K3」（**License type: Proprietary — contact us to get access**）
@@ -1189,6 +1347,15 @@ Kimi K3と同じ、「公開されているが、到達は限られる」状態�
    <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017>
 16. Artificial Analysis「GLM-5.3」（**Open weights model**／License: GLM-5.3 License／753B total・40B active、2026年10月18日閲覧）
    <https://artificialanalysis.ai/models/glm-5-3>
+
+（2026年10月19日追記）<br/>
+17. Meta「Muse Model License」（Hugging Face meta-models/Muse-Spark-Open-816B-A42B 内 LICENSE.md・2026年10月15日／第2条 "Built with Muse Spark Open" の表示義務／第3条 Model as a Serviceで本人と関連会社の総収入が連続12ヶ月で2,000万ドル超の場合、Metaへの通知と別途の書面契約／派生物の定義に出力を使った学習・蒸留を含む／Usage Policy（別紙A）／MAU条項なし）
+   <https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/LICENSE.md>
+18. Artificial Analysis「Muse Spark Open」「gpt-oss-120b」（License: Muse Model License／Intelligence Index v4.3.2：Muse Spark Open（Xhigh）39・gpt-oss-120b（High）12、2026年10月19日閲覧）
+   <https://artificialanalysis.ai/models/muse-spark-open>
+   <https://artificialanalysis.ai/models/gpt-oss-120b>
+19. Nathan Lambert（Interconnects）「Meta shakes up the frontiers, open and closed」（2026年10月17日・閾値を「事業全体で月2,000万ドル超」と紹介）
+   <https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open>
 
 ※K3の正式ライセンス全文・再配布条件・軍事利用制限・修正版公開義務は、本書の調査時点（2026年7月18日）では確認できなかった。「Modified MIT」とする報道は存在するが、確認できたのはK2系の条文のみである。
 
