@@ -308,6 +308,43 @@ It is, however, a researcher’s estimate, not continuous measurement of the kin
 And the estimate brings another fact into view.<br/>
 **The open-weight models closest to the frontier are Chinese; U.S. open-weight models sit several months further away.**
 
+## Addendum 2 (October 19, 2026): U.S. Open Weights Have Rejoined the Line
+
+(Added on October 19, 2026)<br/>
+This chapter wrote that "U.S. open-weight models are no longer the protagonists of frontier-grade open weights."<br/>
+The evidence was gpt-oss-120b at Index 24 and Llama 4 Maverick at Index 14—both July 2026 values on v4.1.
+
+On October 15, 2026, Meta published the weights of Muse Spark Open on Hugging Face.<br/>
+In its official blog, Meta calls it "the most capable US open-weight model to date."<br/>
+According to the official model card, it has 816B total parameters, 42B active, a one-million-token context window, and is natively multimodal.
+
+Placed again on the same ruler—Artificial Analysis Intelligence Index v4.3.2:
+
+| | Developer | Intelligence Index (v4.3.2) |
+|---|---|---|
+| GLM-5.3 (max) | Z.ai (China) | 45 |
+| Kimi K3 (max) | Moonshot AI (China) | 44 |
+| **Muse Spark Open (Xhigh)** | **Meta (U.S.)** | **39** |
+| DeepSeek V4.1 Flash (max) | DeepSeek (China) | 39 |
+| gpt-oss-120b (High) | OpenAI (U.S.) | 12 |
+| Llama 4 Maverick | Meta (U.S.) | 9 |
+
+The two U.S. models this chapter used as evidence now score 12 and 9 on the current version.<br/>
+Muse Spark Open scores 39. The gap to the highest Chinese score (GLM-5.3 at 45) is now **six points**.<br/>
+On the same version, the gap between gpt-oss-120b and GLM-5.3 is 33 points.
+
+On October 17, 2026, Lambert wrote that "in many ways, the gap between the best American and Chinese models has been reduced roughly by half."<br/>
+That is a researcher's assessment, not a measurement. This addendum treats only the figures in the table above as facts.
+
+This chapter's proposition—**the gap stabilized at a level of a few months**—does not move with this addendum.<br/>
+What moved is the other fact that Addendum 1 brought into view.<br/>
+**U.S. open weights are still not the protagonists. But they have rejoined the line.**
+
+Matching in performance and reaching people's hands are different matters.<br/>
+The execution requirements of Muse Spark Open are recorded in Addendum 4 to Chapter 3, and its conditions of use in Addendum 4 to Chapter 4.
+
+*The figure of 39 for Muse Spark Open also appears in Meta's official model card. This addendum uses the value confirmed on Artificial Analysis's model page (accessed October 19, 2026). The current values for gpt-oss-120b and Llama 4 Maverick were confirmed on the same company's model pages on the same day. The values for GLM-5.3, Kimi K3, and DeepSeek V4.1 Flash are those in Addendum 3 to Chapter 3 (accessed October 18, 2026).
+
 ### References
 
 1. Epoch AI, “Open-weight models lag state-of-the-art by around 3 months on average” (October 30, 2025; average 3.5-month lag / 7-point ECI gap from January 2023 to October 2025)
@@ -336,6 +373,18 @@ And the estimate brings another fact into view.<br/>
 (Added on September 25, 2026)<br/>
 12. Nathan Lambert (Interconnects), “The current balance of power in open models” (September 21, 2026; prepared remarks for a Congressional briefing / Chinese open-weight models about 2–5 months behind the closed frontier, U.S. open-weight models about 6–9 months)
     <https://www.interconnects.ai/p/the-current-balance-of-power-in-open>
+
+(Added on October 19, 2026)<br/>
+13. Meta, "Muse Spark Open" (October 15, 2026; "the most capable US open-weight model to date" / 816B total parameters, 42B active / one-million-token context)
+    <https://research.meta.ai/blog/muse-spark-open>
+14. Meta, "meta-models/Muse-Spark-Open-816B-A42B," official Hugging Face model card (816B total / 42B active / 1M tokens / natively multimodal / lists Artificial Analysis Intelligence Index 39)
+    <https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B>
+15. Artificial Analysis, "Muse Spark Open," "gpt-oss-120b," "Llama 4 Maverick" (Intelligence Index v4.3.2: Muse Spark Open (Xhigh) 39 / gpt-oss-120b (High) 12 / Llama 4 Maverick 9; accessed October 19, 2026)
+    <https://artificialanalysis.ai/models/muse-spark-open>
+    <https://artificialanalysis.ai/models/gpt-oss-120b>
+    <https://artificialanalysis.ai/models/llama-4-maverick>
+16. Nathan Lambert (Interconnects), "Meta shakes up the frontiers, open and closed" (October 17, 2026; assessment that the gap between the best American and Chinese open models has, in many ways, been reduced roughly by half)
+    <https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open>
 
 <br/>
 
@@ -821,6 +870,48 @@ Neither 753B nor 552B is a number that runs locally.
 
 *Regarding the release date of the GLM-5.3 weights, the Hugging Face commit history shows the initial commit at August 27, 17:16 (display time zone unknown), titled "Initial commit 0828." Reporting (The New Stack, August 28, 2026) gives the release date as August 28. This addendum treats it as August 27–28. The statement attributed to Z.ai that it "conducted two additional weeks of comprehensive safety evaluations" is quoted by that report from an X post by a Z.ai staff member; this book has not directly verified the primary source.*
 
+## Addendum 4 (October 19, 2026): The Party Itself Wrote That It Runs on a Desktop
+
+(Added on October 19, 2026)<br/>
+Addendum 3 wrote of GLM-5.3 and DeepSeek V4.1 Flash: "Neither 753B nor 552B is a number that runs locally."<br/>
+On October 15, 2026, Meta wrote that an 816B model runs on a desktop.
+
+### A Fourth Data Point: Muse Spark Open
+
+The weights of Muse Spark Open are distributed on Hugging Face as 65 safetensors shards.<br/>
+The tensor types are BF16 and F32, and the safetensors total **about 1.64 TB** (1,644,333,393,864 bytes).<br/>
+Another door, close in weight to the "1.7 terabytes" in this chapter's title, has opened.
+
+Its total parameter count is about 30% of Kimi K3's. Yet its distribution size exceeds the 1.56 TB of Kimi K3, which was distributed in MXFP4.<br/>
+**Scale and file weight can invert, depending on the precision of distribution.**
+
+| | Total parameters | Distribution size | Intelligence Index (v4.3.2) | License |
+|---|---|---|---|---|
+| Kimi K3 | 2.8T | 1.56 TB (MXFP4) | 44 | Kimi K3 License |
+| GLM-5.3 | 753B | 756 GB (mixed FP8) | 45 | GLM-5.3 License |
+| DeepSeek V4.1 Flash | 552B | Unconfirmed | 39 | MIT |
+| **Muse Spark Open** | **816B** | **1.64 TB (BF16)** | **39** | **Muse Model License** |
+
+### Execution Requirements Stated by the Party Itself
+
+The official model card states the memory required as "at least 700GB of VRAM for NVFP4 and 2TB for BF16."<br/>
+This is an explicit execution requirement from the party itself, the counterpart of the "number 64" this chapter discussed.
+
+Meta's official blog goes further.<br/>
+It says the model **runs on a desktop** using two Apple M5 Ultra Mac Studios and MLX—the first model in its class to do so.<br/>
+It explains that up to 512 GB of unified memory per Mac Studio, joined across two machines, can be treated as one terabyte in total.
+
+Here, one calculation does not add up.<br/>
+The distributed BF16 weights (about 1.64 TB) do not fit within the two machines' combined one terabyte.<br/>
+What fits is the roughly 700 GB class for NVFP4 indicated by the model card.<br/>
+Yet the weights distributed in this repository are BF16 and F32 only, and **the blog does not state at what precision the model is loaded onto the two machines.**
+
+This addendum has not confirmed that the model runs on a desktop. It is recorded as a statement by the party itself.<br/>
+Against Addendum 3's "not a number that runs locally," the party itself has now issued a statement to the contrary.<br/>
+**It has been written that the wall came down. But the conditions for getting over it have not yet been written.**
+
+*Regarding the total parameter count of Muse Spark Open, the body of the official model card and Meta's official blog give 816B, while the Hugging Face metadata displays 822,036,529,664 (822B) (BF16 821,906,490,368; F32 130,039,296). No official explanation for the difference could be found. This addendum uses the body figure of 816B. The distribution size is the sum of the sizes of each safetensors file returned by the Hugging Face API (retrieved October 19, 2026).
+
 ### References
 
 1. Moonshot AI, “Kimi K3 Tech Blog: Open Frontier Intelligence” (supernode with 64+ accelerators recommended / MXFP4 weights and MXFP8 activations / Stable LatentMoE with 16 of 896 experts active / API prices of $3 and $15, cached input $0.30)
@@ -857,6 +948,14 @@ Neither 753B nor 552B is a number that runs locally.
    <https://artificialanalysis.ai/models/deepseek-v4-1-flash>
 15. The New Stack, "Z.ai's GLM-5.3 goes open weight, but its new license aims at hyperscalers" (August 28, 2026; quotes a Z.ai staff member's X post on "two additional weeks of comprehensive safety evaluations")
    <https://thenewstack.io/zai-glm-weights-license/>
+
+(Added on October 19, 2026)<br/>
+16. Meta, "meta-models/Muse-Spark-Open-816B-A42B," official Hugging Face model card (816B total / 42B active / memory required: at least 700 GB for NVFP4, 2 TB for BF16 / Hugging Face metadata 822B params / 65 safetensors shards totaling 1,644,333,393,864 bytes / tensor types BF16, F32 / License: Muse Model License)
+   <https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B>
+17. Meta, "Muse Spark Open" (October 15, 2026; desktop execution on two Apple M5 Ultra Mac Studios with MLX / up to 512 GB of unified memory per machine, one terabyte in total / precision not stated)
+   <https://research.meta.ai/blog/muse-spark-open>
+18. Artificial Analysis, "Muse Spark Open" (Intelligence Index v4.3.2: Muse Spark Open (Xhigh) 39 / 816B total, 42B active / open weights; accessed October 19, 2026)
+   <https://artificialanalysis.ai/models/muse-spark-open>
 
 *The weight-size figures—approximately 5.6 TB in BF16, 2.8 TB in INT8, and 1.4 TB in INT4—are arithmetic estimates based on Moonshot’s reported total of 2.8 trillion parameters, not figures officially disclosed by Moonshot. The actual distribution format on July 27, 2026 was MXFP4, with a reported file size of 1.56 TB (PC Watch, July 28, 2026).*
 
@@ -1150,6 +1249,65 @@ Openness is neither a declaration nor an intention, but a state.
 
 *The text of the GLM-5.3 License was verified from the LICENSE file (4.26 kB) in the Hugging Face repository. This addendum's summary is limited to the revenue threshold (US$10 billion, twelve consecutive months), the party conducting the security review (Z.AI), and the definition of Model as a Service (which excludes embedded end-user features and simple request relaying). Conditions on redistribution and whether the text must be inherited by derivative models were not examined in this addendum.*
 
+## Addendum 4 (October 19, 2026): A U.S. License Drew the Same Line as Kimi K3
+
+(Added on October 19, 2026)<br/>
+This chapter cited the 700 million MAU ceiling in Meta's Llama 4 Community License as an example of openness with a threshold.<br/>
+On October 15, 2026, Meta released Muse Spark Open together with a new license text, the "Muse Model License."<br/>
+**The MAU clause is gone. What replaced it is a revenue line.**
+
+### The Line Sits in the Same Place as Kimi K3's
+
+Section 3 of the license provides as follows.<br/>
+If the licensee or any of its affiliates runs a business that provides third parties with access to AI models via an API or similar interface, where the third party receives the models' outputs—"Model as a Service"—<br/>
+**and the aggregate gross revenue of the licensee and its affiliates exceeds US$20 million during any consecutive twelve-month period,** the licensee must notify Meta and enter into a separate written agreement before offering Muse Spark Open in that business.<br/>
+The section does not apply to internal use, research, commercial activity that is not Model as a Service, or use as a component powering features of the licensee's own product.
+
+The Kimi K3 License, recorded in Addendum 1 to this chapter, required a separate agreement with Moonshot AI for businesses offering the model as Model as a Service whose total revenue including affiliates exceeds $20 million over twelve consecutive months.<br/>
+**The amount, the period, and the business form covered are the same.**<br/>
+Measured against the GLM-5.3 License threshold (US$10 billion), it is one five-hundredth.
+
+This chapter has followed threshold clauses through the license texts of Chinese open weights.<br/>
+The license of the most capable U.S. open-weight model has drawn the same line as one of them.<br/>
+Addendum 3 wrote that "Privileged Open is not an attribute of a country; it is an individual state determined by license text and storage size."<br/>
+**That sentence has held for a U.S. license as well.**
+
+### Attribution and Derivatives Reach Further
+
+The threshold sits in the same place, but the conditions reach further.
+
+* **Attribution:** Any product or service that uses Muse Spark Open or its derivatives must prominently display "Built with Muse Spark Open" in its user interface, documentation, website, or settings menu. There is no scale threshold. The Kimi K3 License's attribution obligation applied only to products with more than 100 million MAU or more than $20 million in monthly revenue
+* **Derivatives:** The license defines "Derivatives" as any AI model created, trained, modified (including fine-tuned), **distilled**, or otherwise improved using the Software **or any outputs or results thereof.** Meta claims no ownership of outputs, but a model built from them falls inside the license as a derivative
+* **Usage policy:** The Usage Policy (Exhibit A) is incorporated into the license, and compliance with it is a condition
+
+Distillation, which Chapter 6 discussed, appears here not as an accusation but as a defined term in a license.
+
+### The Inverse Correlation Now Holds Only at the Top
+
+This chapter's diagram showed that "permissiveness and capability are inversely correlated." Its values were all July 2026 values on v4.1.<br/>
+Placed again on the current ruler (v4.3.2):
+
+| | License | Threshold / conditions | Intelligence Index (v4.3.2) |
+|---|---|---|---|
+| gpt-oss-120b | Apache 2.0 | None | 12 |
+| DeepSeek V4.1 Flash | MIT | None | 39 |
+| Muse Spark Open | Muse Model License | MaaS revenue $20M (12 months) / attribution / usage policy | 39 |
+| Kimi K3 | Kimi K3 License | MaaS revenue $20M (12 months) / attribution at 100M MAU or $20M monthly revenue | 44 |
+| GLM-5.3 | GLM-5.3 License | MaaS aggregate revenue $10B (security review) | 45 |
+
+The top two, 44 and 45, both carry threshold clauses.<br/>
+But at 39, an MIT license and a threshold license now sit tied.<br/>
+**The inverse correlation between permissiveness and capability now holds only at the top.**
+
+### Of the Four, What Is Now in Place
+
+* Distributed weights: **in place** (Hugging Face, about 1.64 TB in BF16)
+* Resources to run them: **stated by the party itself** (two desktop machines; precision not stated; Addendum 4 to Chapter 3)
+* Conditions of use: **in place** (Muse Model License)
+* Materials to reproduce: not examined in this addendum
+
+*A secondary commentary (Interconnects, October 17, 2026) described this threshold as "more than $20M per month across their entire business." The license text reads "exceeds twenty (20) million US dollars ... during any consecutive twelve (12) month period," and covers only Model as a Service businesses. Reading the period differently produces a twelvefold difference. This addendum uses the wording of the license text.
+
 ### References
 
 1. Vals AI, “Kimi K3” (**License type: Proprietary — contact us to get access**)
@@ -1186,6 +1344,15 @@ Openness is neither a declaration nor an intention, but a state.
    <https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017>
 16. Artificial Analysis, "GLM-5.3" (**Open weights model** / License: GLM-5.3 License / 753B total, 40B active; accessed October 18, 2026)
    <https://artificialanalysis.ai/models/glm-5-3>
+
+(Added on October 19, 2026)<br/>
+17. Meta, "Muse Model License" (LICENSE.md in Hugging Face meta-models/Muse-Spark-Open-816B-A42B; October 15, 2026 / Section 2: obligation to display "Built with Muse Spark Open" / Section 3: notice to Meta and a separate written agreement for Model as a Service where aggregate gross revenue of the licensee and affiliates exceeds $20M over any consecutive twelve months / definition of Derivatives includes training and distillation using outputs / Usage Policy (Exhibit A) / no MAU clause)
+   <https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/LICENSE.md>
+18. Artificial Analysis, "Muse Spark Open," "gpt-oss-120b" (License: Muse Model License / Intelligence Index v4.3.2: Muse Spark Open (Xhigh) 39, gpt-oss-120b (High) 12; accessed October 19, 2026)
+   <https://artificialanalysis.ai/models/muse-spark-open>
+   <https://artificialanalysis.ai/models/gpt-oss-120b>
+19. Nathan Lambert (Interconnects), "Meta shakes up the frontiers, open and closed" (October 17, 2026; describes the threshold as "more than $20M per month across their entire business")
+   <https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open>
 
 *As of the research cutoff for this book (July 18, 2026), K3’s formal license text, redistribution conditions, military-use restrictions, and disclosure obligations for modified versions could not be confirmed. Reports describing the license as Modified MIT existed, but the only text verified was that of the K2 family.*
 
